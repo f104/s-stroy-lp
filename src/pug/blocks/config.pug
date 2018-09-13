@@ -7,8 +7,36 @@ include chunks/config-tab
         p.heading__lead Выберите свой вариант
 
     .js-tabs.js-tabs_disconnected
+        
+        .config-select.sm-full.js-tabs__select
+            .config-select__list
+                a.config-select__item.js-tabs__select__item._active(href='#1-section-window')
+                    span.config-select__item__img
+                        img(src='img/windows/1-section-window_sm.svg')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Одностворчатое окно
+                        span.config-select__item__content__muted 900X1400
+                a.config-select__item.js-tabs__select__item(href='#2-section-window')
+                    span.config-select__item__img
+                        img(src='img/windows/1-section-window_sm.svg')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Двустворчатое окно
+                        span.config-select__item__content__muted 1300X1400
+                a.config-select__item.js-tabs__select__item(href='#3-section-window')
+                    span.config-select__item__img
+                        img(src='img/windows/1-section-window_sm.svg')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Трехстворчатое окно
+                        span.config-select__item__content__muted 1400X2100
+                a.config-select__item.js-tabs__select__item(href='#balcony-window')
+                    span.config-select__item__img
+                        img(src='img/windows/1-section-window_sm.svg')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Балконный блок
+                        span.config-select__item__content__muted 2100X2100
+                
         .js-tabs__content
-            
+        
             .window-list.sm-full(id='1-section-window')
                 .window-list__item
                     .window-list__item__head
@@ -25,7 +53,7 @@ include chunks/config-tab
                         ul.window-list__item__content__ul
                             li.window-list__item__content__ul__li 2-х камерный стеклопакет 32 мм
                             li.window-list__item__content__ul__li Сертифицированный монтаж по ГОСТ
-                        +payment(800)
+                        +payment('800')
                     img.window-list__item__img(src='img/blitz.png' alt='Профиль Rehau Blitz 60 мм')
                     .window-list__item__foot
                         button.btn Рассчитать свой вариант
@@ -45,7 +73,7 @@ include chunks/config-tab
                             li.window-list__item__content__ul__li 2-х камерный стеклопакет 32 мм
                             li.window-list__item__content__ul__li Сертифицированный монтаж по ГОСТ
                                 +tooltip('Монтаж по ГОСТ включает в себя установку рамы, стеклопакетов,отливов,паро - и гидроизоляции,регулировку фурнитуры.')
-                        +payment(880)
+                        +payment('880')
                     img.window-list__item__img(src='img/grazio.png' alt='Профиль Rehau Blitz 60 мм')
                     .window-list__item__foot
                         button.btn Рассчитать свой вариант
@@ -66,7 +94,7 @@ include chunks/config-tab
                         ul.window-list__item__content__ul
                             li.window-list__item__content__ul__li 2-х камерный стеклопакет 32 мм
                             li.window-list__item__content__ul__li Сертифицированный монтаж по ГОСТ
-                        +payment(800)
+                        +payment('1 350')
                     img.window-list__item__img(src='img/blitz.png' alt='Профиль Rehau Blitz 60 мм')
                     .window-list__item__foot
                         button.btn Рассчитать свой вариант
@@ -86,7 +114,7 @@ include chunks/config-tab
                             li.window-list__item__content__ul__li 2-х камерный стеклопакет 32 мм
                             li.window-list__item__content__ul__li Сертифицированный монтаж по ГОСТ
                                 +tooltip('Монтаж по ГОСТ включает в себя установку рамы, стеклопакетов,отливов,паро - и гидроизоляции,регулировку фурнитуры.')
-                        +payment(880)
+                        +payment('1 470')
                     img.window-list__item__img(src='img/grazio.png' alt='Профиль Rehau Blitz 60 мм')
                     .window-list__item__foot
                         button.btn Рассчитать свой вариант

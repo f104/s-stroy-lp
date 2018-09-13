@@ -51,12 +51,15 @@ var app = {
             $(elem).easytabs({
                 tabs: tabsSelector,
                 panelContext: $(elem).hasClass('js-tabs_disconnected') ? $('.js-tabs__content') : $(elem),
-//                updateHash: false,
+                updateHash: false,
                 animate: false,
 //                transitionCollapse: 'fadeOut',
 //                transitionUncollapse: 'fadeIn',
 //                collapsedByDefault: false
             }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
+                $(elem).find('.js-tabs__select__item')
+                        .removeClass('_active')
+                        .filter(`[href="${$clicked.attr('href')}"]`).addClass('_active');
                 $targetPanel.find('.swiper-container').each(function () {
                     var el = $(this)[0];
                     if (el.swiper) {
@@ -64,6 +67,22 @@ var app = {
                     }
                 });
             });
+        });
+        // tabs select
+        $('.js-tabs__select').each(function () {
+            let height = $(this).outerHeight();
+            $(this).css({height: height + 'px'});
+        });
+        $('.js-tabs__select__item').on('click', function () {
+            if ($(this).hasClass('_active')) {
+                $(this).parents('.js-tabs__select').addClass('_active');
+                $('.js-tabs__select__item').removeClass('_active');
+            } else {
+                $(this).parents('.js-tabs__select').removeClass('_active');
+                $(this).addClass('_active');
+                $(this).parents('.js-tabs').easytabs('select', $(this).attr('href'));
+            }
+            return false;
         });
     },
 

@@ -104,3 +104,59 @@
         }
     }
 }
+
+.config-select {
+    $root: &;
+    margin-bottom: 15px;
+    &__list {
+        background-color: $color-bg-gray;
+    }
+    &__item {
+        cursor: pointer;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        &__img {
+            width: 40px;
+            margin-right: 10px;
+            flex-grow: 0;
+        }
+        &__content {
+            font-family: $font-family-alt;
+            font-size: 15px;
+            &__h {
+                display: block;
+                font-weight: 600;
+            }
+            &__muted {
+                font-weight: 500;
+                opacity: .4;
+            }
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &:not(._active) {
+            display: none;
+        }
+    }
+    &._active {
+        #{$root}__list {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+        }
+        #{$root}__item {
+            display: flex;
+            border-bottom: 1px solid $color-border-gray;
+            &:last-child {
+                border-bottom-width: 0;
+            }
+        }
+    }
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
