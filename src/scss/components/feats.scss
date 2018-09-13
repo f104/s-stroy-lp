@@ -1,0 +1,112 @@
+.feats {
+    $root: &;
+    background-color: $color-bg-gray;
+    font-family: $font-family-alt;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 40px;  
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+        font-size: 18px;
+        margin-bottom: 72px;  
+        border-radius: 5px;
+    }
+    #{$root}__inner {
+        margin-top: -1px;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        min-height: 80px;
+        border-top: 1px solid $color-border-gray;
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        @include media-breakpoint-up(md) {
+            min-height: 100px;
+            width: 50%;
+            border-right: 1px solid $color-border-gray;
+            padding: 25px 30px;
+        }
+        @include media-breakpoint-only(md) {
+            &:nth-child(2n) {
+                border-right-width: 0;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            width: 25%;
+            &:last-child {
+                border-right-width: 0;
+            }
+        }
+        &__img {
+            width: 56px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            .svgsprite {
+                font-size: 40px;
+            }
+            @include media-breakpoint-up(md) {
+                .svgsprite {
+                    font-size: 49px;
+                }
+            }
+        }
+    }
+    &._double {
+        font-family: $font-family;
+        font-weight: normal;
+        font-size: 14px;
+        @include media-breakpoint-up(md) {
+            font-size: 17px;
+        }
+        #{$root}__inner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #{$root}__item {
+            min-height: 156px;
+            width: 50%;
+            border-right: 1px solid $color-border-gray;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 15px;
+            &:nth-child(2n) {
+                border-right-width: 0;
+            }
+            @include media-breakpoint-up(md) {
+                min-height: 171px;
+                padding: 20px;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 25%;
+                &:nth-child(2n) {
+                    border-right-width: 1px;
+                }
+                &:nth-child(4n) {
+                    border-right-width: 0;
+                }
+            }
+            &__img {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 20px;
+                }
+            }
+            &__text {
+                @include media-breakpoint-up(md) {
+                    width: 245px;
+                }
+            }
+        }
+    }
+}

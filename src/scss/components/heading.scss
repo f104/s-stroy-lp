@@ -1,0 +1,45 @@
+.heading {
+    $root: &;
+    margin-bottom: 26px;
+    font-family: $font-family-alt;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 55px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 65px;
+    }
+    &__h {
+        color: $color-secondary;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+        @include media-breakpoint-up(md) {
+            font-size: 32px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 37px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 40px;
+        }
+    }
+    &__lead {
+        color: $color-primary;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 12px;
+        @include media-breakpoint-up(md) {
+            font-size: 22px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 25px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-top: 18px;
+            font-size: 28px;
+        }
+    }
+}

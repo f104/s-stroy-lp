@@ -1,0 +1,26 @@
+mixin reviews-item()
+    .reviews-item
+        .reviews-item__head
+            if attributes.avatar
+                .reviews-item__head__col
+                    img.reviews-item__av(src='img/reviews/avatar/' + attributes.avatar + '.png')
+            .reviews-item__head__col
+                h5.reviews-item__h= attributes.title
+                p.reviews-item__muted= attributes.muted
+                p.reviews-item__work= attributes.work
+        .reviews-item__content=attributes.text
+        .reviews-item__foot
+            if attributes.photo
+                span.reviews-item__img
+                    img(src='img/reviews/photo/' + attributes.photo + '.jpg')
+                    a.reviews-item__img__link.dashed.js-popup(href='img/reviews/photo/' + attributes.photo + '.jpg') Открыть фото
+            if attributes.scan
+                span.reviews-item__img
+                    img(src='img/reviews/scan/' + attributes.scan + '.jpg')
+                    a.reviews-item__img__link.dashed.js-popup(href='img/reviews/scan/' + attributes.scan + '.jpg') Читать
+            if attributes.video
+                span.reviews-item__img._video
+                    img(src='img/reviews/video/' + attributes.video + '.jpg')
+                    a.reviews-item__img__link.js-popup(href='//www.youtube.com/watch?v=' + attributes.video)
+                        +svgsprite('play')
+        

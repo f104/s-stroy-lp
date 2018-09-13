@@ -1,0 +1,28 @@
+.cc-logo {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-up(sm) {
+        position: absolute;
+        top: 31px;
+        left: 40px;
+        height: auto;
+    }
+    @include media-breakpoint-up(md) {
+        top: 44px;
+        left: 50px;
+    }
+    @include media-breakpoint-up(xl) {
+        left: 70px;
+    }
+    &_img {
+        width: 122px;
+        @include media-breakpoint-up(sm) {
+            width: 140px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 177px;
+        }
+    }
+}

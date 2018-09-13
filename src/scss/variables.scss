@@ -1,0 +1,46 @@
+/* Main Colors */
+$color-base: #fff;
+$color-primary: #2B4CB9;
+$color-primary-dark: #1D3CA3;
+$color-secondary: #62C14E;
+$color-bg-gray: #F3F3F3;
+$color-bg-gray-hover: #EAEAEA;
+$color-border-gray: #D7D4DC;
+
+$color-bg: $color-base;
+$color-text: #0E0E0E;
+$color-link: inherit;
+$color-link-hover: inherit;
+
+/* Fonts */
+$font-family: "Lato", sans-serif;
+$font-family-alt: "Montserrat", "Lato", sans-serif;
+$font-size: 14px;
+$font-weight: normal;
+$letter-spacing: normal;
+$line-height: normal;
+
+/* Screen sizes */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1280px,
+  xl: 1440px
+);
+
+$container-max-widths: (
+  xs: 100%,
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  /*lg: 1135px,*/
+  xl: 1164px
+);
+$container-paddings: (
+  xs: 20px,
+  sm: 20px,
+  md: 30px,
+  lg: 70px,
+  xl: 0px
+);

@@ -1,0 +1,33 @@
+.payment {
+    display: flex;
+    align-items: stretch;
+    font-family: $font-family-alt;
+    height: 50px;
+    &__accent {
+        font-weight: 700;
+        font-size: 33px;
+        color: $color-base;
+        background-color: $color-secondary;
+        padding: 0 9px;
+        display: flex;
+        align-items: center;
+        border-radius: 3px 0 0 3px;
+    }
+    &__content {
+        line-height: 19px;
+        font-size: 13px;
+        background-color: $color-base;
+        padding: 0 9px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 3px 3px;
+        &__accent {
+            font-weight: 700;
+            line-height: 21px;
+            font-size: 14px;
+            white-space: nowrap;
+            display: block;
+        }
+    }
+}

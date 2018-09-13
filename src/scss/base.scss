@@ -1,0 +1,54 @@
+*, *:after, *:before {
+    position: relative;
+}
+
+.body {
+    margin:0;
+    padding:0;
+
+    background: $color-bg;
+    color: $color-text;
+
+    font-family: $font-family;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+
+    display: flex;
+
+}
+.content {
+    flex-grow: 1;
+}
+
+.container {
+    @include make-container();
+    &._xl {
+        @include media-breakpoint-up(lg) {
+            /*max-width: 1180px;*/
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: 1340px;
+        }
+    }
+}
+
+.color-primary {
+    color: $color-primary;
+}
+
+.dashed {
+    border-bottom: 1px dashed;
+}
+
+a {
+    @include transition(opacity);
+    &:hover {
+        opacity: .8;
+    }
+}
+strong {
+    font-weight: 700;
+}

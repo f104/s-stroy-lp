@@ -1,0 +1,9 @@
+mixin config-tab()
+    a.config-tab(href=attributes.href)
+        .config-tab__head
+            img(src=attributes.img alt=attributes.title)
+        .config-tab__foot
+            span.config-tab__foot__h= attributes.title
+            span.config-tab__foot__muted= attributes.size
+    
+

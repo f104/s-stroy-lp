@@ -1,0 +1,39 @@
+.scrollbar-outer {
+    overflow: hidden;
+}
+.scrollbar-outer.scroll-wrapper {
+    > .scroll-element.scroll-x .scroll-element_outer {
+        height: 11px;
+        top: 0;
+        width: auto;
+        background-color: transparent;
+        @each $breakpoint, $container-padding in $container-paddings {
+            @include media-breakpoint-only($breakpoint, $grid-breakpoints) {
+                right: $container-padding;
+                left: $container-padding;
+            }
+        }
+        .scroll-element_track {
+            background: $color-bg-gray;
+        }
+        .scroll-bar {
+            background: $color-primary;
+            cursor: pointer;
+        }
+    }
+    @each $breakpoint, $container-padding in $container-paddings {
+        @include media-breakpoint-only($breakpoint, $grid-breakpoints) {
+            margin-right: - $container-padding;
+            margin-left: - $container-padding;
+        }
+    }
+    .scroll-content {
+        padding-bottom: 25px;
+        @each $breakpoint, $container-padding in $container-paddings {
+            @include media-breakpoint-only($breakpoint, $grid-breakpoints) {
+                padding-right: $container-padding;
+                padding-left: $container-padding;
+            }
+        }
+    }
+}

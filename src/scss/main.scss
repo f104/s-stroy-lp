@@ -1,0 +1,36 @@
+// Commons
+/*@import 'vendor/swiper.min.css';*/
+@import "variables";
+@import "custom-reset";
+
+// External
+/*@import "ven/src/scss/owl.carousel";*/
+
+// Base
+@import "mixins";
+@import "base";
+/*@import "generated/sprites";*/
+@import "generated/svgsprites";
+@import "fonts";
+
+// Components
+/*@import "././node_modules/swiper/src/swiper";*/
+/*@import 'swiper/dist/css/swiper.css';*/
+/*@import url("../../node_modules/swiper/dist/css/swiper.css");*/
+@import "components/heading";
+@import "components/buttons";
+@import "components/inputs";
+@import "components/tooltip";
+@import "components/config";
+@import "components/window-list";
+@import "components/feats";
+@import "components/payment";
+@import "components/bank";
+@import "components/man";
+@import "components/eco";
+@import "components/eco-badge";
+@import "components/reviews";
+@import "components/work";
+@import "components/footer";
+@import "components/scrollbar";
+@import "components/sliders";

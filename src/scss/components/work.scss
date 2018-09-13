@@ -1,0 +1,183 @@
+.work {
+    margin-bottom: 50px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 100px;
+    }
+    .swiper-container {
+        margin-bottom: 15px;
+    }
+    .swiper-pagination {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}
+.work-slide {
+    background-color: $color-bg;
+    padding-bottom: 30px;
+    @include media-breakpoint-up(md) {
+        height: 495px !important;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 550px !important;
+    }
+    .btn {
+        margin-top: 20px;
+        @include media-breakpoint-up(md) {
+            width: 269px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: 25px;
+        }
+    }
+    &__h {
+        font-family: $font-family-alt;
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            font-size: 25px;
+            margin-bottom: 26px;
+            width: 385px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 27px;
+            margin-bottom: 24px;
+            width: 545px;
+        }
+    }
+    &__text {
+        line-height: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            line-height: 23px;
+            font-size: 15px;
+            margin-bottom: 20px;
+            width: 385px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 25px;
+            width: 545px;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &._final {
+            font-size: 18px;
+            @include media-breakpoint-up(lg) {
+                margin-top: 50px;
+            }
+
+        }
+    }
+    &__img {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        max-height: 100%;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+        @include media-breakpoint-only(md) {
+            &._2 {
+                width: 330px;
+            }
+            &._3 {
+                width: 410px;
+            }
+            &._5 {
+                width: 410px;
+            }
+        }
+    }
+}
+
+.work-nav {
+    $root: &;
+    &__list {
+        font-family: $font-family-alt;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            text-align: left;
+            background-color: $color-bg-gray;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            border-radius: 7px;
+            line-height: 39px;
+            margin-bottom: 27px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+        &__item {
+            white-space: nowrap;
+            cursor: pointer;
+            color: $color-primary;
+            margin-left: auto;
+            margin-right: auto;
+            @include transition(all);
+            &:after {
+                font-family: 'fontello';
+                content: '\e805';
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 1ex;
+            }
+            display: none;
+            &:first-child {
+                border-left-width: 0;
+            }
+            &:last-child {
+                flex-grow: 1;
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+                padding: 0 13px;
+                border-left: 1px solid $color-border-gray;
+                color: rgba($color-text, .5);
+                &:after {
+                    content: none;
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                padding: 0 30px;
+            }
+            &._active {
+                pointer-events: none;
+                color: $color-bg;
+                background-color: $color-primary;
+                border-left-color: $color-primary;
+                @include media-breakpoint-only(sm) {
+                    + #{$root}__list__item {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    &__btn {
+        width: 270px;
+        @include media-breakpoint-up(lg) {
+            width: 215px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @include media-breakpoint-only(sm) {
+            &._next {
+                display: none;
+            }
+        }
+    }
+}

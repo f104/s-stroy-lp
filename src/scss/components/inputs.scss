@@ -1,0 +1,57 @@
+.input {
+    background-color: rgba($color-bg, .3);
+    color: $color-bg;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    line-height: 53px;
+    border-radius: 26.5px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    @include ie10up {
+        height: 53px;
+    }
+    @include transition(all);
+    &:hover {
+        background-color: rgba($color-bg, .5);
+        @include border-inset(1px, $color-primary);
+    }
+    &:focus {
+        @include border-inset(2px, $color-primary);
+    }
+    @include media-breakpoint-up(md) {
+        line-height: 60px;
+        border-radius: 30px;
+        @include ie10up {
+            height: 60px;
+        }
+    }
+}
+
+.input-group {
+    > * {
+        margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        > * {
+            margin-bottom: 0;
+        }
+        width: 510px;
+        .input {
+            width: 300px;
+            padding-right: 85px;
+        }
+        .btn {
+            width: 275px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

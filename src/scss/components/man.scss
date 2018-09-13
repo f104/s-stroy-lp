@@ -1,0 +1,171 @@
+.man {
+    $root: &;
+    &__slide {
+        background-color: $color-bg-gray;
+        background-size: cover;
+        background-position: center;
+        &:after {
+            content: '';
+            background-color: $color-bg;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: .3;
+            @include transition(opacity);
+        }
+        width: 320px;
+        height: 204px;
+        @include media-breakpoint-up(md) {
+            width: 635px;
+            height: 405px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 911px;
+            height: 582px;
+        }
+    }
+    .swiper-slide {
+        width: auto;
+        &-active {
+            #{$root}__slide {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .swiper-wrapper {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+    .swiper-container {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(md) {
+            overflow: visible;
+            margin-bottom: 70px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 53px;
+        }
+    }
+    .swiper-pagination {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+    .swiper-button {
+        &-prev, &-next {
+            background-image: none;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: $color-bg;
+            text-align: center;
+            line-height: 70px;
+            font-size: 24px;
+            @include transition(all);
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $color-bg;
+                    color: $color-primary;
+                }
+            }
+        }
+        &-next {
+            left: auto;
+            right: -35px;
+        }
+    }
+
+    &__sert {
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 48px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__text {
+            font-family: $font-family-alt;
+            line-height: 19px;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+                line-height: 24px;
+                width: 618px;
+                margin-bottom: 36px;
+            }
+            @include media-breakpoint-up(lg) {
+                line-height: 27px;
+                font-size: 20px;
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+        &__view {
+            border: 1px solid $color-primary;
+            border-radius: 4px;
+            padding: 10px 10px 10px 60px;
+            @include media-breakpoint-up(md) {
+                border-width: 2px;
+                padding: 17px 20px 15px 84px;
+                width: 438px;
+                border-radius: 5px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            &__h {
+                display: block;
+                font-weight: 500;
+                line-height: 23px;
+                font-size: 15px;
+                margin-bottom: 10px;
+                color: $color-primary;
+                @include media-breakpoint-up(md) {
+                    line-height: 26px;
+                    font-size: 20px;
+                }
+            }
+            &__muted {
+                line-height: 18px;
+                font-size: 14px;
+                opacity: 0.5;
+                @include media-breakpoint-up(md) {
+                    line-height: 24px;
+                    font-size: 18px;
+                }
+            }
+            .svgsprite {
+                position: absolute;
+                top: 13px;
+                left: 13px;
+                font-size: 38px;
+                @include media-breakpoint-up(md) {
+                    top: 18px;
+                    left: 17px;
+                    font-size: 54px;
+                }
+            }
+        }
+    }
+}

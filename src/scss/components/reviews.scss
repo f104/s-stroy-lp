@@ -1,0 +1,317 @@
+.reviews-item {
+    $root: &;
+    background-color: $color-bg-gray;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+        padding: 26px 30px 30px;
+        border-radius: 10px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 30px 33px 33px;
+        border-radius: 10px;
+    }
+    &__head {
+        margin-bottom: 28px;
+        @include media-breakpoint-up(md) {
+            display: flex;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 33px;
+        }
+        &__col {
+            flex-grow: 0;
+        }
+    }
+    &__foot {
+        margin-top: 25px;
+        @include media-breakpoint-up(lg) {
+            margin-top: 30px;
+        }
+    }
+    &__content {
+        line-height: 20px;
+        font-size: 14px;
+        opacity: 0.8;
+        flex-grow: 1;
+        @include media-breakpoint-up(md) {
+            line-height: 22px;
+            font-size: 15px;
+        }
+        @include media-breakpoint-up(lg) {
+            line-height: 24px;
+            font-size: 17px;
+        }
+    }
+    &__h {
+        font-family: $font-family-alt;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 5px;
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            margin-bottom: 9px;
+        }
+    }
+    &__muted {
+        font-size: 14px;
+        opacity: 0.4;
+        margin-bottom: 7px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 9px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 11px;
+            font-size: 15px;
+        }
+    }
+    &__work {
+        font-size: 14px;
+        color: $color-primary;
+        @include media-breakpoint-up(lg) {
+            font-size: 15px;
+        }
+    }
+    &__av {
+        width: 77px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+    }
+    &__img {
+        display: inline-block;
+        margin-right: 15px;
+        height: 106px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            top: 50%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        @include media-breakpoint-up(md) {
+            margin-right: 19px;
+            height: 143px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-right: 22px;
+            height: 163px;
+        }
+        &__link {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: $color-bg;
+            z-index: 1;
+            font-size: 14px;
+            @include media-breakpoint-up(lg) {
+                font-size: 16px;
+            }
+        }
+        img {
+            height: 100%;
+        }
+        &._video {
+            border-radius: 5px;
+            overflow: hidden;
+            &:after {
+                content: none;
+            }
+            @include media-breakpoint-up(md) {
+                height: 144px;
+            }
+            #{$root}__img__link {
+                bottom: auto;
+                left: 15px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .svgsprite {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+.reviews-list {
+    @include media-breakpoint-up(md) {
+        @include row(23px);
+        flex-wrap: nowrap;
+        &:after {
+            content: '';
+            display: block;
+            width: 18.5px; //30 - 23 / 2;
+            flex-shrink: 0;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        @include row(26px);
+        flex-wrap: nowrap;
+        &:after {
+            width: 57px; //50 - 26 / 2;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        &:after {
+            content: none;
+        }
+    }
+    &__item {
+        flex-shrink: 0;
+        display: flex;
+        @include media-breakpoint-up(md) {
+            @include col(502px, 23px);
+        }
+        @include media-breakpoint-up(lg) {
+            @include col(50%, 26px);
+        }
+    }
+}
+
+.reviews {
+    @include media-breakpoint-only(sm) {
+        .scrollbar-outer {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    margin-bottom: 60px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 80px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 90px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 109px;
+        .scrollbar-outer.scroll-wrapper {
+            margin-left: -13px;
+            margin-right: -13px;
+            .scroll-content {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+            > .scroll-element.scroll-x .scroll-element_outer {
+                left: 13px;
+                right: 13px;
+            }
+        }
+    }
+    .swiper-container-horizontal {
+        padding-bottom: 30px;
+    }
+    .swiper-pagination {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}
+
+.reviews-tabs {
+    $root: &;
+    display: flex;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 24px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 40px;
+    }
+    &__item {
+        width: 50%;
+        &:first-child {
+            #{$root}__link {
+                border-radius: 10px 0 0 10px;
+            }
+        }
+        &:last-child {
+            #{$root}__link {
+                border-radius: 0 10px 10px 0;
+            }
+        }
+        &.active {
+            box-shadow: 0px 0px 30px rgba(43, 76, 185, 0.5);
+            z-index: 1;
+        }
+    }
+    &__link {
+        display: block;
+        background-color: $color-bg-gray;
+        min-height: 55px;
+        height: 100%;
+        @include transition(all);
+        padding: 8px 10px;
+        @include media-breakpoint-up(md) {
+            padding: 15px 17px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 21px 26px;
+        }
+        &.active {
+            @include border-inset(3px, $color-primary);
+        }
+        @include tab-hover;
+        &__h {
+            display: block;
+            font-family: $font-family-alt;
+            font-weight: 600;
+            font-size: 14px;
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+                margin-bottom: 9px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+        }
+        &__text {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+                font-size: 14px;
+                opacity: 0.4;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 16px;
+            }
+        }
+        &__badge {
+            font-family: $font-family-alt;
+            font-weight: 600;
+            font-size: 14px;
+            color: $color-primary;
+            position: absolute;
+            left: 7px;
+            bottom: 8px;
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                left: auto;
+                bottom: auto;
+                top: 15px;
+                right: 17px;
+                font-size: 18px;
+            }
+            @include media-breakpoint-up(lg) {
+                top: 21px;
+                right: 26px;
+                font-size: 20px;
+            }
+        }
+    }
+}

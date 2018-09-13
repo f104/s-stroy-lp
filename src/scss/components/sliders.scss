@@ -1,0 +1,16 @@
+.swiper-container-horizontal {
+    > .swiper-pagination-bullets {
+        bottom: 0;
+        .swiper-pagination-bullet {
+            margin: 0 6px;
+            width: 12px;
+            height: 12px;
+            background: #E4DFED;
+            opacity: 1;
+            @include transition(background);
+            &-active {
+                background: $color-primary;
+            }
+        }
+    }
+}

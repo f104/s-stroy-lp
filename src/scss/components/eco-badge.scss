@@ -1,0 +1,23 @@
+.eco-badge {
+    background-color: $color-bg;
+    border-radius: 4px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    &__img {
+        margin: 0 10px;
+        .svgsprite {
+            font-size: 33px;
+        }
+    }
+    &__text {
+        color: $color-primary;
+        font-size: 15px;
+        line-height: 18px;
+        padding-right: 10px;
+        white-space: nowrap;
+        strong {
+            display: block;
+        }
+    }
+}

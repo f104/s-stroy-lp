@@ -1,0 +1,106 @@
+.config {
+    margin-bottom: 40px;
+    .scrollbar-outer {
+        display: none;
+    }
+    @include media-breakpoint-up(md) {
+        .scrollbar-outer {
+            display: block;
+        }
+        margin-bottom: 90px;
+    }
+    @include media-breakpoint-up(lg) {
+        .scrollbar-outer {
+            overflow: visible;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 100px;
+    }
+}
+.config-tabs {
+    @include media-breakpoint-only(sm) {
+        display: none;
+    }
+    @include media-breakpoint-up(md) {
+        @include row(20px);
+        flex-wrap: nowrap;
+        &:after {
+            content: '';
+            display: block;
+            width: 20px; //30 - 20 / 2;
+            flex-shrink: 0;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        @include row(25px);
+        flex-wrap: nowrap;
+        &:after {
+            content: none;
+        }
+    }
+    &__item {
+        @include media-breakpoint-up(md) {
+            @include col(267px, 20px);
+            flex-shrink: 0;
+            padding-top: 20px; // чтобы тень в скроллбар умещалась
+        }
+        @include media-breakpoint-up(lg) {
+            @include col(25%, 25px);
+            padding-top: 0;
+        }
+    }
+}
+.config-tab {
+    display: block;
+    background: $color-bg-gray;
+    border-radius: 10px;
+    padding: 26px 26px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 225px;
+    @include media-breakpoint-up(lg) {
+        height: 257px;
+    }
+    &__foot {
+        /*flex-grow: 1;*/
+        font-family: $font-family-alt;
+        font-size: 15px;
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 19px;
+        }
+        &__h {
+            display: block;
+            font-weight: 600;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 5px;
+            }
+        }
+        &__muted {
+            font-weight: 500;
+            opacity: 0.4;
+        }
+    }
+    @include tab-hover;
+    @include transition(all);
+    &.active {
+        box-shadow: 
+            inset 3px 0 0 $color-primary, inset 0 3px 0 $color-primary, inset -3px 0 0 $color-primary, inset 0 -3px 0 $color-primary,
+            0px 0px 30px rgba(43, 76, 185, 0.5);
+        @include media-breakpoint-up(lg) {
+            &:after {
+                content: '';
+                position: absolute;
+                top: -30px;
+                left: 0;
+                right: 0;
+                height: 30px;
+                background-color: $color-bg-gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+.eco {
+    color: $color-bg;
+    background-color: gray;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, 0.42) 100%);
+    padding-top: 18px;
+    padding-bottom: 37px;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(md) {
+        padding-top: 25px;
+        padding-bottom: 35px;
+        margin-bottom: 59px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 43px;
+        padding-bottom: 70px;
+        margin-bottom: 74px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 53px;
+        padding-bottom: 80px;
+        margin-bottom: 90px;
+    }
+    &__head {
+        margin-bottom: 29px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 36px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 90px;
+        }
+    }
+    &__row {
+        @include media-breakpoint-up(lg) {
+            @include row(46px);
+        }
+        &__col {
+            margin-bottom: 50px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 62px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+                @include col(50%, 46px);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__h {
+        font-family: $font-family-alt;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 19px;
+        @include media-breakpoint-up(md) {
+            font-size: 33px;
+            margin-bottom: 17px;
+            width: 460px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 38px;
+            margin-bottom: 24px;
+            width: auto;
+        }
+    }
+    &__sub-h {
+        font-family: $font-family-alt;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 22px;
+        @include media-breakpoint-up(md) {
+            font-size: 20px;
+            margin-bottom: 36px;
+        }
+    }
+    &__lead {
+        font-family: $font-family-alt;
+        font-size: 17px;
+        @include media-breakpoint-up(md) {
+            font-size: 20px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 24px;
+        }
+    }
+    &__text {
+        font-size: 15px;
+        margin-bottom: 29px;
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            margin-bottom: 42px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 47px;
+        }
+    }
+    &__list {
+        padding: 15px;
+        border: 1px solid rgba($color-bg, .5);
+        border-radius: 6px;
+        font-size: 15px;
+        @include media-breakpoint-up(md) {
+            padding: 20px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 25px;
+            font-size: 18px;
+        }
+        &__item {
+            margin-bottom: 12px;
+            padding-left: 13px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 16px;
+                padding-left: 20px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 25px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                left: 0px;
+                top: 4px;
+                background-color: $color-bg;
+                @include media-breakpoint-up(md) {
+                    width: 8px;
+                    height: 8px;
+                }
+            } 
+        }
+    }
+    &__form {
+        margin-bottom: 27px;
+    }
+    &__desc {
+        background-color: rgba($color-bg, .2);
+        padding: 70px 20px 20px;
+        line-height: 22px;
+        font-size: 15px;
+        margin-bottom: 20px;
+        .svgsprite {
+            position: absolute;
+            top: 17px;
+            left: 20px;
+            font-size: 37px;
+        }
+        @include media-breakpoint-up(md) {
+            padding: 20px 20px 20px 98px;
+            line-height: 23px;
+            font-size: 16px;
+            border-radius: 7px;
+            width: 577px;
+            margin-bottom: 30px;
+            .svgsprite {
+                top: 17px;
+                left: 20px;
+                font-size: 50px;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 37px;
+            width: auto;
+        }
+    }
+    &__badge-wrapper {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            align-items: center;
+        }
+        .eco-badge {
+            margin-bottom: 21px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+                margin-right: 38px;
+                width: 214px;
+            }
+        }
+    }
+    &__link {
+        font-size: 18px;
+        @include media-breakpoint-up(md) {
+            font-size: 20px;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+        background-position-x: -70%;
+        @include media-breakpoint-up(md) {
+            background-position-x: -160%;
+        }
+        @include media-breakpoint-up(lg) {
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+}
