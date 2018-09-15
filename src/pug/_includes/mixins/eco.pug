@@ -1,7 +1,18 @@
 mixin eco()
-    .eco-badge
-        .eco-badge__img
-            +svgsprite('clim')
-        .eco-badge__text
-            | Эко-инжиниринг
-            strong Бесплатно
+    if (attributes.button)
+        button.eco-badge._btn
+            .eco-badge__img
+                .eco-badge__img__sm
+                    +svgsprite('clim_sm')
+                .eco-badge__img__md
+                    +svgsprite('clim')
+            .eco-badge__text
+                | Эко-инжиниринг
+                strong Бесплатно
+    else
+        .eco-badge
+            .eco-badge__img
+                +svgsprite('clim')
+            .eco-badge__text
+                | Эко-инжиниринг
+                strong Бесплатно

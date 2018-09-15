@@ -29,6 +29,13 @@
             height: 60px;
         }
     }
+    &._for-white {
+        background-color: $color-bg-gray;
+        color: $color-text;
+        &:hover {
+            background-color: $color-bg-gray;
+        }
+    }
 }
 
 .input-group {

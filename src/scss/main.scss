@@ -17,10 +17,12 @@
 /*@import "././node_modules/swiper/src/swiper";*/
 /*@import 'swiper/dist/css/swiper.css';*/
 /*@import url("../../node_modules/swiper/dist/css/swiper.css");*/
+@import "components/header";
 @import "components/heading";
 @import "components/buttons";
 @import "components/inputs";
 @import "components/tooltip";
+@import "components/main";
 @import "components/config";
 @import "components/window-list";
 @import "components/feats";
@@ -34,3 +36,4 @@
 @import "components/footer";
 @import "components/scrollbar";
 @import "components/sliders";
+@import "components/quiz";

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import page from 'page';
 import forms from 'forms';
+import quiz from 'quiz';
 import Swiper from 'swiper';
 var app = {
 
@@ -22,7 +23,11 @@ var app = {
         // Init forms
         this.forms = forms;
         this.forms.init.call(this);
-
+        
+        // Init quiz
+        this.quiz = quiz;
+        this.quiz.init.call(this);
+        
         app.checkMedia();
         app.window.on('resize', app.checkMedia);
         window.jQuery = $;
@@ -37,11 +42,15 @@ var app = {
         });
 
         app.document.on(app.resizeEventName, function () {
-//            console.log(app.resizeEventName)
             app.initManSlider();
             app.initReviewsSlider();
             app.initScrollbar();
         });
+        
+        // Antispam
+        setTimeout(function () {
+            $('input[name="email3"],input[name="email"],input[name="text"]').attr('value', '').val('');
+        }, 5000);
     },
 
     initTabs: function () {

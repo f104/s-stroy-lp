@@ -23,7 +23,7 @@
 }
 
 @mixin tab-hover() {
-    @media (hover: hover) {
+    @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0){
         &:hover {
             opacity: 1;
         }
@@ -32,6 +32,14 @@
                 background: $color-bg-gray-hover;
                 @include border-inset(1px, rgba(43, 76, 185, 0.4));
             }
+        }
+    }
+}
+
+@mixin hover-desktop() {
+    @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0){
+        &:hover {
+            @content
         }
     }
 }

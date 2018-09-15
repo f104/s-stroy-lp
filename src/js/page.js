@@ -29,13 +29,6 @@ const page = {
             FastClick.attach(document.body);
         }
         
-        
-
-        // Antispam
-        setTimeout(function () {
-            $('input[name="email3"],input[name="email"],input[name="text"]').attr('value', '').val('');
-        }, 5000);
-
     },
     
 };

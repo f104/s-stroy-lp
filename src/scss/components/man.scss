@@ -75,11 +75,9 @@
             @include media-breakpoint-down(md) {
                 display: none;
             }
-            @media (hover: hover) {
-                &:hover {
-                    background-color: $color-bg;
-                    color: $color-primary;
-                }
+            &:hover {
+                background-color: $color-bg;
+                color: $color-primary;
             }
         }
         &-next {

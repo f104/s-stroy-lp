@@ -17,19 +17,17 @@
         height: 53px;
     }
     @include transition(all);
-    @media (hover: hover) {
+    &:hover {
+        background-color: $color-bg;
+        color: $color-primary;
+        box-shadow: 0px 10px 30px rgba($color-bg, 0.5);
+    }
+    &._for-white {
         &:hover {
-            background-color: $color-bg;
-            color: $color-primary;
-            box-shadow: 0px 10px 30px rgba($color-bg, 0.5);
-        }
-        &._for-white {
-            &:hover {
-                background-color: $color-primary-dark;
-                color: $color-bg;
-                box-shadow: 0px 10px 30px rgba(43, 76, 185, 0.7);
-            }            
-        }
+            background-color: $color-primary-dark;
+            color: $color-bg;
+            box-shadow: 0px 10px 30px rgba(43, 76, 185, 0.7);
+        }            
     }
     @include media-breakpoint-up(md) {
         font-size: 14px;

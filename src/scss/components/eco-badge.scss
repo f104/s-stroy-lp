@@ -1,5 +1,7 @@
 .eco-badge {
+    $root: &;
     background-color: $color-bg;
+    color: $color-primary;
     border-radius: 4px;
     height: 52px;
     display: flex;
@@ -9,15 +11,53 @@
         .svgsprite {
             font-size: 33px;
         }
+        &__sm {
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+        &__md {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
     }
     &__text {
-        color: $color-primary;
         font-size: 15px;
         line-height: 18px;
         padding-right: 10px;
         white-space: nowrap;
         strong {
             display: block;
+        }
+    }
+    &._btn {
+        @include transition(all);
+        background-color: #E7E1F3;
+        color: $color-primary;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-bg;
+        }
+        @include media-breakpoint-down(sm) {
+            border-radius: 0;
+            width: 44px;
+            height: 44px;
+            #{$root}__text {
+                display: none;
+            }
+            #{$root}__img {
+                width: 100%;
+                text-align: center;
+                .svgsprite {
+                    font-size: 13px;
+                }
+            }
+        }
+        @include media-breakpoint-only(md) {
+            height: 60px;
+            border-radius: 0;
         }
     }
 }
