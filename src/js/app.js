@@ -111,7 +111,11 @@ var app = {
 
     initPopup: function () {
         require("@fancyapps/fancybox");
-        $('.js-popup').fancybox();
+        $('.js-popup').fancybox({
+            autoFocus: false,
+            touch: false,
+            baseClass: 'popup',
+        });
     },
 
     initReviewsSlider: function () {

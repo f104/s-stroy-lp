@@ -18,6 +18,7 @@ const forms = {
         let selector = document.querySelectorAll('.js-mask');
         let im = new Inputmask("+7 (999)-999-9999", {
             clearMaskOnLostFocus: false,
+            removeMaskOnSubmit: true,
             placeholder: '_'
         });
         im.mask(selector);

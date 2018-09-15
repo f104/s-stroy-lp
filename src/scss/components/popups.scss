@@ -1,0 +1,49 @@
+.popup {
+    .fancybox-bg {
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 1;
+    }
+    .fancybox-slide--html {
+        padding: 0;
+    }
+    .fancybox-content {
+        background: transparent;
+        /*margin: 0 0 44px 0;*/
+        padding: 0;
+    }
+    .fancybox-close-small {
+        background: $color-bg;
+        border-radius: 50%;
+        opacity: 1;
+        color: $color-primary;
+        @include transition(all);
+        &:hover {
+            background-color: $color-primary;
+            color: $color-bg;
+        }
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        @include media-breakpoint-up(md) {
+            right: 30px;
+            top: 30px;
+            width: 60px;
+            height: 60px;
+            padding: 13px;
+        }
+        @include media-breakpoint-up(lg) {
+            right: 50px;
+            top: 50px;
+            width: 60px;
+            height: 60px;
+            padding: 13px;
+        }
+    }
+}
+body.fancybox-active {
+    > :not(.fancybox-container) {
+        filter: blur(60px);
+    }
+}

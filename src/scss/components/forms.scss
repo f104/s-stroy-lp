@@ -62,3 +62,14 @@
         }
     }
 }
+
+.form-desc {
+    line-height: 18px;
+    font-size: 14px;
+    opacity: 0.5;
+    margin-top: 28px;
+    @include media-breakpoint-up(md) {
+        line-height: 22px;
+        font-size: 15px;
+    }
+}

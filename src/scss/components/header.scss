@@ -31,10 +31,16 @@
             #{$root}__call { flex-grow: 1; }
         }
         @include media-breakpoint-up(lg) {
+            #{$root}__logo { width: 112px; margin-right: 48px; }
             #{$root}__call { flex-grow: 0; }
         }
         @include media-breakpoint-up(xl) {
-            #{$root}__eco { flex-grow: 1; }
+            #{$root}__eco { 
+                flex-grow: 1; 
+                .eco-badge {
+                    width: 214px;
+                }
+            }
         }
     }
     &__logo {
@@ -42,6 +48,9 @@
             display: none;
             @include media-breakpoint-up(md) {
                 display: block;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 100%;
             }
         }
         &__sm {

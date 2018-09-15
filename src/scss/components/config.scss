@@ -95,11 +95,12 @@
             &:after {
                 content: '';
                 position: absolute;
-                top: -30px;
+                top: -40px;
                 left: 0;
                 right: 0;
-                height: 30px;
+                height: 40px;
                 background-color: $color-bg-gray;
+                z-index: -1;
             }
         }
     }
