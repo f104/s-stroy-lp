@@ -140,14 +140,14 @@
             height: 100%;
         }
         &._video {
-            border-radius: 5px;
-            overflow: hidden;
             &:after {
                 content: none;
             }
-            @include media-breakpoint-up(md) {
+            width: 260px;
+            height: auto;
+/*            @include media-breakpoint-up(md) {
                 height: 144px;
-            }
+            }*/
             #{$root}__img__link {
                 bottom: auto;
                 left: 15px;

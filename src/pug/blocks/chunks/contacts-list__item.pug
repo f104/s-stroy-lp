@@ -17,4 +17,4 @@ mixin contacts-list__item
                     each agent in attributes.agents
                         li.contacts-list__item__agents__item
                             img.contacts-list__item__agents__item__img(src='img/agents/' + agent.photo)
-                            a.dashed(href='#')= agent.name
+                            = agent.name

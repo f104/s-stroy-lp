@@ -21,7 +21,9 @@ mixin reviews-item()
                     span.reviews-item__img__link Читать
             if attributes.video
                 span.reviews-item__img._video
-                    img(src='img/reviews/video/' + attributes.video + '.jpg')
-                    a.reviews-item__img__link.js-popup(href='//www.youtube.com/watch?v=' + attributes.video)
-                        +svgsprite('play')
-        
+                    .reviews-video__player.embed-responsive.embed-responsive-16by9
+                        iframe.embed-responsive-item(
+                            src='https://www.youtube.com/embed/' + attributes.video + '?rel=0&amp;controls=0&amp;showinfo=0'
+                            allow="encrypted-media" 
+                            allowfullscreen
+                            )
