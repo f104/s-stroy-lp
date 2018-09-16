@@ -18,6 +18,7 @@
         @include transition(background-color);
         &:hover {
             background-color: $color-secondary-hover;
+            opacity: 1;
         }
         &__h {
             font-family: $font-family-alt;

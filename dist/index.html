@@ -30,7 +30,7 @@
                     </div>
                     <div class="eco-badge__text">Эко-инжиниринг<strong>Бесплатно</strong></div></a>
             </div>
-            <div class="header__phone">+7 (831) 420-61-23 </div><a class="header__call" href="#">
+            <div class="header__phone">+7 (831) 420-61-23 </div><a class="header__call js-popup" href="#call">
                   <svg class="svgsprite _phone">
                     <use xlink:href="assets/img/sprites/svgsprites.svg#phone"></use>
                   </svg><span class="header__call__text dashed">Заказать обратный звонок</span></a>
@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="main__form"><a class="btn _for-white js-popup" href="#calc">Рассчитать свой вариант</a></div>
-          <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br>5 дней</div>
+          <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br>14 дней</div>
           <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
         </div>
       </div>
@@ -65,32 +65,25 @@
           <div class="stock__h">Топ-предложения месяца</div>
           <div class="stock-list sm-full md-full">
             <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="stock-list__item swiper-slide js-stock__hover">
+              <div class="swiper-wrapper"><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
                   <div class="stock-list__item__h">Дарим 2000 рублей на окна Rehau</div>
-                  <div class="stock-list__item__text">Доступно еще 10 дней</div>
+                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
                   <div class="stock-list__item _popup js-stock__hover__content">
                     <div class="stock-list__item__h">Купон на скидку 2000 руб. на ваш заказ</div>
                     <div class="stock-list__item__text">Нажмите, чтобы воспользоваться скидкой (акция распростроняется на заказ стоимостью от 25 000 руб.)</div>
-                  </div>
-                </div>
-                <div class="stock-list__item swiper-slide js-stock__hover">
+                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
                   <div class="stock-list__item__h">Ламинированные подоконники Danke</div>
-                  <div class="stock-list__item__text">Доступно еще 12 дней</div>
+                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
                   <div class="stock-list__item _popup js-stock__hover__content">
                     <div class="stock-list__item__h">Ламинированные подоконники премиум-класса по цене обычных</div>
                     <div class="stock-list__item__text">При покупке окон из профиля ПВХ Intelio 80</div>
-                  </div>
-                </div>
-                <div class="stock-list__item swiper-slide js-stock__hover">
+                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
                   <div class="stock-list__item__h">Дарим фотосессию при покупке окна</div>
-                  <div class="stock-list__item__text">Доступно еще 15 дней</div>
+                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
                   <div class="stock-list__item _popup js-stock__hover__content">
-                    <div class="stock-list__item__h">Нажмите, чтобы оформить заказ и получить фотосессию в подарок!</div>
+                    <div class="stock-list__item__h">Профессиональная фотосесия + фотомакияж + укладка</div>
                     <div class="stock-list__item__text">Нажмите, чтобы оформить заказ и получить фотосессию в подарок!</div>
-                  </div>
-                </div>
-              </div>
+                  </div></a></div>
             </div>
             <div class="swiper-button-prev"><i class="icon-prev"></i>
             </div>
@@ -488,6 +481,8 @@
                               <button class="btn _for-white">Оставить заявку</button>
                               <input class="js-quiz__discount-input" name="discount" hidden>
                               <input class="js-quiz__results-input" name="results" hidden>
+                              <input name="form_id" value="5" hidden>
+                              <input name="form_name" value="Quiz" hidden>
                               <input name="email" value="user@host.com" hidden>
                               <input name="text" value="info" hidden>
                               <input name="email3" value="info@example.com" hidden>
@@ -740,8 +735,7 @@
           <div class="swiper-wrapper">
             <div class="work-slide swiper-slide">
               <h3 class="work-slide__h">Бесплатный замер</h3>
-              <p class="work-slide__text">Специалист бесплатно снимет размеры, проведет анализ проема с внутренней и внешней стороны, расскажет о действующих акциях, рассрочке, рассчитает стоимость изделия и оформит договор на месте с дополнительной скидкой 5%. Можно оплатить всю сумму сразу или оформить рассрочку. При самовывозе и оптовом заказе предоставляются дополнительные скидки.</p>
-              <button class="btn _for-white">Вызвать замерщика</button><img class="work-slide__img _1" src="img/work/1.svg" alt="Бесплатный замер">
+              <p class="work-slide__text">Специалист бесплатно снимет размеры, проведет анализ проема с внутренней и внешней стороны, расскажет о действующих акциях, рассрочке, рассчитает стоимость изделия и оформит договор на месте с дополнительной скидкой 5%. Можно оплатить всю сумму сразу или оформить рассрочку. При самовывозе и оптовом заказе предоставляются дополнительные скидки.</p><a class="btn _for-white js-popup" href="#call">Вызвать замерщика</a><img class="work-slide__img _1" src="img/work/1.svg" alt="Бесплатный замер">
             </div>
             <div class="work-slide swiper-slide">
               <h3 class="work-slide__h">Изготовление окна</h3>
@@ -802,6 +796,8 @@
                   <input name="email" value="user@host.com" hidden>
                   <input name="text" value="info" hidden>
                   <input name="email3" value="info@example.com" hidden>
+                  <input name="form_id" value="1" hidden>
+                  <input name="form_name" value="Вызов специалиста на эко-инжиниринг (inline)" hidden>
                   <input class="input js-mask" name="phone" required autocomplete="off">
                   <button class="btn">Оставить заявку</button>
                 </div>
@@ -1182,6 +1178,8 @@
                       <input name="email" value="user@host.com" hidden>
                       <input name="text" value="info" hidden>
                       <input name="email3" value="info@example.com" hidden>
+                      <input name="form_id" value="1" hidden>
+                      <input name="form_name" value="Вызов специалиста на эко-инжиниринг (popup)" hidden>
                       <input class="input js-mask" required>
                       <button class="btn">Оставить заявку</button>
                     </div>
@@ -1227,6 +1225,26 @@
                 <input name="email" value="user@host.com" hidden>
                 <input name="text" value="info" hidden>
                 <input name="email3" value="info@example.com" hidden>
+                <input name="form_id" value="4" hidden>
+                <input name="form_name" value="Рассчитать свой вариант" hidden>
+                <input class="input js-mask" required>
+                <button class="btn">Оставить заявку</button>
+              </div>
+              <div class="form-desc">Оставьте ваш номер телефона и мы перезвоним вам, а также согласуем бесплатный выезд специалиста в удобное для вас время.</div>
+            </form>
+          </div>
+        </div>
+        <div id="call">
+          <div class="calc">
+            <h3 class="calc__h">Заказать обратный звонок</h3>
+            <div class="calc__lead">Оставьте ваш номер и наш специалист с вами свяжется, поможет с выбором и произведет оперативный расчет необходимой конфигурации окон.</div>
+            <form class="calc__form">
+              <div class="input-group">
+                <input name="email" value="user@host.com" hidden>
+                <input name="text" value="info" hidden>
+                <input name="email3" value="info@example.com" hidden>
+                <input name="form_id" value="3" hidden>
+                <input name="form_name" value="Заказать обратный звонок" hidden>
                 <input class="input js-mask" required>
                 <button class="btn">Оставить заявку</button>
               </div>
@@ -1249,7 +1267,7 @@
                       <input name="email" value="user@host.com" hidden>
                       <input name="text" value="info" hidden>
                       <input name="email3" value="info@example.com" hidden>
-                      <input name="form_id" hidden>
+                      <input name="form_id" value="2" hidden>
                       <input name="form_name" value="Выгодная рассрочка от САКСЭС" hidden>
                       <input class="input js-mask" required>
                       <button class="btn">Оставить заявку</button>

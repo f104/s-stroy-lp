@@ -14,6 +14,11 @@ var app = {
     },
     media: 320,
     resizeEventName: 'app_resize',
+    fancyOptions: {
+        autoFocus: false,
+        touch: false,
+        baseClass: 'popup',
+    },
 
     init: function () {
 
@@ -119,11 +124,7 @@ var app = {
 
     initPopup: function () {
         require("@fancyapps/fancybox");
-        $('.js-popup').fancybox({
-            autoFocus: false,
-            touch: false,
-            baseClass: 'popup',
-        });
+        $('.js-popup').fancybox(this.fancyOptions);
     },
 
     initReviewsSlider: function () {
@@ -155,6 +156,7 @@ var app = {
         new Swiper(selector, {
             slidesPerView: 3,
             breakpointsInverse: true,
+            watchOverflow: true,
             breakpoints: {
                 1279: {
                     slidesPerView: 2
@@ -186,7 +188,7 @@ var app = {
             simulateTouch: false,
             autoHeight: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.work .swiper-pagination',
                 type: 'bullets',
                 clickable: true
             },
@@ -209,7 +211,7 @@ var app = {
             if (!slider.isEnd) {
                 slider.slideNext();
             } else {
-                $.fancybox.open($('#order'));
+                $.fancybox.open($('#calc'), app.fancyOptions);
             }
         });
         let slideTo = function (index) {
@@ -265,7 +267,7 @@ var app = {
                 }
                 let $this = $(this), timeout;
                 $(this).hover(function () {
-                    timeout = setTimeout(function(){
+                    timeout = setTimeout(function () {
                         if ($this.hasClass('_hovered')) {
                             return;
                         }

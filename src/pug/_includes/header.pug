@@ -8,7 +8,7 @@ mixin header(options)
             .header__eco
                 +eco(button=true)
             .header__phone +7 (831) 420-61-23 
-            a.header__call(href='#')
+            a.header__call.js-popup(href='#call')
                 +svgsprite('phone')
                 span.header__call__text.dashed Заказать обратный звонок
             .header__dog(hidden) 
