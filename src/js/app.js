@@ -22,6 +22,7 @@ var app = {
 
     init: function () {
 
+        
         // Init page
         this.page = page;
         this.page.init.call(this);

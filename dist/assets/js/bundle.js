@@ -12216,7 +12216,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom7_dist_dom7_modular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom7_dist_dom7_modular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ssr_window__ = __webpack_require__(6);
 /**
  * Swiper 4.3.5
@@ -19079,16 +19079,16 @@ var win = (typeof window === 'undefined') ? {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _page=__webpack_require__(8);var _page2=_interopRequireDefault(_page);var _forms=__webpack_require__(13);var _forms2=_interopRequireDefault(_forms);var _quiz=__webpack_require__(19);var _quiz2=_interopRequireDefault(_quiz);var _contacts=__webpack_require__(24);var _contacts2=_interopRequireDefault(_contacts);var _swiper=__webpack_require__(3);var _swiper2=_interopRequireDefault(_swiper);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var app={breakpoints:{sm:320,md:768,lg:1280,xl:1440},media:320,resizeEventName:'app_resize',fancyOptions:{autoFocus:false,touch:false,baseClass:'popup'},init:function init(){// Init page
+var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _page=__webpack_require__(8);var _page2=_interopRequireDefault(_page);var _forms=__webpack_require__(13);var _forms2=_interopRequireDefault(_forms);var _quiz=__webpack_require__(20);var _quiz2=_interopRequireDefault(_quiz);var _contacts=__webpack_require__(25);var _contacts2=_interopRequireDefault(_contacts);var _swiper=__webpack_require__(3);var _swiper2=_interopRequireDefault(_swiper);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var app={breakpoints:{sm:320,md:768,lg:1280,xl:1440},media:320,resizeEventName:'app_resize',fancyOptions:{autoFocus:false,touch:false,baseClass:'popup'},init:function init(){// Init page
 this.page=_page2.default;this.page.init.call(this);// Init forms
 this.forms=_forms2.default;this.forms.init.call(this);// Init quiz
 this.quiz=_quiz2.default;this.quiz.init.call(this);// Init contacts
 this.contacts=_contacts2.default;this.contacts.init.call(this);app.checkMedia();app.window.on('resize',app.checkMedia);window.jQuery=_jquery2.default;app.document.ready(function(){app.initReviewsSlider();app.initStockSlider();app.initManSlider();app.initWorkSlider();app.initPopup();app.initScrollbar();app.initTabs();app.initStock();});app.document.on(app.resizeEventName,function(){app.initManSlider();app.initReviewsSlider();app.initScrollbar();app.initStock();});// Antispam
-setTimeout(function(){(0,_jquery2.default)('input[name="email3"],input[name="email"],input[name="text"]').attr('value','').val('');},5000);},initTabs:function initTabs(){__webpack_require__(25);(0,_jquery2.default)('.js-tabs').each(function(index,elem){var tabsSelector=typeof(0,_jquery2.default)(elem).data('tabs')==='undefined'?'.js-tabs__list > li':(0,_jquery2.default)(elem).data('tabs');(0,_jquery2.default)(elem).easytabs({tabs:tabsSelector,panelContext:(0,_jquery2.default)(elem).hasClass('js-tabs_disconnected')?(0,_jquery2.default)('.js-tabs__content'):(0,_jquery2.default)(elem),updateHash:false,animate:false//                transitionCollapse: 'fadeOut',
+setTimeout(function(){(0,_jquery2.default)('input[name="email3"],input[name="email"],input[name="text"]').attr('value','').val('');},5000);},initTabs:function initTabs(){__webpack_require__(26);(0,_jquery2.default)('.js-tabs').each(function(index,elem){var tabsSelector=typeof(0,_jquery2.default)(elem).data('tabs')==='undefined'?'.js-tabs__list > li':(0,_jquery2.default)(elem).data('tabs');(0,_jquery2.default)(elem).easytabs({tabs:tabsSelector,panelContext:(0,_jquery2.default)(elem).hasClass('js-tabs_disconnected')?(0,_jquery2.default)('.js-tabs__content'):(0,_jquery2.default)(elem),updateHash:false,animate:false//                transitionCollapse: 'fadeOut',
 //                transitionUncollapse: 'fadeIn',
 //                collapsedByDefault: false
 }).bind('easytabs:after',function(event,$clicked,$targetPanel,settings){(0,_jquery2.default)(elem).find('.js-tabs__select__item').removeClass('_active').filter('[href="'+$clicked.attr('href')+'"]').addClass('_active');$targetPanel.find('.swiper-container').each(function(){var el=(0,_jquery2.default)(this)[0];if(el.swiper){el.swiper.update();}});});});// tabs select
-(0,_jquery2.default)('.js-tabs__select').each(function(){var height=(0,_jquery2.default)(this).outerHeight();(0,_jquery2.default)(this).css({height:height+'px'});});(0,_jquery2.default)('.js-tabs__select__item').on('click',function(){if((0,_jquery2.default)(this).hasClass('_active')){(0,_jquery2.default)(this).parents('.js-tabs__select').addClass('_active');(0,_jquery2.default)('.js-tabs__select__item').removeClass('_active');}else{(0,_jquery2.default)(this).parents('.js-tabs__select').removeClass('_active');(0,_jquery2.default)(this).addClass('_active');(0,_jquery2.default)(this).parents('.js-tabs').easytabs('select',(0,_jquery2.default)(this).attr('href'));}return false;});},initScrollbar:function initScrollbar(){__webpack_require__(26);if(app.media>=app.breakpoints.md){(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar('destroy');}if(app.media>=app.breakpoints.md&&app.media<app.breakpoints.lg){(0,_jquery2.default)('.js-scrollbar-md').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md').scrollbar('destroy');}},initPopup:function initPopup(){__webpack_require__(27);(0,_jquery2.default)('.js-popup').fancybox(this.fancyOptions);},initReviewsSlider:function initReviewsSlider(){var selector='.reviews .swiper-container';if(app.media==app.breakpoints.sm){new _swiper2.default(selector,{spaceBetween:10,slidesPerView:1,pagination:{el:'.reviews .swiper-container + .swiper-pagination',type:'bullets',clickable:true}});}else{//            console.log(1)
+(0,_jquery2.default)('.js-tabs__select').each(function(){var height=(0,_jquery2.default)(this).outerHeight();(0,_jquery2.default)(this).css({height:height+'px'});});(0,_jquery2.default)('.js-tabs__select__item').on('click',function(){if((0,_jquery2.default)(this).hasClass('_active')){(0,_jquery2.default)(this).parents('.js-tabs__select').addClass('_active');(0,_jquery2.default)('.js-tabs__select__item').removeClass('_active');}else{(0,_jquery2.default)(this).parents('.js-tabs__select').removeClass('_active');(0,_jquery2.default)(this).addClass('_active');(0,_jquery2.default)(this).parents('.js-tabs').easytabs('select',(0,_jquery2.default)(this).attr('href'));}return false;});},initScrollbar:function initScrollbar(){__webpack_require__(27);if(app.media>=app.breakpoints.md){(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar('destroy');}if(app.media>=app.breakpoints.md&&app.media<app.breakpoints.lg){(0,_jquery2.default)('.js-scrollbar-md').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md').scrollbar('destroy');}},initPopup:function initPopup(){__webpack_require__(28);(0,_jquery2.default)('.js-popup').fancybox(this.fancyOptions);},initReviewsSlider:function initReviewsSlider(){var selector='.reviews .swiper-container';if(app.media==app.breakpoints.sm){new _swiper2.default(selector,{spaceBetween:10,slidesPerView:1,pagination:{el:'.reviews .swiper-container + .swiper-pagination',type:'bullets',clickable:true}});}else{//            console.log(1)
 var els=document.querySelectorAll(selector);els.forEach(function(el){if(el.swiper){el.swiper.destroy();}});}},initStockSlider:function initStockSlider(){var selector='.stock .swiper-container';new _swiper2.default(selector,{slidesPerView:3,breakpointsInverse:true,watchOverflow:true,breakpoints:{1279:{slidesPerView:2},767:{spaceBetween:10,slidesPerView:1}},pagination:{el:'.stock .swiper-pagination',type:'bullets',clickable:true},navigation:{nextEl:'.stock .swiper-button-next',prevEl:'.stock .swiper-button-prev'}});},initWorkSlider:function initWorkSlider(){var $nav=(0,_jquery2.default)('.js-work-nav__item');var $btn=(0,_jquery2.default)('.js-work-nav__btn');var slider=new _swiper2.default('.work .swiper-container',{slidesPerView:1,effect:'fade',simulateTouch:false,autoHeight:true,pagination:{el:'.work .swiper-pagination',type:'bullets',clickable:true}});slider.on('slideChange',function(){//            console.log(this.realIndex);
 $nav.removeClass('_active');$nav.eq(this.realIndex).addClass('_active');if(this.isEnd){$btn.removeClass('_next').text($btn.data('order'));}else if(!$btn.hasClass('_next')){$btn.addClass('_next').text($btn.data('next'));}});$nav.on('click',function(){//            console.log($(this).index());
 slider.slideTo((0,_jquery2.default)(this).index());});$btn.on('click',function(){if(!slider.isEnd){slider.slideNext();}else{_jquery2.default.fancybox.open((0,_jquery2.default)('#calc'),app.fancyOptions);}});var slideTo=function slideTo(index){slider.slideTo(index);};},initManSlider:function initManSlider(){var stretch=535;if(app.media>=app.breakpoints.lg){stretch=725;}if(app.media>=app.breakpoints.xl){stretch=745;}var selector='.man .swiper-container';var el=document.querySelector(selector);if(el.swiper){el.swiper.destroy();}var slider=new _swiper2.default(selector,{effect:app.media>=app.breakpoints.md?'coverflow':'slide',slidesPerView:'auto',normalizeSlideIndex:false,//            centeredSlides: false,
@@ -20918,7 +20918,7 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _inputmask=__webpack_require__(14);var _inputmask2=_interopRequireDefault(_inputmask);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var forms={init:function init(){var app=this;app.document.ready(function(){app.forms.initMask();});},initMask:function initMask(){//        $('.js-mask').inputmask("99-9999999");
+Object.defineProperty(exports,"__esModule",{value:true});var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _inputmask=__webpack_require__(14);var _inputmask2=_interopRequireDefault(_inputmask);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var forms={url:'backend/sendmail.php',init:function init(){var app=this;app.document.ready(function(){app.forms.initMask();__webpack_require__(19);(0,_jquery2.default)('form').submit(function(e){var $form=(0,_jquery2.default)(this);var data=$form.serialize();_jquery2.default.ajax({type:'post',url:forms.url,dataType:'json',data:data,beforeSend:function beforeSend(){$form.find('input, select, button').addClass('_disabled');},success:function success(data){if(data['success']){forms.showMessage();_jquery2.default.fancybox.close();}else if(data['msg']){console.log(data['msg']);}if(data['msg']){_jquery2.default.jGrowl(data['msg'],{life:3000,theme:data['success']?'message-success':'message-error'});}},complete:function complete(){$form.find('input, select, button').removeClass('_disabled');}});return false;});});},showMessage:function showMessage(){(0,_jquery2.default)('.js-success_hide').fadeOut(function(){(0,_jquery2.default)('.js-content').addClass('_success');(0,_jquery2.default)('.js-success_show').fadeIn();});},initMask:function initMask(){//        $('.js-mask').inputmask("99-9999999");
 //        $('.js-mask').inputmask("99-9999999");
 //        Inputmask().mask(document.querySelectorAll("input"));
 var selector=document.querySelectorAll('.js-mask');var im=new _inputmask2.default("+7 (999)-999-9999",{clearMaskOnLostFocus:false,removeMaskOnSubmit:true,placeholder:'_'});im.mask(selector);}};exports.default=forms;
@@ -21640,10 +21640,415 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+/**
+ * jGrowl 1.4.5
+ *
+ * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
+ * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
+ *
+ * Written by Stan Lemon <stosh1985@gmail.com>
+ * Last updated: 2015.02.01
+ *
+ * jGrowl is a jQuery plugin implementing unobtrusive userland notifications.  These
+ * notifications function similarly to the Growl Framework available for
+ * Mac OS X (http://growl.info).
+ *
+ * To Do:
+ * - Move library settings to containers and allow them to be changed per container
+ *
+ * Changes in 1.4.5
+ * - Fixed arguement list for click callback, thanks @timotheeg
+ *
+ * Changes in 1.4.4
+ * - Revert word-break changes, thanks @curtisgibby
+ *
+ * Changes in 1.4.3
+ * - Fixed opactiy in LESS for older version of IE
+ *
+ * Changes in 1.4.2
+ * - Added word-break to less/css
+ *
+ * Changes in 1.4.1
+ * - Added appendTo option
+ * - jQuery compatibility updates
+ * - Add check for closing a notification before it opens
+ *
+ * Changes in 1.4.0
+ * - Removed IE6 support
+ * - Added LESS support
+ *
+ * Changes in 1.3.0
+ * - Added non-vendor border-radius to stylesheet
+ * - Added grunt for generating minified js and css
+ * - Added npm package info
+ * - Added bower package info
+ * - Updates for jshint
+ *
+ * Changes in 1.2.13
+ * - Fixed clearing interval when the container shuts down
+ *
+ * Changes in 1.2.12
+ * - Added compressed versions using UglifyJS and Sqwish
+ * - Improved README with configuration options explanation
+ * - Added a source map
+ *
+ * Changes in 1.2.11
+ * - Fix artifacts left behind by the shutdown method and text-cleanup
+ *
+ * Changes in 1.2.10
+ * - Fix beforeClose to be called in click event
+ *
+ * Changes in 1.2.9
+ * - Fixed BC break in jQuery 2.0 beta
+ *
+ * Changes in 1.2.8
+ * - Fixes for jQuery 1.9 and the MSIE6 check, note that with jQuery 2.0 support
+ *   jGrowl intends to drop support for IE6 altogether
+ *
+ * Changes in 1.2.6
+ * - Fixed js error when a notification is opening and closing at the same time
+ *
+ * Changes in 1.2.5
+ * - Changed wrapper jGrowl's options usage to "o" instead of $.jGrowl.defaults
+ * - Added themeState option to control 'highlight' or 'error' for jQuery UI
+ * - Ammended some CSS to provide default positioning for nested usage.
+ * - Changed some CSS to be prefixed with jGrowl- to prevent namespacing issues
+ * - Added two new options - openDuration and closeDuration to allow
+ *   better control of notification open and close speeds, respectively
+ *   Patch contributed by Jesse Vincet.
+ * - Added afterOpen callback.  Patch contributed by Russel Branca.
+ *
+ * Changes in 1.2.4
+ * - Fixed IE bug with the close-all button
+ * - Fixed IE bug with the filter CSS attribute (special thanks to gotwic)
+ * - Update IE opacity CSS
+ * - Changed font sizes to use "em", and only set the base style
+ *
+ * Changes in 1.2.3
+ * - The callbacks no longer use the container as context, instead they use the actual notification
+ * - The callbacks now receive the container as a parameter after the options parameter
+ * - beforeOpen and beforeClose now check the return value, if it's false - the notification does
+ *   not continue.  The open callback will also halt execution if it returns false.
+ * - Fixed bug where containers would get confused
+ * - Expanded the pause functionality to pause an entire container.
+ *
+ * Changes in 1.2.2
+ * - Notification can now be theme rolled for jQuery UI, special thanks to Jeff Chan!
+ *
+ * Changes in 1.2.1
+ * - Fixed instance where the interval would fire the close method multiple times.
+ * - Added CSS to hide from print media
+ * - Fixed issue with closer button when div { position: relative } is set
+ * - Fixed leaking issue with multiple containers.  Special thanks to Matthew Hanlon!
+ *
+ * Changes in 1.2.0
+ * - Added message pooling to limit the number of messages appearing at a given time.
+ * - Closing a notification is now bound to the notification object and triggered by the close button.
+ *
+ * Changes in 1.1.2
+ * - Added iPhone styled example
+ * - Fixed possible IE7 bug when determining if the ie6 class shoudl be applied.
+ * - Added template for the close button, so that it's content could be customized.
+ *
+ * Changes in 1.1.1
+ * - Fixed CSS styling bug for ie6 caused by a mispelling
+ * - Changes height restriction on default notifications to min-height
+ * - Added skinned examples using a variety of images
+ * - Added the ability to customize the content of the [close all] box
+ * - Added jTweet, an example of using jGrowl + Twitter
+ *
+ * Changes in 1.1.0
+ * - Multiple container and instances.
+ * - Standard $.jGrowl() now wraps $.fn.jGrowl() by first establishing a generic jGrowl container.
+ * - Instance methods of a jGrowl container can be called by $.fn.jGrowl(methodName)
+ * - Added glue preferenced, which allows notifications to be inserted before or after nodes in the container
+ * - Added new log callback which is called before anything is done for the notification
+ * - Corner's attribute are now applied on an individual notification basis.
+ *
+ * Changes in 1.0.4
+ * - Various CSS fixes so that jGrowl renders correctly in IE6.
+ *
+ * Changes in 1.0.3
+ * - Fixed bug with options persisting across notifications
+ * - Fixed theme application bug
+ * - Simplified some selectors and manipulations.
+ * - Added beforeOpen and beforeClose callbacks
+ * - Reorganized some lines of code to be more readable
+ * - Removed unnecessary this.defaults context
+ * - If corners plugin is present, it's now customizable.
+ * - Customizable open animation.
+ * - Customizable close animation.
+ * - Customizable animation easing.
+ * - Added customizable positioning (top-left, top-right, bottom-left, bottom-right, center)
+ *
+ * Changes in 1.0.2
+ * - All CSS styling is now external.
+ * - Added a theme parameter which specifies a secondary class for styling, such
+ *   that notifications can be customized in appearance on a per message basis.
+ * - Notification life span is now customizable on a per message basis.
+ * - Added the ability to disable the global closer, enabled by default.
+ * - Added callbacks for when a notification is opened or closed.
+ * - Added callback for the global closer.
+ * - Customizable animation speed.
+ * - jGrowl now set itself up and tears itself down.
+ *
+ * Changes in 1.0.1:
+ * - Removed dependency on metadata plugin in favor of .data()
+ * - Namespaced all events
+ */
+(function($) {
+	/** jGrowl Wrapper - Establish a base jGrowl Container for compatibility with older releases. **/
+	$.jGrowl = function( m , o ) {
+		// To maintain compatibility with older version that only supported one instance we'll create the base container.
+		if ( $('#jGrowl').length === 0 )
+			$('<div id="jGrowl"></div>').addClass( (o && o.position) ? o.position : $.jGrowl.defaults.position ).appendTo( (o && o.appendTo) ? o.appendTo : $.jGrowl.defaults.appendTo );
+
+		// Create a notification on the container.
+		$('#jGrowl').jGrowl(m,o);
+	};
+
+
+	/** Raise jGrowl Notification on a jGrowl Container **/
+	$.fn.jGrowl = function( m , o ) {
+		// Short hand for passing in just an object to this method
+		if ( o === undefined && $.isPlainObject(m) ) {
+			o = m;
+			m = o.message;
+		}
+
+		if ( $.isFunction(this.each) ) {
+			var args = arguments;
+
+			return this.each(function() {
+				/** Create a jGrowl Instance on the Container if it does not exist **/
+				if ( $(this).data('jGrowl.instance') === undefined ) {
+					$(this).data('jGrowl.instance', $.extend( new $.fn.jGrowl(), { notifications: [], element: null, interval: null } ));
+					$(this).data('jGrowl.instance').startup( this );
+				}
+
+				/** Optionally call jGrowl instance methods, or just raise a normal notification **/
+				if ( $.isFunction($(this).data('jGrowl.instance')[m]) ) {
+					$(this).data('jGrowl.instance')[m].apply( $(this).data('jGrowl.instance') , $.makeArray(args).slice(1) );
+				} else {
+					$(this).data('jGrowl.instance').create( m , o );
+				}
+			});
+		}
+	};
+
+	$.extend( $.fn.jGrowl.prototype , {
+
+		/** Default JGrowl Settings **/
+		defaults: {
+			pool:				0,
+			header:				'',
+			group:				'',
+			sticky:				false,
+			position:			'top-right',
+			appendTo:			'body',
+			glue:				'after',
+			theme:				'default',
+			themeState:			'highlight',
+			corners:			'10px',
+			check:				250,
+			life:				3000,
+			closeDuration:		'normal',
+			openDuration:		'normal',
+			easing:				'swing',
+			closer:				true,
+			closeTemplate:		'&times;',
+			closerTemplate:		'<div>[ close all ]</div>',
+			log:				function() {},
+			beforeOpen:			function() {},
+			afterOpen:			function() {},
+			open:				function() {},
+			beforeClose:		function() {},
+			close:				function() {},
+			click:				function() {},
+			animateOpen:		{
+				opacity:		'show'
+			},
+			animateClose:		{
+				opacity:		'hide'
+			}
+		},
+
+		notifications: [],
+
+		/** jGrowl Container Node **/
+		element:				null,
+
+		/** Interval Function **/
+		interval:				null,
+
+		/** Create a Notification **/
+		create: function( message , options ) {
+			var o = $.extend({}, this.defaults, options);
+
+			/* To keep backward compatibility with 1.24 and earlier, honor 'speed' if the user has set it */
+			if (typeof o.speed !== 'undefined') {
+				o.openDuration = o.speed;
+				o.closeDuration = o.speed;
+			}
+
+			this.notifications.push({ message: message , options: o });
+
+			o.log.apply( this.element , [this.element,message,o] );
+		},
+
+		render: function( n ) {
+			var self = this;
+			var message = n.message;
+			var o = n.options;
+
+			// Support for jQuery theme-states, if this is not used it displays a widget header
+			o.themeState = (o.themeState === '') ? '' : 'ui-state-' + o.themeState;
+
+			var notification = $('<div/>')
+				.addClass('jGrowl-notification alert ' + o.themeState + ' ui-corner-all' + ((o.group !== undefined && o.group !== '') ? ' ' + o.group : ''))
+				.append($('<button/>').addClass('jGrowl-close').html(o.closeTemplate))
+				.append($('<div/>').addClass('jGrowl-header').html(o.header))
+				.append($('<div/>').addClass('jGrowl-message').html(message))
+				.data("jGrowl", o).addClass(o.theme).children('.jGrowl-close').bind("click.jGrowl", function() {
+					$(this).parent().trigger('jGrowl.beforeClose');
+					return false;
+				})
+				.parent();
+
+
+			/** Notification Actions **/
+			$(notification).bind("mouseover.jGrowl", function() {
+				$('.jGrowl-notification', self.element).data("jGrowl.pause", true);
+			}).bind("mouseout.jGrowl", function() {
+				$('.jGrowl-notification', self.element).data("jGrowl.pause", false);
+			}).bind('jGrowl.beforeOpen', function() {
+				if ( o.beforeOpen.apply( notification , [notification,message,o,self.element] ) !== false ) {
+					$(this).trigger('jGrowl.open');
+				}
+			}).bind('jGrowl.open', function() {
+				if ( o.open.apply( notification , [notification,message,o,self.element] ) !== false ) {
+					if ( o.glue == 'after' ) {
+						$('.jGrowl-notification:last', self.element).after(notification);
+					} else {
+						$('.jGrowl-notification:first', self.element).before(notification);
+					}
+
+					$(this).animate(o.animateOpen, o.openDuration, o.easing, function() {
+						// Fixes some anti-aliasing issues with IE filters.
+						if ($.support.opacity === false)
+							this.style.removeAttribute('filter');
+
+						if ( $(this).data("jGrowl") !== null && typeof $(this).data("jGrowl") !== 'undefined') // Happens when a notification is closing before it's open.
+							$(this).data("jGrowl").created = new Date();
+
+						$(this).trigger('jGrowl.afterOpen');
+					});
+				}
+			}).bind('jGrowl.afterOpen', function() {
+				o.afterOpen.apply( notification , [notification,message,o,self.element] );
+			}).bind('click', function() {
+				o.click.apply( notification, [notification,message,o,self.element] );
+			}).bind('jGrowl.beforeClose', function() {
+				if ( o.beforeClose.apply( notification , [notification,message,o,self.element] ) !== false )
+					$(this).trigger('jGrowl.close');
+			}).bind('jGrowl.close', function() {
+				// Pause the notification, lest during the course of animation another close event gets called.
+				$(this).data('jGrowl.pause', true);
+				$(this).animate(o.animateClose, o.closeDuration, o.easing, function() {
+					if ( $.isFunction(o.close) ) {
+						if ( o.close.apply( notification , [notification,message,o,self.element] ) !== false )
+							$(this).remove();
+					} else {
+						$(this).remove();
+					}
+				});
+			}).trigger('jGrowl.beforeOpen');
+
+			/** Optional Corners Plugin **/
+			if ( o.corners !== '' && $.fn.corner !== undefined ) $(notification).corner( o.corners );
+
+			/** Add a Global Closer if more than one notification exists **/
+			if ($('.jGrowl-notification:parent', self.element).length > 1 &&
+				$('.jGrowl-closer', self.element).length === 0 && this.defaults.closer !== false ) {
+				$(this.defaults.closerTemplate).addClass('jGrowl-closer ' + this.defaults.themeState + ' ui-corner-all').addClass(this.defaults.theme)
+					.appendTo(self.element).animate(this.defaults.animateOpen, this.defaults.speed, this.defaults.easing)
+					.bind("click.jGrowl", function() {
+						$(this).siblings().trigger("jGrowl.beforeClose");
+
+						if ( $.isFunction( self.defaults.closer ) ) {
+							self.defaults.closer.apply( $(this).parent()[0] , [$(this).parent()[0]] );
+						}
+					});
+			}
+		},
+
+		/** Update the jGrowl Container, removing old jGrowl notifications **/
+		update: function() {
+			$(this.element).find('.jGrowl-notification:parent').each( function() {
+				if ($(this).data("jGrowl") !== undefined && $(this).data("jGrowl").created !== undefined &&
+					($(this).data("jGrowl").created.getTime() + parseInt($(this).data("jGrowl").life, 10))  < (new Date()).getTime() &&
+					$(this).data("jGrowl").sticky !== true &&
+					($(this).data("jGrowl.pause") === undefined || $(this).data("jGrowl.pause") !== true) ) {
+
+					// Pause the notification, lest during the course of animation another close event gets called.
+					$(this).trigger('jGrowl.beforeClose');
+				}
+			});
+
+			if (this.notifications.length > 0 &&
+				(this.defaults.pool === 0 || $(this.element).find('.jGrowl-notification:parent').length < this.defaults.pool) )
+				this.render( this.notifications.shift() );
+
+			if ($(this.element).find('.jGrowl-notification:parent').length < 2 ) {
+				$(this.element).find('.jGrowl-closer').animate(this.defaults.animateClose, this.defaults.speed, this.defaults.easing, function() {
+					$(this).remove();
+				});
+			}
+		},
+
+		/** Setup the jGrowl Notification Container **/
+		startup: function(e) {
+			this.element = $(e).addClass('jGrowl').append('<div class="jGrowl-notification"></div>');
+			this.interval = setInterval( function() {
+				// some error in chage ^^
+				var instance = $(e).data('jGrowl.instance');
+				if (undefined !== instance) {
+					instance.update();
+				}
+			}, parseInt(this.defaults.check, 10));
+		},
+
+		/** Shutdown jGrowl, removing it and clearing the interval **/
+		shutdown: function() {
+			$(this.element).removeClass('jGrowl')
+				.find('.jGrowl-notification').trigger('jGrowl.close')
+				.parent().empty()
+			;
+
+			clearInterval(this.interval);
+		},
+
+		close: function() {
+			$(this.element).find('.jGrowl-notification').each(function(){
+				$(this).trigger('jGrowl.beforeClose');
+			});
+		}
+	});
+
+	/** Reference the Defaults Object for compatibility with older versions of jGrowl **/
+	$.jGrowl.defaults = $.fn.jGrowl.prototype.defaults;
+
+})(jQuery);
+
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _swiper=__webpack_require__(3);var _swiper2=_interopRequireDefault(_swiper);var _hogan=__webpack_require__(21);var _hogan2=_interopRequireDefault(_hogan);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var quiz={srcFile:'quiz.json',tpl:{question:_hogan2.default.compile('<div class="quiz-item swiper-slide js-quiz__question" data-index="{{index}}"><div class="quiz-item__question">{{question}}</div><ul class="quiz-item__responces sm-full">{{{answers}}}</ul></div>'),answer:_hogan2.default.compile('<li class="quiz-item__responces__item js-quiz__answer" data-next="{{nextQuestion}}">{{answer}}</li>')},codeLength:7,codeSymbols:'ABCDEFGHIJKLMNPQRSTUVWXYZ123456789',init:function init(){var app=this;_jquery2.default.getJSON(this.quiz.srcFile,function(json){app.quiz.initQuiz(json);app.quiz.initTooltip();}).fail(function(jqxhr,textStatus,error){var err=textStatus+", "+error;console.log("Request Failed: "+err);});//        app.document.ready(function () {
+Object.defineProperty(exports,"__esModule",{value:true});var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);var _swiper=__webpack_require__(3);var _swiper2=_interopRequireDefault(_swiper);var _hogan=__webpack_require__(22);var _hogan2=_interopRequireDefault(_hogan);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var quiz={srcFile:'quiz.json',tpl:{question:_hogan2.default.compile('<div class="quiz-item swiper-slide js-quiz__question" data-index="{{index}}"><div class="quiz-item__question">{{question}}</div><ul class="quiz-item__responces sm-full">{{{answers}}}</ul></div>'),answer:_hogan2.default.compile('<li class="quiz-item__responces__item js-quiz__answer" data-next="{{nextQuestion}}">{{answer}}</li>')},codeLength:7,codeSymbols:'ABCDEFGHIJKLMNPQRSTUVWXYZ123456789',init:function init(){var app=this;_jquery2.default.getJSON(this.quiz.srcFile,function(json){app.quiz.initQuiz(json);app.quiz.initTooltip();}).fail(function(jqxhr,textStatus,error){var err=textStatus+", "+error;console.log("Request Failed: "+err);});//        app.document.ready(function () {
 //        });
 },initQuiz:function initQuiz(data){var that=this;var $wrapper=(0,_jquery2.default)('.js-quiz__wrapper'),questions=data.questions,html=[];var _loop=function _loop(index){var answers=[];questions[index]['answers'].forEach(function(answer){answers.push(that.tpl.answer.render(answer));});var question=that.tpl.question.render({index:index,question:questions[index]['question'],answers:answers.join('')});html.push(question);};var _iteratorNormalCompletion=true;var _didIteratorError=false;var _iteratorError=undefined;try{for(var _iterator=Object.keys(questions)[Symbol.iterator](),_step;!(_iteratorNormalCompletion=(_step=_iterator.next()).done);_iteratorNormalCompletion=true){var index=_step.value;_loop(index);}}catch(err){_didIteratorError=true;_iteratorError=err;}finally{try{if(!_iteratorNormalCompletion&&_iterator.return){_iterator.return();}}finally{if(_didIteratorError){throw _iteratorError;}}}$wrapper.prepend(html.join(''));var selector='.quiz .swiper-container';var slider=new _swiper2.default(selector,{slidesPerView:1,effect:'fade',simulateTouch:false,//            initialSlide: 3,
 autoHeight:true});var total=this.getTotal(1,questions),rate=data.discountPerQuestion,step=1,prevIndex=[],finalIndex=slider.slides.length-1,results=[],$back=(0,_jquery2.default)('.js-quiz__back'),$toggle=(0,_jquery2.default)('.js-quiz__toggle'),$hide=(0,_jquery2.default)('.js-quiz__end-hide'),$results=(0,_jquery2.default)('.js-quiz__results-input');that.setStep(step,total);(0,_jquery2.default)('.js-quiz__rate').text(rate);(0,_jquery2.default)('.js-quiz__total').text(total);(0,_jquery2.default)('.js-quiz__answer').on('click',function(){var parent=(0,_jquery2.default)(this).parents('.js-quiz__question');step++;prevIndex.push(parent.data('index')-1);results.push({question:parent.text(),answer:(0,_jquery2.default)(this).text()});//            console.log(results);
@@ -21657,7 +22062,7 @@ that.setStep(step,total);that.setDiscount(rate,step,data.discountMax);slider.isB
 autoHeight:true});(0,_jquery2.default)('.js-quiz__responce').on('click',function(){slider.slideNext();});var total=slider.slides.length;var $current=(0,_jquery2.default)('.js-quiz__current');var $bar=(0,_jquery2.default)('.js-quiz__progress');var $back=(0,_jquery2.default)('.js-quiz__back');var $toggle=(0,_jquery2.default)('.js-quiz__toggle');var $discount=(0,_jquery2.default)('.js-quiz__discount');var rate=parseInt((0,_jquery2.default)('.js-quiz__rate').text());$bar.css({width:100/total+'%'});(0,_jquery2.default)('.js-quiz__total').text(total);$back.on('click',function(){slider.slidePrev();});slider.on('slideChange',function(){var current=slider.realIndex+1;var percent=current*100/total;$current.text(current);$bar.css({width:percent+'%'});$discount.text(slider.realIndex*rate);current===1?$back.removeClass('_active'):$back.addClass('_active');slider.isEnd?$toggle.addClass('_final'):$toggle.removeClass('_final');});var $tooltip=(0,_jquery2.default)('.js-quiz__tooltip'),tooltipText=$tooltip.text();(0,_jquery2.default)('.js-quiz__btn').hover(function(){$tooltip.text(tooltipText);$tooltip.show(200);},function(){$tooltip.hide(200);}).on('click',function(){var i=document.querySelector('.quiz-item__code__input');i.select();if(document.execCommand("copy")){$tooltip.text($tooltip.data('success'));}});}};exports.default=quiz;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23093,7 +23498,7 @@ function scroll(...args) {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23113,14 +23518,14 @@ function scroll(...args) {
 
 // This file is for use with Node.js. See dist/ for browser files.
 
-var Hogan = __webpack_require__(22);
-Hogan.Template = __webpack_require__(23).Template;
+var Hogan = __webpack_require__(23);
+Hogan.Template = __webpack_require__(24).Template;
 Hogan.template = Hogan.Template;
 module.exports = Hogan;
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23549,7 +23954,7 @@ module.exports = Hogan;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23896,7 +24301,7 @@ var Hogan = {};
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23907,7 +24312,7 @@ coordinates:[[0,-60],[50,0]]}});map.geoObjects.add(placemark);placemarks.push(pl
 return geo;}};exports.default=contacts;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23924,7 +24329,7 @@ return geo;}};exports.default=contacts;
  */(function(a){a.easytabs=function(j,e){var f=this,q=a(j),i={animate:true,panelActiveClass:"active",tabActiveClass:"active",defaultTab:"li:first-child",animationSpeed:"normal",tabs:"> ul > li",updateHash:true,cycle:false,collapsible:false,collapsedClass:"collapsed",collapsedByDefault:true,uiTabs:false,transitionIn:"fadeIn",transitionOut:"fadeOut",transitionInEasing:"swing",transitionOutEasing:"swing",transitionCollapse:"slideUp",transitionUncollapse:"slideDown",transitionCollapseEasing:"swing",transitionUncollapseEasing:"swing",containerClass:"",tabsClass:"",tabClass:"",panelClass:"",cache:true,event:"click",panelContext:q},h,l,v,m,d,t={fast:200,normal:400,slow:600},r;f.init=function(){f.settings=r=a.extend({},i,e);r.bind_str=r.event+".easytabs";if(r.uiTabs){r.tabActiveClass="ui-tabs-selected";r.containerClass="ui-tabs ui-widget ui-widget-content ui-corner-all";r.tabsClass="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all";r.tabClass="ui-state-default ui-corner-top";r.panelClass="ui-tabs-panel ui-widget-content ui-corner-bottom";}if(r.collapsible&&e.defaultTab!==undefined&&e.collpasedByDefault===undefined){r.collapsedByDefault=false;}if(typeof r.animationSpeed==="string"){r.animationSpeed=t[r.animationSpeed];}a("a.anchor").remove().prependTo("body");q.data("easytabs",{});f.setTransitions();f.getTabs();b();g();w();n();c();q.attr("data-easytabs",true);};f.setTransitions=function(){v=r.animate?{show:r.transitionIn,hide:r.transitionOut,speed:r.animationSpeed,collapse:r.transitionCollapse,uncollapse:r.transitionUncollapse,halfSpeed:r.animationSpeed/2}:{show:"show",hide:"hide",speed:0,collapse:"hide",uncollapse:"show",halfSpeed:0};};f.getTabs=function(){var x;f.tabs=q.find(r.tabs),f.panels=a(),f.tabs.each(function(){var A=a(this),z=A.children("a"),y=A.children("a").data("target");A.data("easytabs",{});if(y!==undefined&&y!==null){A.data("easytabs").ajax=z.attr("href");}else{y=z.attr("href");}y=y.match(/#([^\?]+)/)[1];x=r.panelContext.find("#"+y);if(x.length){x.data("easytabs",{position:x.css("position"),visibility:x.css("visibility")});x.not(r.panelActiveClass).hide();f.panels=f.panels.add(x);A.data("easytabs").panel=x;}else{f.tabs=f.tabs.not(A);if("console"in window){console.warn("Warning: tab without matching panel for selector '#"+y+"' removed from set");}}});};f.selectTab=function(x,C){var y=window.location,B=y.hash.match(/^[^\?]*/)[0],z=x.parent().data("easytabs").panel,A=x.parent().data("easytabs").ajax;if(r.collapsible&&!d&&(x.hasClass(r.tabActiveClass)||x.hasClass(r.collapsedClass))){f.toggleTabCollapse(x,z,A,C);}else{if(!x.hasClass(r.tabActiveClass)||!z.hasClass(r.panelActiveClass)){o(x,z,A,C);}else{if(!r.cache){o(x,z,A,C);}}}};f.toggleTabCollapse=function(x,y,z,A){f.panels.stop(true,true);if(u(q,"easytabs:before",[x,y,r])){f.tabs.filter("."+r.tabActiveClass).removeClass(r.tabActiveClass).children().removeClass(r.tabActiveClass);if(x.hasClass(r.collapsedClass)){if(z&&(!r.cache||!x.parent().data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[x,y]);y.load(z,function(C,B,D){x.parent().data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[x,y,C,B,D]);});}x.parent().removeClass(r.collapsedClass).addClass(r.tabActiveClass).children().removeClass(r.collapsedClass).addClass(r.tabActiveClass);y.addClass(r.panelActiveClass)[v.uncollapse](v.speed,r.transitionUncollapseEasing,function(){q.trigger("easytabs:midTransition",[x,y,r]);if(typeof A=="function"){A();}});}else{x.addClass(r.collapsedClass).parent().addClass(r.collapsedClass);y.removeClass(r.panelActiveClass)[v.collapse](v.speed,r.transitionCollapseEasing,function(){q.trigger("easytabs:midTransition",[x,y,r]);if(typeof A=="function"){A();}});}}};f.matchTab=function(x){return f.tabs.find("[href='"+x+"'],[data-target='"+x+"']").first();};f.matchInPanel=function(x){return x&&f.validId(x)?f.panels.filter(":has("+x+")").first():[];};f.validId=function(x){return x.substr(1).match(/^[A-Za-z]+[A-Za-z0-9\-_:\.].$/);};f.selectTabFromHashChange=function(){var y=window.location.hash.match(/^[^\?]*/)[0],x=f.matchTab(y),z;if(r.updateHash){if(x.length){d=true;f.selectTab(x);}else{z=f.matchInPanel(y);if(z.length){y="#"+z.attr("id");x=f.matchTab(y);d=true;f.selectTab(x);}else{if(!h.hasClass(r.tabActiveClass)&&!r.cycle){if(y===""||f.matchTab(m).length||q.closest(y).length){d=true;f.selectTab(l);}}}}}};f.cycleTabs=function(x){if(r.cycle){x=x%f.tabs.length;$tab=a(f.tabs[x]).children("a").first();d=true;f.selectTab($tab,function(){setTimeout(function(){f.cycleTabs(x+1);},r.cycle);});}};f.publicMethods={select:function select(x){var y;if((y=f.tabs.filter(x)).length===0){if((y=f.tabs.find("a[href='"+x+"']")).length===0){if((y=f.tabs.find("a"+x)).length===0){if((y=f.tabs.find("[data-target='"+x+"']")).length===0){if((y=f.tabs.find("a[href$='"+x+"']")).length===0){a.error("Tab '"+x+"' does not exist in tab set");}}}}}else{y=y.children("a").first();}f.selectTab(y);}};var u=function u(A,x,z){var y=a.Event(x);A.trigger(y,z);return y.result!==false;};var b=function b(){q.addClass(r.containerClass);f.tabs.parent().addClass(r.tabsClass);f.tabs.addClass(r.tabClass);f.panels.addClass(r.panelClass);};var g=function g(){var y=window.location.hash.match(/^[^\?]*/)[0],x=f.matchTab(y).parent(),z;if(x.length===1){h=x;r.cycle=false;}else{z=f.matchInPanel(y);if(z.length){y="#"+z.attr("id");h=f.matchTab(y).parent();}else{h=f.tabs.parent().find(r.defaultTab);if(h.length===0){a.error("The specified default tab ('"+r.defaultTab+"') could not be found in the tab set ('"+r.tabs+"') out of "+f.tabs.length+" tabs.");}}}l=h.children("a").first();p(x);};var p=function p(z){var y,x;if(r.collapsible&&z.length===0&&r.collapsedByDefault){h.addClass(r.collapsedClass).children().addClass(r.collapsedClass);}else{y=a(h.data("easytabs").panel);x=h.data("easytabs").ajax;if(x&&(!r.cache||!h.data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[l,y]);y.load(x,function(B,A,C){h.data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[l,y,B,A,C]);});}h.data("easytabs").panel.show().addClass(r.panelActiveClass);h.addClass(r.tabActiveClass).children().addClass(r.tabActiveClass);}q.trigger("easytabs:initialised",[l,y]);};var w=function w(){f.tabs.children("a").bind(r.bind_str,function(x){r.cycle=false;d=false;f.selectTab(a(this));x.preventDefault?x.preventDefault():x.returnValue=false;});};var o=function o(z,D,E,H){f.panels.stop(true,true);if(u(q,"easytabs:before",[z,D,r])){var A=f.panels.filter(":visible"),y=D.parent(),F,x,C,G,B=window.location.hash.match(/^[^\?]*/)[0];if(r.animate){F=s(D);x=A.length?k(A):0;C=F-x;}m=B;G=function G(){q.trigger("easytabs:midTransition",[z,D,r]);if(r.animate&&r.transitionIn=="fadeIn"){if(C<0){y.animate({height:y.height()+C},v.halfSpeed).css({"min-height":""});}}if(r.updateHash&&!d){window.location.hash="#"+D.attr("id");}else{d=false;}D[v.show](v.speed,r.transitionInEasing,function(){y.css({height:"","min-height":""});q.trigger("easytabs:after",[z,D,r]);if(typeof H=="function"){H();}});};if(E&&(!r.cache||!z.parent().data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[z,D]);D.load(E,function(J,I,K){z.parent().data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[z,D,J,I,K]);});}if(r.animate&&r.transitionOut=="fadeOut"){if(C>0){y.animate({height:y.height()+C},v.halfSpeed);}else{y.css({"min-height":y.height()});}}f.tabs.filter("."+r.tabActiveClass).removeClass(r.tabActiveClass).children().removeClass(r.tabActiveClass);f.tabs.filter("."+r.collapsedClass).removeClass(r.collapsedClass).children().removeClass(r.collapsedClass);z.parent().addClass(r.tabActiveClass).children().addClass(r.tabActiveClass);f.panels.filter("."+r.panelActiveClass).removeClass(r.panelActiveClass);D.addClass(r.panelActiveClass);if(A.length){A[v.hide](v.speed,r.transitionOutEasing,G);}else{D[v.uncollapse](v.speed,r.transitionUncollapseEasing,G);}}};var s=function s(z){if(z.data("easytabs")&&z.data("easytabs").lastHeight){return z.data("easytabs").lastHeight;}var B=z.css("display"),y,x;try{y=a("<div></div>",{position:"absolute",visibility:"hidden",overflow:"hidden"});}catch(A){y=a("<div></div>",{visibility:"hidden",overflow:"hidden"});}x=z.wrap(y).css({position:"relative",visibility:"hidden",display:"block"}).outerHeight();z.unwrap();z.css({position:z.data("easytabs").position,visibility:z.data("easytabs").visibility,display:B});z.data("easytabs").lastHeight=x;return x;};var k=function k(y){var x=y.outerHeight();if(y.data("easytabs")){y.data("easytabs").lastHeight=x;}else{y.data("easytabs",{lastHeight:x});}return x;};var n=function n(){if(typeof a(window).hashchange==="function"){a(window).hashchange(function(){f.selectTabFromHashChange();});}else{if(a.address&&typeof a.address.change==="function"){a.address.change(function(){f.selectTabFromHashChange();});}}};var c=function c(){var x;if(r.cycle){x=f.tabs.index(h);setTimeout(function(){f.cycleTabs(x+1);},r.cycle);}};f.init();};a.fn.easytabs=function(c){var b=arguments;return this.each(function(){var e=a(this),d=e.data("easytabs");if(undefined===d){d=new a.easytabs(this,c);e.data("easytabs",d);}if(d.publicMethods[c]){return d.publicMethods[c](Array.prototype.slice.call(b,1));}});};})(jQuery);
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24020,7 +24425,7 @@ if(scrollx.isVisible){scrollx.scroll.addClass(scrollClass);scrolly.scroll.addCla
      */if(window.angular){(function(angular){angular.module('jQueryScrollbar',[]).provider('jQueryScrollbar',function(){var defaultOptions=defaults;return{setOptions:function setOptions(options){angular.extend(defaultOptions,options);},$get:function $get(){return{options:angular.copy(defaultOptions)};}};}).directive('jqueryScrollbar',['jQueryScrollbar','$parse',function(jQueryScrollbar,$parse){return{restrict:"AC",link:function link(scope,element,attrs){var model=$parse(attrs.jqueryScrollbar),options=model(scope);element.scrollbar(options||jQueryScrollbar.options).on('$destroy',function(){element.scrollbar('destroy');});}};}]);})(window.angular);}});
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 // ==================================================

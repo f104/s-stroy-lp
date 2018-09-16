@@ -1,0 +1,22 @@
+.jGrowl {
+    z-index: 999999;
+    filter: unset !important;
+    &-notification {
+        font-family: $font-family-alt;
+        padding: 20px;
+        &.message {
+            &-success {
+                font-weight: 600;
+                font-size: 18px;
+                background-color: $color-secondary;
+            }
+            &-error {
+                background-color: red;
+            }
+        }
+        .jGrowl-close {
+            font-size: 18px;
+            top: -10px;
+        }
+    }
+}

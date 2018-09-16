@@ -49,4 +49,7 @@
             transform: translateY(-50%);
         }
     }
+    &._disabled {
+        pointer-events: none;
+    }
 }

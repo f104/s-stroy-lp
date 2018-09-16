@@ -9,6 +9,7 @@
     "fastclick": "1.0.6",
     "hogan.js": "^3.0.2",
     "inputmask": "^4.0.0",
+    "jgrowl": "^1.4.6",
     "jquery": "3.3.1",
     "svg4everybody": "2.x",
     "swiper": "^4.3.5",
