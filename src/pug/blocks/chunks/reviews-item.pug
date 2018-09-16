@@ -11,13 +11,14 @@ mixin reviews-item()
         .reviews-item__content=attributes.text
         .reviews-item__foot
             if attributes.photo
-                span.reviews-item__img
-                    img(src='img/reviews/photo/' + attributes.photo + '.jpg')
-                    a.reviews-item__img__link.dashed.js-popup(href='img/reviews/photo/' + attributes.photo + '.jpg') Открыть фото
+                each photo in attributes.photo
+                    a.reviews-item__img._photo.js-popup(href='img/reviews/photo/' + photo + '.jpg')
+                        img(src='img/reviews/photo/sm/' + photo + '.jpg')
+                        span.reviews-item__img__link Открыть
             if attributes.scan
-                span.reviews-item__img
-                    img(src='img/reviews/scan/' + attributes.scan + '.jpg')
-                    a.reviews-item__img__link.dashed.js-popup(href='img/reviews/scan/' + attributes.scan + '.jpg') Читать
+                a.reviews-item__img.js-popup(href='img/reviews/scan/' + attributes.scan + '.jpg')
+                    img(src='img/reviews/scan/sm/' + attributes.scan + '.jpg')
+                    span.reviews-item__img__link Читать
             if attributes.video
                 span.reviews-item__img._video
                     img(src='img/reviews/video/' + attributes.video + '.jpg')

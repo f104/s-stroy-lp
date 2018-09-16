@@ -104,12 +104,23 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 100%);
         }
         @include media-breakpoint-up(md) {
-            margin-right: 19px;
-            height: 143px;
+            margin-right: 15px;
+            height: 140px;
         }
         @include media-breakpoint-up(lg) {
+            margin-right: 20px;
+            height: 160px;
+        }
+        @include media-breakpoint-up(xl) {
             margin-right: 22px;
             height: 163px;
+        }
+        @include media-breakpoint-down(sm) {
+            &._photo {
+                &:nth-child(even) {
+                    display: none;
+                }
+            }
         }
         &__link {
             position: absolute;
@@ -120,6 +131,9 @@
             font-size: 14px;
             @include media-breakpoint-up(lg) {
                 font-size: 16px;
+            }
+            @include media-breakpoint-down(sm) {
+                display: none;
             }
         }
         img {
