@@ -2,6 +2,7 @@ import $ from 'jquery';
 import page from 'page';
 import forms from 'forms';
 import quiz from 'quiz';
+import contacts from 'contacts';
 import Swiper from 'swiper';
 var app = {
 
@@ -27,6 +28,10 @@ var app = {
         // Init quiz
         this.quiz = quiz;
         this.quiz.init.call(this);
+
+        // Init contacts
+        this.contacts = contacts;
+        this.contacts.init.call(this);
 
         app.checkMedia();
         app.window.on('resize', app.checkMedia);
@@ -297,7 +302,7 @@ var app = {
 //            console.log(app.media);
         }
         if (app.media != current) {
-            app.document.trigger(app.resizeEventName);
+            app.document.trigger(app.resizeEventName, {media: app.media});
         }
     }
 

@@ -1,0 +1,20 @@
+mixin contacts-list__item
+    .contacts-list__item.swiper-slide
+        .contacts-list__item__col
+            .contacts-list__item__h= attributes.title
+            .contacts-list__item__muted= attributes.muted || 'Офис продаж'
+            dl.contacts-list__item__address.clearfix
+                dt.contacts-list__item__address__dt Адрес
+                dd.contacts-list__item__address__dd.js-map__item(data-geo=attributes.geo)= attributes.address
+                dt.contacts-list__item__address__dt Телефон: 
+                dd.contacts-list__item__address__dd= attributes.phone
+                dt.contacts-list__item__address__dt Время работы:
+                dd.contacts-list__item__address__dd= attributes.time
+        if (attributes.agents)
+            .contacts-list__item__col
+                .contacts-list__item__h._agents Менеджеры
+                ul.contacts-list__item__agents
+                    each agent in attributes.agents
+                        li.contacts-list__item__agents__item
+                            img.contacts-list__item__agents__item__img(src='img/agents/' + agent.photo)
+                            a.dashed(href='#')= agent.name

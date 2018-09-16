@@ -55,9 +55,7 @@
               <del class="main__price-del__price">12 390 ₽</del>
             </div>
           </div>
-          <div class="main__form">
-            <button class="btn _for-white">Рассчитать свой вариант</button>
-          </div>
+          <div class="main__form"><a class="btn _for-white js-popup" href="#calc">Рассчитать свой вариант</a></div>
           <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br>5 дней</div>
           <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
         </div>
@@ -815,8 +813,330 @@
         </div>
         <div class="eco__bg" style="background-image: url(img/eco.jpg)"></div>
       </div>
-      <div class="heading">
-        <h3 class="heading__h">Контакты</h3>
+      <div class="container">
+        <div class="heading">
+          <h3 class="heading__h">Контакты</h3>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="container">
+          <div class="contacts-list sm-full md-full">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Нижегородский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.311956, 43.990589">Нижегородский р-н, ул. Костина, д. 3, 3 этаж, офис 304</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-23</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/1.jpg"><a class="dashed" href="#">Ольга</a></li>
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/2.jpg"><a class="dashed" href="#">Елена</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Нижегородский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.295690, 44.077699">Нижегородский р-н, Казанское шоссе, д. 4</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-27</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб, вс: выходной</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/3.jpg"><a class="dashed" href="#">Любовь</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Приокский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.236466, 43.953606">Приокский р-н, пр. Гагарина, д. 101/5</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-34</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 19-00, сб: с 10-00 до 15-00</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/4.jpg"><a class="dashed" href="#">Марина</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Советский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.293567, 44.019308">Советский р-н, ул. Бекетова, д. 51</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-37</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб, вс: выходной</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Московский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.311696, 43.832899">Московский р-н, Московское шоссе, д. 298а</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-39</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 17-00, сб, вс: выходной</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/5.jpg"><a class="dashed" href="#">Светлана</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Сормовский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.358612, 43.854171">Сормовский р-н, пр. Союзный, д. 2</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-45</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 19-00, сб: с 10-00 до 15-00</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/6.jpg"><a class="dashed" href="#">Анна</a></li>
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/7.jpg"><a class="dashed" href="#">Кира</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Канавинский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.344966, 43.928289">Канавинский р-н, ТЦ «Купеческая Слобода», ул. К. Маркса, д. 8 «А»</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-47</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-вс: с 10:00 до 20:00</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Ленинский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.273015, 43.935630">Ленинский р-н, пр. Ленина, д. 48</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-49</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб,вс: выходной</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/8.jpg"><a class="dashed" href="#">Татьяга</a></li>
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/9.jpg"><a class="dashed" href="#">Дарья</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Ленинский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.256829, 43.939000">Ленинский р-н, ул. Суздальская, Карповский рынок</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 262-11-16</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-сб: с 9-00 до 17-00, вс: с 9-00 до 16-00</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">Автозаводский район</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.248031, 43.863190">Автозаводский р-н, пр. Кирова, д. 5</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831) 420-61-54</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб, вс - выходной</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/10.jpg"><a class="dashed" href="#">Елена</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Кстово</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.147611, 44.199493">г. Кстово, ул. 40 лет Октября, д. 9</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (83145) 9-58-53, +7 (831) 262-12-14</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб, вс: выходной</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Бор</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.348801, 44.081454">г. Бор, ул. Стеклозаводское шоссе, д. 3</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (83159) 7-40-03</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 8-00 до 17-00</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Выкса</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="55.306527, 42.166533">г. Выкса, микрорайон Центральный, д.8, пом.2</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (831-77) 3-13-02</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 17-00</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/11.jpg"><a class="dashed" href="#">Евгения</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Выкса</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="55.333251, 42.133394">г. Выкса, пос. Строитель, строение 13</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (83177) 6-75-95</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 17-00, сб: с 9-00 до 12-00</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/12.jpg"><a class="dashed" href="#">Ольга</a></li>
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/13.jpg"><a class="dashed" href="#">Алла</a></li>
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/14.jpg"><a class="dashed" href="#">Татьяна</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Богородск</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.102418, 43.506748">г. Богородск, ул. Ленина, д. 170, ТЦ «Континент», 2 этаж</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (83170) 3-000-6</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 8-00 до 17-00, сб, вс - выходной</dd>
+                          </dl>
+                        </div>
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h _agents">Менеджеры</div>
+                          <ul class="contacts-list__item__agents">
+                            <li class="contacts-list__item__agents__item"><img class="contacts-list__item__agents__item__img" src="img/agents/15.jpg"><a class="dashed" href="#">Наталья</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Павлово</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="55.964534, 43.063905">г. Павлово, ул. Куйбышева, д. 2/20</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (83171) 2-30-10</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00, сб, вс - выходной</dd>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="contacts-list__item swiper-slide">
+                        <div class="contacts-list__item__col">
+                          <div class="contacts-list__item__h">г. Дзержинск</div>
+                          <div class="contacts-list__item__muted">Офис продаж</div>
+                          <dl class="contacts-list__item__address clearfix">
+                            <dt class="contacts-list__item__address__dt">Адрес</dt>
+                            <dd class="contacts-list__item__address__dd js-map__item" data-geo="56.252852, 43.466665">г. Дзержинск, просп. Чкалова, д. 50</dd>
+                            <dt class="contacts-list__item__address__dt">Телефон: </dt>
+                            <dd class="contacts-list__item__address__dd">+7 (8313) 22-02-61</dd>
+                            <dt class="contacts-list__item__address__dt">Время работы:</dt>
+                            <dd class="contacts-list__item__address__dd">пн-пт: с 9-00 до 18-00</dd>
+                          </dl>
+                        </div>
+                      </div>
+              </div>
+            </div>
+            <div class="contacts__buttons">
+              <div class="swiper-button-prev"><i class="icon-prev"></i><span class="js-map__prev">Адрес предыдущего офиса</span>
+              </div>
+              <div class="swiper-button-next"><span class="js-map__next">Адрес следующего офиса</span><i class="icon-next"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map" id="map"></div>
       </div>
       <div hidden>
         <div id="order">order</div>
@@ -899,9 +1219,7 @@
                         </svg>
                   </div>
                   <div class="eco-badge__text">Эко-инжиниринг<strong>Бесплатно</strong></div></a></div>
-              <div class="footer__col _3">
-                <button class="btn _for-white">Оставить заявку</button>
-              </div>
+              <div class="footer__col _3"><a class="btn _for-white js-popup" href="#calc">Оставить заявку</a></div>
               <div class="footer__col _4">
                 <ul class="footer__menu">
                   <li class="footer__menu__item"> <a href="#">Пластиковые окна</a></li>

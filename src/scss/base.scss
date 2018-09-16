@@ -59,3 +59,21 @@ a {
 strong {
     font-weight: 700;
 }
+
+.placemark {
+    color: $color-primary;
+    width: 50px;
+    height: 60px;
+    top: -60px;
+    opacity: .6;
+    transform-origin: 50% 100%;
+    @include transition(all);
+    .svgsprite {
+        width: 43px;
+        height: 60px;
+    }
+    &._active {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}

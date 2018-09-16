@@ -203,9 +203,10 @@
         right: 0;
         z-index: -1;
         background-size: cover;
-        background-position-x: -70%;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
         @include media-breakpoint-up(md) {
-            background-position-x: -160%;
+            background-position-x: 25%;
         }
         @include media-breakpoint-up(lg) {
             background-position-x: center;

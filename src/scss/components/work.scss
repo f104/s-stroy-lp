@@ -7,6 +7,7 @@
         margin-bottom: 15px;
     }
     .swiper-pagination {
+        bottom: 30px;
         @include media-breakpoint-up(md) {
             display: none;
         }
