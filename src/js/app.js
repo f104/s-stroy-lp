@@ -23,30 +23,33 @@ var app = {
         // Init forms
         this.forms = forms;
         this.forms.init.call(this);
-        
+
         // Init quiz
         this.quiz = quiz;
         this.quiz.init.call(this);
-        
+
         app.checkMedia();
         app.window.on('resize', app.checkMedia);
         window.jQuery = $;
 
         app.document.ready(function () {
             app.initReviewsSlider();
+            app.initStockSlider();
             app.initManSlider();
             app.initWorkSlider();
             app.initPopup();
             app.initScrollbar();
             app.initTabs();
+            app.initStock();
         });
 
         app.document.on(app.resizeEventName, function () {
             app.initManSlider();
             app.initReviewsSlider();
             app.initScrollbar();
+            app.initStock();
         });
-        
+
         // Antispam
         setTimeout(function () {
             $('input[name="email3"],input[name="email"],input[name="text"]').attr('value', '').val('');
@@ -125,7 +128,7 @@ var app = {
                 spaceBetween: 10,
                 slidesPerView: 1,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.reviews .swiper-container + .swiper-pagination',
                     type: 'bullets',
                     clickable: true
                 },
@@ -139,6 +142,33 @@ var app = {
                 }
             });
         }
+
+    },
+
+    initStockSlider: function () {
+        let selector = ('.stock .swiper-container');
+        new Swiper(selector, {
+            slidesPerView: 3,
+            breakpointsInverse: true,
+            breakpoints: {
+                1279: {
+                    slidesPerView: 2
+                },
+                767: {
+                    spaceBetween: 10,
+                    slidesPerView: 1
+                }
+            },
+            pagination: {
+                el: '.stock .swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.stock .swiper-button-next',
+                prevEl: '.stock .swiper-button-prev',
+            },
+        });
 
     },
 
@@ -209,15 +239,49 @@ var app = {
                 slideShadows: false,
             },
             pagination: {
-                el: '.swiper-pagination',
+                el: '.man .swiper-pagination',
                 type: 'bullets',
                 clickable: true
             },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.man .swiper-button-next',
+                prevEl: '.man .swiper-button-prev',
             },
         });
+    },
+
+    initStock: function () {
+        $('.js-stock__hover').unbind('mouseenter mouseleave');
+        if (app.media >= app.breakpoints.lg) {
+            $('.js-stock__hover').each(function () {
+                let $popup = $(this).find('.js-stock__hover__content');
+                if (!$popup) {
+                    return;
+                }
+                let $this = $(this), timeout;
+                $(this).hover(function () {
+                    timeout = setTimeout(function(){
+                        if ($this.hasClass('_hovered')) {
+                            return;
+                        }
+                        $this.addClass('_hovered');
+                        let offset = $this.offset(),
+                                h = $this.outerHeight(),
+                                w = $this.outerWidth();
+                        $popup.css({
+                            'width': w,
+                            'top': offset.top - 20,
+                            'left': offset.left,
+                        });
+                        $popup.appendTo(app.body).addClass('_active');
+                    }, 200);
+                }, function () {
+                    clearTimeout(timeout);
+                    $popup.removeClass('_active').appendTo($(this));
+                    $this.removeClass('_hovered');
+                });
+            });
+        }
     },
 
     /**

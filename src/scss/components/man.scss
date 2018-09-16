@@ -42,10 +42,9 @@
             margin-bottom: 0;
         }
     }
-    .swiper-container {
+    &__slider {
         margin-bottom: 30px;
         @include media-breakpoint-up(md) {
-            overflow: visible;
             margin-bottom: 70px;
         }
         @include media-breakpoint-up(lg) {
@@ -57,35 +56,6 @@
             display: none;
         }
     }
-    .swiper-button {
-        &-prev, &-next {
-            background-image: none;
-            left: -35px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: $color-bg;
-            text-align: center;
-            line-height: 70px;
-            font-size: 24px;
-            @include transition(all);
-            @include media-breakpoint-down(md) {
-                display: none;
-            }
-            &:hover {
-                background-color: $color-bg;
-                color: $color-primary;
-            }
-        }
-        &-next {
-            left: auto;
-            right: -35px;
-        }
-    }
-
     &__sert {
         margin-bottom: 40px;
         @include media-breakpoint-up(md) {
