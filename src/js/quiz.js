@@ -5,7 +5,7 @@ const quiz = {
 
     srcFile: 'quiz.json',
     tpl: {
-        question: Hogan.compile('<div class="quiz-item swiper-slide js-quiz__question" data-index="{{index}}"><div class="quiz-item__question">{{question}}</div><ul class="quiz-item__responces sm-full">{{{answers}}}</ul></div>'),
+        question: Hogan.compile('<div class="quiz-item swiper-slide js-quiz__question" data-index="{{index}}"><div class="quiz-item__question js-quiz__question__text">{{question}}</div><ul class="quiz-item__responces sm-full">{{{answers}}}</ul></div>'),
         answer: Hogan.compile('<li class="quiz-item__responces__item js-quiz__answer" data-next="{{nextQuestion}}">{{answer}}</li>')
     },
     codeLength: 7,
@@ -68,7 +68,7 @@ const quiz = {
             step++;
             prevIndex.push(parent.data('index') - 1);
             results.push({
-                question: parent.text(),
+                question: parent.find('.js-quiz__question__text').text(),
                 answer: $(this).text()
             });
 //            console.log(results);

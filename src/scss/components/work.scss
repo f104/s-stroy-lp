@@ -5,6 +5,19 @@
     }
     .swiper-container {
         margin-bottom: 15px;
+        // компенсация тени для кнопки
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    // кнопка просвечивает
+    .swiper-container-fade {
+        .swiper-slide:not(.swiper-slide-active) {
+            .btn {
+                display: none;
+            }
+        }
     }
     .swiper-pagination {
         @include media-breakpoint-up(md) {
