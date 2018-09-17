@@ -56,8 +56,8 @@
               <del class="main__price-del__price">12 390 ₽</del>
             </div>
           </div>
-          <div class="main__form"><a class="btn _for-white js-popup" href="#calc">Рассчитать свой вариант</a></div>
-          <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br>14 дней</div>
+          <div class="main__form"><a class="btn _for-white js-popup" href="#calc" data-action="Первый экран">Рассчитать свой вариант</a></div>
+          <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br><span class="js-left" data-left="2018-09-30"></span></div>
           <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
         </div>
       </div>
@@ -66,21 +66,21 @@
           <div class="stock__h">Топ-предложения месяца</div>
           <div class="stock-list sm-full md-full">
             <div class="swiper-container">
-              <div class="swiper-wrapper"><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
+              <div class="swiper-wrapper"><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc" data-action="Дарим 2000 рублей">
                   <div class="stock-list__item__h">Дарим 2000 рублей на окна Rehau</div>
-                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
+                  <div class="stock-list__item__text">Доступно еще <span class="js-left" data-left="2018-09-30"></span></div>
                   <div class="stock-list__item _popup js-stock__hover__content">
                     <div class="stock-list__item__h">Купон на скидку 2000 руб. на ваш заказ</div>
                     <div class="stock-list__item__text">Нажмите, чтобы воспользоваться скидкой (акция распростроняется на заказ стоимостью от 25 000 руб.)</div>
-                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
+                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc" data-action="Ламинированные подоконники Danke">
                   <div class="stock-list__item__h">Ламинированные подоконники Danke</div>
-                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
+                  <div class="stock-list__item__text">Доступно еще <span class="js-left" data-left="2018-09-30"></span></div>
                   <div class="stock-list__item _popup js-stock__hover__content">
                     <div class="stock-list__item__h">Ламинированные подоконники премиум-класса по цене обычных</div>
                     <div class="stock-list__item__text">При покупке окон из профиля ПВХ Intelio 80</div>
-                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc">
+                  </div></a><a class="stock-list__item swiper-slide js-stock__hover js-popup" href="#calc" data-action="Дарим фотосессию">
                   <div class="stock-list__item__h">Дарим фотосессию при покупке окна</div>
-                  <div class="stock-list__item__text">Доступно еще 14 дней</div>
+                  <div class="stock-list__item__text">Доступно еще <span class="js-left" data-left="2018-09-30"></span></div>
                   <div class="stock-list__item _popup js-stock__hover__content">
                     <div class="stock-list__item__h">Профессиональная фотосесия + фотомакияж + укладка</div>
                     <div class="stock-list__item__text">Нажмите, чтобы оформить заказ и получить фотосессию в подарок!</div>
@@ -1228,6 +1228,7 @@
                 <input name="email3" value="info@example.com" hidden>
                 <input name="form_id" value="4" hidden>
                 <input name="form_name" value="Рассчитать свой вариант" hidden>
+                <input name="action" hidden>
                 <input class="input js-mask" name="phone" required autocomplete="off">
                 <button class="btn">Оставить заявку</button>
               </div>

@@ -26,6 +26,7 @@ const forms = {
                     success: function (data) {
                         if (data['success']) {
                             forms.showMessage();
+                            $form[0].reset();
                             $.fancybox.close();
                         } else if (data['msg']) {
                             console.log(data['msg']);

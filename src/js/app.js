@@ -18,11 +18,20 @@ var app = {
         autoFocus: false,
         touch: false,
         baseClass: 'popup',
+        afterShow: function (instance, slide) {
+            let action = instance.$trigger.data('action');
+            if (action) {
+                let $input = slide.$slide.find('[name="action"]');
+                if ($input) {
+                    $input.val(action);
+                }
+            }
+        },
     },
 
     init: function () {
 
-        
+
         // Init page
         this.page = page;
         this.page.init.call(this);
@@ -52,6 +61,7 @@ var app = {
             app.initScrollbar();
             app.initTabs();
             app.initStock();
+            app.initLeft();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -307,7 +317,53 @@ var app = {
         if (app.media != current) {
             app.document.trigger(app.resizeEventName, {media: app.media});
         }
-    }
+    },
+
+    initLeft: function () {
+        $('.js-left').each(function () {
+            let date = $(this).data('left');
+            if (date) {
+                date = Date.parse(date);
+                let now = Date.now(),
+                        est = date - now,
+                        days = Math.ceil(est / 1000 / 60 / 60 / 24);
+                $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));
+            }
+        });
+    },
+
+    /**
+     * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+     * param  iNumber Integer Число на основе которого нужно сформировать окончание
+     * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
+     *         например ['яблоко', 'яблока', 'яблок']
+     * return String
+     * 
+     * https://habrahabr.ru/post/105428/
+     */
+    getNumEnding: function (iNumber, aEndings) {
+        var sEnding, i;
+        iNumber = iNumber % 100;
+        if (iNumber >= 11 && iNumber <= 19) {
+            sEnding = aEndings[2];
+        } else {
+            i = iNumber % 10;
+            switch (i)
+            {
+                case (1):
+                    sEnding = aEndings[0];
+                    break;
+                case (2):
+                case (3):
+                case (4):
+                    sEnding = aEndings[1];
+                    break;
+                default:
+                    sEnding = aEndings[2];
+            }
+        }
+        return sEnding;
+    },
 
 };
 app.init();

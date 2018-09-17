@@ -13,14 +13,14 @@
                 span.main__price-del__muted Обычная цена
                 del.main__price-del__price 12 390 ₽
         .main__form
-            a.btn._for-white.js-popup(href='#calc') Рассчитать свой вариант
+            a.btn._for-white.js-popup(href='#calc' data-action='Первый экран') Рассчитать свой вариант
         .main__sticker(style='background-image:url(img/sticker.png)')
             span.main__sticker__accent АКЦИЯ
                 br
                 | до 30.09
             | Осталось
             br
-            | 14 дней
+            span.js-left(data-left='2018-09-30')
         .main__installment
             span.main__installment__accent 0%
             | рассрочка
