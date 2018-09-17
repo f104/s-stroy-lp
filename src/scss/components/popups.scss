@@ -55,7 +55,7 @@ body.fancybox-active {
     padding: 0 0px;
     margin: 0 auto;
     @include media-breakpoint-up(md) {
-        padding: 0 120px;
+        padding: 0 100px;
     }
     &__h {
         text-align: center;
@@ -63,7 +63,7 @@ body.fancybox-active {
         font-weight: 700;
         font-size: 20px;
         margin-bottom: 19px;
-        padding: 0 30px;
+        padding: 0 40px;
         @include media-breakpoint-up(md) {
             padding: 0;
             padding: 0;
