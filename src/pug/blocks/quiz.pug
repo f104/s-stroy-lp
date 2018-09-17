@@ -28,7 +28,7 @@ include chunks/quiz-item
                             .quiz-item__row__col
                                 .quiz-item__muted Оставьте номер, мы зафиксируем вашу скидку
                                 .input-group
-                                    input.input._for-white.js-mask(name='phone')
+                                    input.input._for-white.js-mask(name='phone' required autocomplete='off')
                                     button.btn._for-white Оставить заявку
                                     input.js-quiz__discount-input(name='discount' hidden)
                                     input.js-quiz__results-input(name='results' hidden)
