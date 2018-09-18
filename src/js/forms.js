@@ -14,7 +14,7 @@ const forms = {
             require("jgrowl");
             $('form').submit(function (e) {
                 let $form = $(this);
-                let data = $form.serialize();
+                let data = $form.serialize() + '&tab=' + app.currentTab;
                 $.ajax({
                     type: 'post',
                     url: forms.url,

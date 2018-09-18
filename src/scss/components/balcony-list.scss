@@ -52,6 +52,15 @@
                 width: 315px;
             }
         }
+        &__head {
+            margin-bottom: 20px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 23px;
+            }
+            @include media-breakpoint-up(lg) {
+                min-height: 56px;
+            }
+        }
         &__h {
             font-family: $font-family-alt;
             font-weight: 600;
@@ -66,10 +75,8 @@
             font-family: $font-family-alt;
             font-weight: 500;
             font-size: 16px;
-            margin-bottom: 20px;
             @include media-breakpoint-up(md) {
                 font-size: 20px;
-                margin-bottom: 26px;
             }
         }
         &__content {
@@ -105,7 +112,9 @@
         &__tabs {
             display: flex;
             justify-content: flex-start;
-            height: 80px;
+            @include media-breakpoint-up(lg) {
+                height: 80px;
+            }
             &__item {
                 &:first-child {
                     margin-right: 20px;

@@ -28,6 +28,7 @@ var app = {
             }
         },
     },
+    currentTab: 'windows',
 
     init: function () {
 
@@ -345,12 +346,17 @@ var app = {
             animate: false,
         }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
             $content.text($clicked.text());
+            app.currentTab = $clicked.attr('href').substr(1);
             if (app.media == app.breakpoints.sm) {
                 $wrapper.slideUp();
                 $toggler.removeClass('active');
             }
         });
-        $content.text($('.js-nav__list').find('a.active').text());
+        let $active = $('.js-nav__list').find('a.active');
+        if ($active.length) {
+            $content.text($active.text());
+            app.currentTab = $active.attr('href').substr(1);
+        }
         $toggler.on('click', function (e) {
             e.stopPropagation();
             $wrapper.slideToggle()
@@ -360,10 +366,10 @@ var app = {
 //            $wrapper.slideToggle();
 //        });
     },
-    
-    initConfig: function() {
+
+    initConfig: function () {
         // смена картинки при смене таба
-        $('.js-config__toggler').on('click', function() {
+        $('.js-config__toggler').on('click', function () {
             let data = $(this).data();
             console.log($(this).data());
             if (data.appTogglerHide && data.appTogglerShow) {
