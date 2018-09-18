@@ -1,6 +1,7 @@
 .input {
     background-color: rgba($color-bg, .3);
     color: $color-bg;
+    font-family: $font-family;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 0.05em;
@@ -31,7 +32,7 @@
     }
     &._for-white {
         background-color: $color-bg-gray;
-        color: $color-text;
+        color: #3E3E3F;
         &:hover {
             background-color: $color-bg-gray;
         }

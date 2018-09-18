@@ -1,0 +1,32 @@
+.main._balcony
+    .container
+        .main__head
+            h1.main__h Выгодно остеклить лоджию или балкон с ремонтом под ключ
+            p.main__text Увеличьте площадь квартиры, приобретя теплый кабинет, зимний сад или кладовую.
+        .main__price-wrapper
+            .main__price
+                span.main__price__muted Экономия до
+                span.main__price__price 20%
+                    | 
+                    span.main__price__price__small от стоимости*
+                span.main__price__text при заказе остекления под ключ
+            .main__price-right
+                span.main__price-right__text Монтаж по ГОСТ включает в себя установку рамы, стеклопакетов, отливов, паро- и гидроизоляции, регулировку фурнитуры
+        .main__form
+            form
+                .input-group
+                    input(name='email' value='user@host.com' hidden)
+                    input(name='text' value='info' hidden)
+                    input(name='email3' value='info@example.com' hidden)
+                    input(name='form_id' value='6' hidden)
+                    input(name='form_name' value='Балконы: первый экран' hidden)
+                    input.input._for-white.js-mask(name='phone' required autocomplete='off')
+                    button.btn Рассчитать свой вариант
+        .main__sticker(style='background-image:url(img/sticker.png)')
+            span.main__sticker__accent АКЦИЯ
+                br
+                | до 30.09
+            | Осталось
+            br
+            span.js-left(data-left='2018-09-30')
+    .main__back(style='background-image:url(img/main/balcony.jpg)')

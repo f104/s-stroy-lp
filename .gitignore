@@ -4,5 +4,5 @@ node_modules/
 bower_components/
 tmp/
 src/scss/generated
-docs
+_docs
 dist/backend

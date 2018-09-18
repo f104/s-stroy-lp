@@ -44,22 +44,60 @@
           </div>
         </header>
     <article class="content">
-      <div class="container">
-        <div class="main _windows">
-          <div class="main__head">
-            <h1 class="main__h">Пластиковые окна от производителя</h1>
-            <p class="main__text">Пластиковые окна от оконного завода «САКСЭС» сохраняют тепло, формируют здоровый микроклимат.</p>
-          </div>
-          <div class="main__back" style="background-image:url(img/main/windows.png)"></div>
-          <div class="main__price-wrapper">
-            <div class="main__price"><span class="main__price__muted">Окно под ключ</span><span class="main__price__price _star">от 9 990 ₽</span><span class="main__price__text">Размер 130×140 см</span></div>
-            <div class="main__price-right"><span class="main__price-right__muted">Обычная цена</span>
-              <del class="main__price-right__price">12 390 ₽</del>
+      <div class="js-tabs">
+        <ul class="js-tabs__list">
+          <li><a href="#windows">Пластиковые окна</a></li>
+          <li><a href="#balcony">Лоджии и балконы</a></li>
+        </ul>
+        <div id="windows">
+          <div class="container">
+            <div class="main _windows">
+              <div class="main__head">
+                <h1 class="main__h">Пластиковые окна от производителя</h1>
+                <p class="main__text">Пластиковые окна от оконного завода «САКСЭС» сохраняют тепло, формируют здоровый микроклимат.</p>
+              </div>
+              <div class="main__back" style="background-image:url(img/main/windows.png)"></div>
+              <div class="main__price-wrapper">
+                <div class="main__price"><span class="main__price__muted">Окно под ключ</span><span class="main__price__price _star">от 9 990 ₽</span><span class="main__price__text">Размер 130×140 см</span></div>
+                <div class="main__price-right"><span class="main__price-right__muted">Обычная цена</span>
+                  <del class="main__price-right__price">12 390 ₽</del>
+                </div>
+              </div>
+              <div class="main__form"><a class="btn _for-white js-popup" href="#calc" data-action="Окна: первый экран">Рассчитать свой вариант</a></div>
+              <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br><span class="js-left" data-left="2018-09-30"></span></div>
+              <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
             </div>
           </div>
-          <div class="main__form"><a class="btn _for-white js-popup" href="#calc" data-action="Окна: первый экран">Рассчитать свой вариант</a></div>
-          <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br><span class="js-left" data-left="2018-09-30"></span></div>
-          <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
+        </div>
+        <div id="balcony">
+          <div class="main _balcony">
+            <div class="container">
+              <div class="main__head">
+                <h1 class="main__h">Выгодно остеклить лоджию или балкон с ремонтом под ключ</h1>
+                <p class="main__text">Увеличьте площадь квартиры, приобретя теплый кабинет, зимний сад или кладовую.</p>
+              </div>
+              <div class="main__price-wrapper">
+                <div class="main__price"><span class="main__price__muted">Экономия до</span><span class="main__price__price">
+                    20% <span class="main__price__price__small">от стоимости*</span></span><span class="main__price__text">при заказе остекления под ключ</span></div>
+                <div class="main__price-right"><span class="main__price-right__text">Монтаж по ГОСТ включает в себя установку рамы, стеклопакетов, отливов, паро- и гидроизоляции, регулировку фурнитуры</span></div>
+              </div>
+              <div class="main__form">
+                <form>
+                  <div class="input-group">
+                    <input name="email" value="user@host.com" hidden>
+                    <input name="text" value="info" hidden>
+                    <input name="email3" value="info@example.com" hidden>
+                    <input name="form_id" value="6" hidden>
+                    <input name="form_name" value="Балконы: первый экран" hidden>
+                    <input class="input _for-white js-mask" name="phone" required autocomplete="off">
+                    <button class="btn">Рассчитать свой вариант</button>
+                  </div>
+                </form>
+              </div>
+              <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br><span class="js-left" data-left="2018-09-30"></span></div>
+            </div>
+            <div class="main__back" style="background-image:url(img/main/balcony.jpg)"></div>
+          </div>
         </div>
       </div>
       <div class="stock">

@@ -5,7 +5,17 @@ block title
 
 block content
     
-    include /blocks/main/windows
+    .js-tabs
+        ul.js-tabs__list
+            li
+                a(href='#windows') Пластиковые окна
+            li
+                a(href='#balcony') Лоджии и балконы
+        div(id="windows")
+            include /blocks/main/windows
+        div(id="balcony")
+            include /blocks/main/balcony
+    
     include /blocks/stock
     
     .container
