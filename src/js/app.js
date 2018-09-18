@@ -53,15 +53,17 @@ var app = {
         window.jQuery = $;
 
         app.document.ready(function () {
+            app.initTabs();
             app.initReviewsSlider();
             app.initStockSlider();
             app.initManSlider();
             app.initWorkSlider();
             app.initPopup();
             app.initScrollbar();
-            app.initTabs();
             app.initStock();
             app.initLeft();
+            app.initConfig();
+            app.initNav();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -90,9 +92,9 @@ var app = {
 //                transitionUncollapse: 'fadeIn',
 //                collapsedByDefault: false
             }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
-                $(elem).find('.js-tabs__select__item')
-                        .removeClass('_active')
-                        .filter(`[href="${$clicked.attr('href')}"]`).addClass('_active');
+//                $(elem).find('.js-tabs__select__item')
+//                        .removeClass('_active')
+//                        .filter(`[href="${$clicked.attr('href')}"]`).addClass('_active');
                 $targetPanel.find('.swiper-container').each(function () {
                     var el = $(this)[0];
                     if (el.swiper) {
@@ -328,6 +330,45 @@ var app = {
                         est = date - now,
                         days = Math.ceil(est / 1000 / 60 / 60 / 24);
                 $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));
+            }
+        });
+    },
+
+    initNav: function () {
+        require("libs/jquery.easytabs.min.js");
+        let $wrapper = $('.js-nav__wrapper'),
+                $toggler = $('.js-nav__toggler'),
+                $content = $('.js-nav__toggler__content');
+        $('.js-nav').easytabs({
+            tabs: '.js-nav__list > li',
+            updateHash: false,
+            animate: false,
+        }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
+            $content.text($clicked.text());
+            if (app.media == app.breakpoints.sm) {
+                $wrapper.slideUp();
+                $toggler.removeClass('active');
+            }
+        });
+        $content.text($('.js-nav__list').find('a.active').text());
+        $toggler.on('click', function (e) {
+            e.stopPropagation();
+            $wrapper.slideToggle()
+            $(this).toggleClass('active');
+        });
+//        app.window.on('click', function() {
+//            $wrapper.slideToggle();
+//        });
+    },
+    
+    initConfig: function() {
+        // смена картинки при смене таба
+        $('.js-config__toggler').on('click', function() {
+            let data = $(this).data();
+            console.log($(this).data());
+            if (data.appTogglerHide && data.appTogglerShow) {
+                $(data.appTogglerHide).addClass('hidden');
+                $(data.appTogglerShow).removeClass('hidden');
             }
         });
     },

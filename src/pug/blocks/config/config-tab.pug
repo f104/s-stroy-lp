@@ -1,0 +1,13 @@
+mixin config-tab()
+    a.config-tabs__tab(href=attributes.href)
+        .config-tabs__tab__head
+            if (attributes.img)
+                img(src=attributes.img alt=attributes.title)
+            if (attributes.sprite)
+                +svgsprite(attributes.sprite)
+        .config-tabs__tab__foot
+            span.config-tabs__tab__foot__h= attributes.title
+            if (attributes.size)
+                span.config-tabs__tab__foot__muted= attributes.size
+    
+

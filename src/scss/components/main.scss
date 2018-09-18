@@ -1,15 +1,29 @@
+.main-wrapper {
+    /*margin-bottom: 260px;*/
+    height: 820px;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(md) {
+        height: 680px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 740px;
+    }
+    @include media-breakpoint-up(xl) {
+        height: 820px;
+    }
+}
 .main {
     $root: &;
     font-family: $font-family-alt;
     padding-top: 18px;
-    margin-bottom: 20px;
+    /*height: 800px;*/
     @include media-breakpoint-up(md) {
         padding-top: 23px;
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
     }
     @include media-breakpoint-up(lg) {
         padding-top: 50px;
-        margin-bottom: 50px;
+        /*margin-bottom: 50px;*/
     }
     &__h {
         font-weight: 700;
@@ -226,14 +240,15 @@
     }
 
     &._windows {
-        margin-bottom: 40px;
+        /*margin-bottom: 40px;*/
+        padding-bottom: 260px;
         @include media-breakpoint-up(md) {
             padding-bottom: 30px;
-            margin-bottom: 30px;
+            /*margin-bottom: 30px;*/
         }
         @include media-breakpoint-up(lg) {
             padding-bottom: 120px;
-            margin-bottom: -60px;
+            /*margin-bottom: -60px;*/
         }
         #{$root} {
             &__head {
@@ -347,14 +362,14 @@
 
     &._balcony {
         padding-bottom: 60px;
-        margin-bottom: -30px;
+        /*margin-bottom: 200px;*/
         @include media-breakpoint-up(md) {
             padding-bottom: 220px;
-            margin-bottom: -180px;
+            /*margin-bottom: -180px;*/
         }
         @include media-breakpoint-up(lg) {
             padding-bottom: 300px;
-            margin-bottom: -240px;
+            /*margin-bottom: -240px;*/
         }
         #{$root} {
             &__head {
@@ -464,9 +479,9 @@
                                         background-position-x: right;*/
                 }
                 @include media-breakpoint-up(lg) {
-/*                    top: 30px;
-                    right: 0;
-                    bottom: -40px;*/
+                    /*                    top: 30px;
+                                        right: 0;
+                                        bottom: -40px;*/
                 }
             }
         }

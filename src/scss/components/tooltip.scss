@@ -23,6 +23,7 @@
         width: 286px;
         box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.15);
         z-index: 100;
+        cursor: default;
         &:after {
             content: '';
             position: absolute;
@@ -36,14 +37,19 @@
 
         }
     }
+    cursor: pointer;
+    &:hover {
+        #{$root}__content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
     [class^="icon"] {
         color: $color-primary;
-        cursor: pointer;
-        &:hover {
-            ~ #{$root}__content {
-                opacity: 1;
-                pointer-events: auto;
-            }
+    }
+    &._inverse {
+        [class^="icon"] {
+            color: $color-bg;
         }
     }
 }

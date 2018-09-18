@@ -56,9 +56,18 @@
 }
 
 .stock {
-    margin-bottom: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 660px;
+    @include media-breakpoint-up(md) {
+        top: 580px;
+    }
     @include media-breakpoint-up(lg) {
-        margin-bottom: 60px;
+        top: 650px;
+    }
+    @include media-breakpoint-up(xl) {
+        top: 720px;
     }
     &__h {
         font-family: $font-family-alt;

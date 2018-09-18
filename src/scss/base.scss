@@ -42,8 +42,18 @@
     }
 }
 
-.color-primary {
+.hidden {
+    display: none !important;
+}
+
+.color-primary, .color-cold {
     color: $color-primary;
+}
+.color-secondary {
+    color: $color-secondary;
+}
+.color-warm {
+    color: #E3902E;
 }
 
 .dashed {

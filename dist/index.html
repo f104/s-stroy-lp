@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>САКСЭС Нижегородский оконный завод</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/libs/jquery.fancybox.css">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
     <link rel="stylesheet" href="fonts/Lato/lato.css">
     <link rel="stylesheet" href="fonts/Fontello/css/fontello.css">
-    <link rel="stylesheet" href="assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1.0">
   </head>
   <body class="body">
         <header class="header">
@@ -44,7 +45,7 @@
           </div>
         </header>
     <article class="content">
-      <div class="container">
+      <div class="main-wrapper container">
         <div class="main _windows">
           <div class="main__head">
             <h1 class="main__h">Пластиковые окна от производителя</h1>
@@ -60,6 +61,44 @@
           <div class="main__form"><a class="btn _for-white js-popup" href="#calc" data-action="Окна: первый экран">Рассчитать свой вариант</a></div>
           <div class="main__sticker" style="background-image:url(img/sticker.png)"><span class="main__sticker__accent">АКЦИЯ<br>до 30.09</span>Осталось<br><span class="js-left" data-left="2018-09-30"></span></div>
           <div class="main__installment"><span class="main__installment__accent">0%</span>рассрочка<span class="main__installment__strong">на 10 мес.</span></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="feats sm-full">
+          <div class="feats__inner">
+            <div class="feats__item">
+              <div class="feats__item__img"> 
+                    <svg class="svgsprite _size">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#size"></use>
+                    </svg>
+              </div>
+              <div class="feats__item__text">Замер бесплатно</div>
+            </div>
+            <div class="feats__item">
+              <div class="feats__item__img"> 
+                    <svg class="svgsprite _policy">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#policy"></use>
+                    </svg>
+              </div>
+              <div class="feats__item__text">Монтаж по ГОСТу</div>
+            </div>
+            <div class="feats__item">
+              <div class="feats__item__img"> 
+                    <svg class="svgsprite _money">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#money"></use>
+                    </svg>
+              </div>
+              <div class="feats__item__text">Беспроцентная рассрочка</div>
+            </div>
+            <div class="feats__item">
+              <div class="feats__item__img"> 
+                    <svg class="svgsprite _warranty">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#warranty"></use>
+                    </svg>
+              </div>
+              <div class="feats__item__text">5 лет гарантии</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="stock">
@@ -92,44 +131,6 @@
             <div class="swiper-button-next"><i class="icon-next"></i>
             </div>
             <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="feats sm-full">
-          <div class="feats__inner">
-            <div class="feats__item">
-              <div class="feats__item__img"> 
-                    <svg class="svgsprite _size">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#size"></use>
-                    </svg>
-              </div>
-              <div class="feats__item__text">Замер бесплатно</div>
-            </div>
-            <div class="feats__item">
-              <div class="feats__item__img"> 
-                    <svg class="svgsprite _policy">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#policy"></use>
-                    </svg>
-              </div>
-              <div class="feats__item__text">Монтаж по ГОСТу</div>
-            </div>
-            <div class="feats__item">
-              <div class="feats__item__img"> 
-                    <svg class="svgsprite _money">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#money"></use>
-                    </svg>
-              </div>
-              <div class="feats__item__text">Беспроцентная рассрочка</div>
-            </div>
-            <div class="feats__item">
-              <div class="feats__item__img"> 
-                    <svg class="svgsprite _warranty">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#warranty"></use>
-                    </svg>
-              </div>
-              <div class="feats__item__text">5 лет гарантии</div>
-            </div>
           </div>
         </div>
       </div>
@@ -1224,7 +1225,7 @@
           <div class="container">
             <div class="calc">
               <h3 class="calc__h">Рассчитать свой вариант</h3>
-              <div class="calc__lead">Оставьте ваш номер и наш специалист с вами свяжется, поможет с выбором и произведет оперативный расчет необходимой конфигурации окон.</div>
+              <div class="calc__lead">Оставьте ваш номер и наш специалист с вами свяжется, поможет с выбором и произведет оперативный расчет необходимой конфигурации.</div>
               <form class="calc__form">
                 <div class="input-group">
                   <input name="email" value="user@host.com" hidden>
@@ -1340,6 +1341,6 @@
             </div>
           </div>
         </footer>
-    <script src="assets/js/bundle.js?v=1.0.0"></script>
+    <script src="assets/js/bundle.js?v=1.1.0"></script>
   </body>
 </html>

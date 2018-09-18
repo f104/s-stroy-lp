@@ -28,6 +28,7 @@
                     margin-right: 0;
                 }
             }
+            #{$root}__logo { width: 100px; }
             #{$root}__call { flex-grow: 1; }
         }
         @include media-breakpoint-up(lg) {
@@ -48,6 +49,7 @@
             display: none;
             @include media-breakpoint-up(md) {
                 display: block;
+                width: 100%;
             }
             @include media-breakpoint-up(lg) {
                 width: 100%;

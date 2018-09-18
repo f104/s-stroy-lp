@@ -18,7 +18,9 @@
         margin-bottom: 100px;
     }
 }
+
 .config-tabs {
+    $root: &;
     @include media-breakpoint-only(sm) {
         display: none;
     }
@@ -50,57 +52,67 @@
             padding-top: 0;
         }
     }
-}
-.config-tab {
-    display: block;
-    background: $color-bg-gray;
-    border-radius: 10px;
-    padding: 26px 26px 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 225px;
-    @include media-breakpoint-up(lg) {
-        height: 257px;
-    }
-    &__foot {
-        /*flex-grow: 1;*/
-        font-family: $font-family-alt;
-        font-size: 15px;
-        @include media-breakpoint-up(md) {
-            font-size: 16px;
-        }
+    &__tab {
+        display: block;
+        background: $color-bg-gray;
+        border-radius: 10px;
+        padding: 26px 26px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 225px;
         @include media-breakpoint-up(lg) {
-            font-size: 19px;
+            height: 257px;
         }
-        &__h {
-            display: block;
-            font-weight: 600;
+        &__foot {
+            /*flex-grow: 1;*/
+            font-family: $font-family-alt;
+            font-size: 15px;
             @include media-breakpoint-up(md) {
-                margin-bottom: 5px;
+                font-size: 16px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 19px;
+            }
+            &__h {
+                display: block;
+                font-weight: 600;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 5px;
+                }
+            }
+            &__muted {
+                font-weight: 500;
+                opacity: 0.4;
             }
         }
-        &__muted {
-            font-weight: 500;
-            opacity: 0.4;
+        @include tab-hover;
+        @include transition(all);
+        &.active {
+            box-shadow: 
+                inset 3px 0 0 $color-primary, inset 0 3px 0 $color-primary, inset -3px 0 0 $color-primary, inset 0 -3px 0 $color-primary,
+                0px 0px 30px rgba(43, 76, 185, 0.5);
+            @include media-breakpoint-up(lg) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    right: 0;
+                    height: 40px;
+                    background-color: $color-bg-gray;
+                    z-index: -1;
+                }
+            }
         }
     }
-    @include tab-hover;
-    @include transition(all);
-    &.active {
-        box-shadow: 
-            inset 3px 0 0 $color-primary, inset 0 3px 0 $color-primary, inset -3px 0 0 $color-primary, inset 0 -3px 0 $color-primary,
-            0px 0px 30px rgba(43, 76, 185, 0.5);
-        @include media-breakpoint-up(lg) {
-            &:after {
-                content: '';
-                position: absolute;
-                top: -40px;
-                left: 0;
-                right: 0;
-                height: 40px;
-                background-color: $color-bg-gray;
-                z-index: -1;
+    &._balcony {
+        #{$root} {
+            &__tab {
+                height: 169px;
+                .svgsprite {
+                    height: 55px;
+                }
             }
         }
     }
@@ -121,6 +133,10 @@
             width: 40px;
             margin-right: 10px;
             flex-grow: 0;
+            .svgsprite {
+                height: 35px;
+                width: 35px;
+            }
         }
         &__content {
             font-family: $font-family-alt;
@@ -159,5 +175,143 @@
     }
     @include media-breakpoint-up(md) {
         display: none;
+    }
+}
+
+.config-detail {
+    $root: 7;
+    &__head {
+        margin-bottom: 28px;
+        @include media-breakpoint-up(md) {
+            display: flex;
+        }
+        &__col {
+            @include media-breakpoint-only(sm) {
+                &:last-child {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
+        }
+        &__muted {
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+            color: rgba(#0E0E0E, .5);
+            @include media-breakpoint-up(md) {
+                font-size: 15px;
+            }
+        }
+        &__badge {
+            display: inline-block;
+            font-family: $font-family-alt;
+            font-weight: 600;
+            line-height: normal;
+            font-size: 13px;
+            line-height: 20px;
+            padding: 0 5px;
+            color: $color-base;
+            background-color: $color-primary;
+            border-radius: 3px;
+            margin-left: 1.5ex;
+            @include media-breakpoint-up(md) {
+                font-size: 14px;
+            }
+            &._action {
+                font-size: 14px;
+                line-height: 28px;
+                margin: 0;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+        }
+        &__price {
+            font-family: $font-family-alt;
+            font-weight: 700;
+            font-size: 28px;
+            color: $color-primary;
+            @include media-breakpoint-up(md) {
+                font-size: 36px;
+            }
+        }
+        &__del {
+            text-decoration: none;
+            font-family: $font-family-alt;
+            font-weight: 600;
+            font-size: 20px;
+            color: #707070;
+            white-space: nowrap;
+            &:after {
+                content: '';
+                position: absolute;
+                right: -1px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 2px;
+                background-color: #707070;
+            }
+            @include media-breakpoint-up(md) {
+                font-size: 30px;
+                line-height: 41px;
+                &:after {
+                    height: 3px;
+                }
+            }
+        }
+        &__text {
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+            color: $color-primary;
+            @include media-breakpoint-up(md) {
+                font-size: 15px;
+            }
+        }
+    }
+    &__content {
+        flex-grow: 1;
+        &__h {
+            font-family: $font-family-alt;
+            font-weight: 700;
+            font-size: 16px;
+            color: $color-primary;
+            margin-bottom: 15px;
+            @include media-breakpoint-up(md) {
+                font-size: 20px;
+            }
+        }
+        &__ul {
+            font-weight: 300;
+            font-size: 14px;
+            margin-bottom: 22px;
+            @include media-breakpoint-up(md) {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            &__li {
+                padding-left: 17px;
+                margin-bottom: .5rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    left: 0px;
+                    top: 3px;
+                    background-color: $color-primary;
+                }
+            }
+        }
     }
 }
