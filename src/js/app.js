@@ -28,6 +28,7 @@ var app = {
             }
         },
     },
+    tabs: ['windows','balcony','cottage','accessories'],
     currentTab: 'windows',
 
     init: function () {
@@ -346,11 +347,15 @@ var app = {
             animate: false,
         }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
             $content.text($clicked.text());
-            app.currentTab = $clicked.attr('href').substr(1);
+            let tab = $clicked.attr('href').substr(1);
+            if (app.tabs.indexOf(tab) !== -1) {
+                app.currentTab = tab;
+            }
             if (app.media == app.breakpoints.sm) {
                 $wrapper.slideUp();
                 $toggler.removeClass('active');
             }
+//            console.log(app.currentTab)
         });
         let $active = $('.js-nav__list').find('a.active');
         if ($active.length) {
@@ -375,7 +380,6 @@ var app = {
         // смена картинки при смене таба
         $('.js-config__toggler').on('click', function () {
             let data = $(this).data();
-            console.log($(this).data());
             if (data.appTogglerHide && data.appTogglerShow) {
                 $(data.appTogglerHide).addClass('hidden');
                 $(data.appTogglerShow).removeClass('hidden');
