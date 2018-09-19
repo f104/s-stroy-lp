@@ -14,6 +14,8 @@ block content
                     a.nav__list__item__link(href='#windows') Пластиковые окна
                 li.nav__list__item
                     a.nav__list__item__link(href='#balcony') Лоджии и балконы
+                li.nav__list__item
+                    a.nav__list__item__link(href='#cottage') Остекление котеджей
         
         div(id="windows")
             include /blocks/main/windows
@@ -23,6 +25,10 @@ block content
             include /blocks/main/balcony
             include /blocks/feats/balcony
             include /blocks/config/balcony
+        div(id="cottage")
+            include /blocks/main/cottage
+            include /blocks/feats/cottage
+            include /blocks/config/cottage
     
     include /blocks/stock
     

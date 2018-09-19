@@ -364,7 +364,7 @@ var app = {
         }
         $toggler.on('click', function (e) {
             e.stopPropagation();
-            $wrapper.slideToggle()
+            $wrapper.slideToggle();
             $(this).toggleClass('active');
         });
 //        app.window.on('click', function() {

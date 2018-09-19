@@ -1,0 +1,25 @@
+.main-wrapper
+    .main._cottage
+        .container
+            .main__head
+                h1.main__h Остекляете коттедж? Дадим скидку за объём
+                p.main__text За комплексный заказ на остекление частного дома или коттеджа 
+                    strong.nowrap сделаем скидку до 40%
+            .main__price-wrapper
+                .main__price
+                    span.main__price__muted Окно под ключ
+                    span.main__price__price от 9 990 ₽
+                    span.main__price__text Окно 130×140, монтаж по ГОСТ
+                .main__price-right
+                    span.main__price-right__text Монтаж по ГОСТ включает в себя установку рамы, стеклопакетов, отливов, паро- и гидроизоляции, регулировку фурнитуры.
+            .main__form
+                form
+                    .input-group
+                        input(name='email' value='user@host.com' hidden)
+                        input(name='text' value='info' hidden)
+                        input(name='email3' value='info@example.com' hidden)
+                        input(name='form_id' value='6' hidden)
+                        input(name='form_name' value='Коттеджи: первый экран' hidden)
+                        input.input._for-white.js-mask(name='phone' required autocomplete='off')
+                        button.btn Рассчитать свой вариант
+        .main__back(style='background-image:url(img/main/cottage.jpg)')

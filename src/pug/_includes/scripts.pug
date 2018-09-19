@@ -1,1 +1,18 @@
 script(src='assets/js/bundle.js?v=' + PACKAGE.version)
+script.
+  (function(document, window, src, site_id){
+    var s, r, t;
+    r = false;
+    s = document.createElement('script');
+    s.async = true;
+    s.type = 'text/javascript';
+    s.src = src;
+    s.onload = s.onreadystatechange = function() {
+      if (!r && (!this.readyState || this.readyState === 'complete')){
+        r = true;
+        rsJs._init(site_id,src);
+      }
+    };
+    t = document.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(s, t);
+  })(document, window, '//static-minicrm.riverstart.ru/bundle.js', '6KSzBTnz2DBrN73Pw');

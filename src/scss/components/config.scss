@@ -111,7 +111,17 @@
             &__tab {
                 height: 169px;
                 .svgsprite {
-                    height: 55px;
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+    &._cottage {
+        #{$root} {
+            &__tab {
+                height: 237px;
+                .svgsprite {
+                    font-size: 100px;
                 }
             }
         }

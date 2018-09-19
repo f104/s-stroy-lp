@@ -360,7 +360,7 @@
         }
     }
 
-    &._balcony {
+    &._balcony, &._cottage {
         padding-bottom: 60px;
         /*margin-bottom: 200px;*/
         @include media-breakpoint-up(md) {
@@ -467,21 +467,106 @@
                     height: 84px;
                     background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
                 }
+            }
+        }
+    }
+
+    &._cottage {
+        #{$root} {
+            &__head {
+                margin-bottom: 36px;
                 @include media-breakpoint-up(md) {
-                    /*                    position: absolute;
-                                        left: 0;
-                                        right: -30px;
-                                        top: 50px;
-                                        bottom: 0;
-                                        height: auto;
-                                        z-index: -1;
-                                        background-size: contain;
-                                        background-position-x: right;*/
+                    width: 460px;
                 }
                 @include media-breakpoint-up(lg) {
-                    /*                    top: 30px;
-                                        right: 0;
-                                        bottom: -40px;*/
+                    width: 600px;
+                    margin-bottom: 40px;
+                }
+                @include media-breakpoint-up(xl) {
+                    width: 100%;
+                }
+            }
+            &__price-wrapper {
+                margin-bottom: 30px;
+                @include media-breakpoint-up(md) {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-top: 0;
+                    margin-bottom: 44px;
+                    width: 640px;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 700px;
+                }
+            }
+            &__h {
+                @include media-breakpoint-up(xl) {
+                    width: 600px;
+                }
+            }
+            &__price {
+                margin-bottom: 20px;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                    margin-right: 20px;
+                }
+                &__muted {
+                    line-height: 22px;
+                    font-size: 15px;
+                }
+                &__price {
+                    font-size: 43px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 50px;
+                    }
+                }
+                &__text {
+                    line-height: 22px;
+                    font-size: 15px;
+                    @include media-breakpoint-up(lg) {
+                        line-height: 24px;
+                        font-size: 16px;
+                    }
+                }
+            }
+            &__sticker {
+                @include media-breakpoint-up(md) {
+                    top: 5px;
+                    right: map-get($container-paddings, 'md');
+                }
+                @include media-breakpoint-up(lg) {
+                    right: map-get($container-paddings, 'lg');
+                }
+                @include media-breakpoint-up(xl) {
+                    right: 0;
+                }
+            }
+            &__back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                background-position-x: 40%;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(90.08deg, #FDFCFF -0.36%, rgba(253, 252, 255, 0.6) 99.93%);
+                    opacity: 0.95;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 84px;
+                    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
                 }
             }
         }

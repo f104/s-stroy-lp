@@ -1,0 +1,468 @@
+include config-tab
+include /blocks/chunks/tooltip-gost
+
+.container._xl.config
+
+    .js-tabs.js-tabs_disconnected
+        
+        .config-select.sm-full.js-tabs__select
+            .config-select__list
+                a.config-select__item.js-tabs__select__item._active(href='#2-section-window-cottage')
+                    span.config-select__item__img
+                        +svgsprite('2-section-window')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Окна пластиковые белые 
+                a.config-select__item.js-tabs__select__item(href='#arc-window-cottage')
+                    span.config-select__item__img
+                        +svgsprite('arc-window')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Окна нестандартной формы
+                a.config-select__item.js-tabs__select__item(href='#lamination-cottage')
+                    span.config-select__item__img
+                        +svgsprite('2-section-window')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Окна с цветной ламинацией профиля
+                a.config-select__item.js-tabs__select__item(href='#tinted-window-cottage')
+                    span.config-select__item__img
+                        +svgsprite('tinted-window')
+                    span.config-select__item__content
+                        span.config-select__item__content__h Декоративный переплет или тонировка
+                
+        .js-tabs__content
+        
+            .balcony-list.sm-full(id='2-section-window-cottage')
+                .balcony-list__item
+                    .balcony-list__item__col
+                        .balcony-list__item__head
+                            .balcony-list__item__h Остеклить коттедж пластиковыми окнами
+                        .balcony-list__item__content
+                            p.
+                                Пластиковые окна для частного дома — оптимальное решение 
+                                в соотношении цена/качество.
+                            p.
+                                Они плотно закрываются, сохраняют тепло внутри помещения, 
+                                надёжно защищают от сквозняков. С эстетической стороны приятно, когда стильные и аккуратные рамы подчёркивают фасад.
+                            p.
+                                Экономия на отоплении благодаря профилю Rehau шириной 70 мм и стеклопакету шириной 32 мм.
+                            p.
+                                Защита от взлома убережет ваше жилище от попыток проникновения.
+                    .balcony-list__item__col
+                        .balcony-list__item__tabs-wrapper.js-tabs(data-tabs='.balcony-list__item__tabs > li')
+                            ul.balcony-list__item__tabs
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/blitz.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-2-section-window-1')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Blitz
+                                        span.balcony-list__item__tabs__item__content__text от 9 990 ₽
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/grazio.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-2-section-window-2')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Grazio
+                                        span.balcony-list__item__tabs__item__content__text от 10 800 ₽
+                            div.balcony-list__item__tab(id='cottage-2-section-window-1')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см
+                                            span.config-detail__head__price от 9 990 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Blitz 60 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 32 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                a.btn.js-popup(href='#calc' data-action='Остеклить коттедж пластиковыми окнами Rehau Blitz') Рассчитать свой вариант
+                                +payment('999')
+                            div.balcony-list__item__tab(id='cottage-2-section-window-2')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см
+                                            span.config-detail__head__price от 10 800 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Grazio 70 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 40 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                a.btn.js-popup(href='#calc' data-action='Остеклить коттедж пластиковыми окнами Rehau Grazio') Рассчитать свой вариант
+                                +payment('1 080')
+                    .balcony-list__item__col.balcony-list__item__img
+                        .balcony-list__item__img__img-wrapper
+                            .balcony-list__item__img__img-wrapper__img(style='background-image: url(img/cottage/windows.jpg)')
+            
+            .balcony-list.sm-full(id='arc-window-cottage')
+                .balcony-list__item
+                    .balcony-list__item__col
+                        .balcony-list__item__head
+                            .balcony-list__item__h Окна нестандартной формы
+                        .balcony-list__item__content
+                            p.
+                                Технические возможности оконного завода «САКСЭС» позволяют 
+                                изготавливать пластиковые окна любых нестандартных форм 
+                                в зависимости от требований вашего проекта. Круглые, квадратные, 
+                                овальные, арочные, в форме трапеции и т.п. — форма окон 
+                                зависит только от ваших пожеланий и фантазии. Наш специалист 
+                                проконсультирует вас и поможет выбрать подходящий вариант.
+                    .balcony-list__item__col
+                        .balcony-list__item__tabs-wrapper.js-tabs(data-tabs='.balcony-list__item__tabs > li')
+                            ul.balcony-list__item__tabs
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/blitz.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-arc-window-1')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Blitz
+                                        span.balcony-list__item__tabs__item__content__text от 12 100 ₽
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/grazio.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-arc-window-2')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Grazio
+                                        span.balcony-list__item__tabs__item__content__text от 13 880 ₽
+                            div.balcony-list__item__tab(id='cottage-arc-window-1')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно «трапеция» 150х150 см
+                                            span.config-detail__head__price от 12 100 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Blitz 60 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 32 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                a.btn.js-popup(href='#calc' data-action='Окна нестандартной формы Rehau Blitz') Рассчитать свой вариант
+                                +payment('1 210')
+                            div.balcony-list__item__tab(id='cottage-arc-window-2')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно «трапеция» 150х150 см
+                                            span.config-detail__head__price от 13 880 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Grazio 70 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 40 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                a.btn.js-popup(href='#calc' data-action='Окна нестандартной формы Rehau Grazio') Рассчитать свой вариант
+                                +payment('1 388')
+                    .balcony-list__item__col.balcony-list__item__img
+                        .balcony-list__item__img__img-wrapper
+                            .balcony-list__item__img__img-wrapper__img(style='background-image: url(img/cottage/arc-window.jpg)')
+            
+            .balcony-list.sm-full(id='lamination-cottage')
+                .balcony-list__item
+                    .balcony-list__item__col
+                        .balcony-list__item__head
+                            .balcony-list__item__h Окна с цветной ламинацией профиля
+                        .balcony-list__item__content
+                            p.
+                                Оконный завод «САКСЭС» предлагает выбор из более чем 30 видов 
+                                наружной ламинации окон. Наш специалист, выезжающий на замер, 
+                                поможет подобрать необходимый цвет, чтобы дополнить и украсить 
+                                фасад вашего дома. Ламинирующая цветная пленка, которой 
+                                покрывают профиль на нашем заводе, имеет не только 
+                                декоративное значение, она дополнительно защищает конструкцию, 
+                                поэтому ламинированные окна отличаются максимальной устойчивостью к:
+                            ul
+                                li повышенным и пониженным температурам окружающей среды (от −80 до +130 градусов);
+                                li загрязнениям и запылению;
+                                li негативному влиянию УФ-лучей солнца, значит, профиль не выгорает, сохраняет свой эстетичный внешний вид и первоначальный цвет на протяжении всего срока службы.
+                    .balcony-list__item__col
+                        .balcony-list__item__tabs-wrapper.js-tabs(data-tabs='.balcony-list__item__tabs > li')
+                            ul.balcony-list__item__tabs
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/blitz.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-lamination-1')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Blitz
+                                        span.balcony-list__item__tabs__item__content__text от 13 400 ₽
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/grazio.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-lamination-2')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Grazio
+                                        span.balcony-list__item__tabs__item__content__text от 15 360 ₽
+                            div.balcony-list__item__tab(id='cottage-lamination-1')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см
+                                            span.config-detail__head__price от 13 400 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Blitz 60 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 32 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Ламинация с улицы
+                                            li.config-detail__content__ul__li Отлив и москитные сетки коричневые
+                                a.btn.js-popup(href='#calc' data-action='Окна с цветной ламинацией профиля Rehau Blitz') Рассчитать свой вариант
+                                +payment('1 340')
+                            div.balcony-list__item__tab(id='cottage-lamination-2')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см
+                                            span.config-detail__head__price от 15 360 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Grazio 70 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 40 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Ламинация с улицы
+                                            li.config-detail__content__ul__li Отлив и москитные сетки коричневые
+                                a.btn.js-popup(href='#calc' data-action='Окна с цветной ламинацией профиля Rehau Grazio') Рассчитать свой вариант
+                                +payment('1 536')
+                    .balcony-list__item__col.balcony-list__item__img
+                        .balcony-list__item__img__img-wrapper
+                            .balcony-list__item__img__img-wrapper__img(style='background-image: url(img/cottage/lamination.jpg)')
+                        .balcony-list__item__img__text.balcony-list__item__content
+                            p.
+                                Ламинированные конструкции не требуют особого ухода, 
+                                они отталкивают загрязнения, легко отмываются. 
+                                В отличие от профиля белого цвета, такие окна хороши тем, 
+                                что на них не остаются следы пальцев.
+            
+            .balcony-list.sm-full(id='tinted-window-cottage')
+                .balcony-list__item
+                    .balcony-list__item__col
+                        .balcony-list__item__head
+                            .balcony-list__item__h Декоративный переплет
+                        .balcony-list__item__content
+                            p.
+                                Оконный завод «САКСЭС» производит окна с декоративным переплетом, 
+                                которые отличной подойдут для панорамных решений в частный дом. 
+                                Декоративная раскладка (шпросы) являются планками, которые устанавливают внутрь 
+                                стеклопакета, служащими роскошным украшением светопрозрачной оконной конструкции. 
+                                Шпросы помещают внутрь стеклопакета во время его изготовления и надежно фиксируют.
+                    .balcony-list__item__col
+                        .balcony-list__item__tabs-wrapper.js-tabs(data-tabs='.balcony-list__item__tabs > li')
+                            ul.balcony-list__item__tabs
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/blitz.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-decor-1')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Blitz
+                                        span.balcony-list__item__tabs__item__content__text от 12 500 ₽
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/grazio.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-decor-2')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Grazio
+                                        span.balcony-list__item__tabs__item__content__text от 13 400 ₽
+                            div.balcony-list__item__tab(id='cottage-decor-1')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см со шпросами
+                                            span.config-detail__head__price от 12 500 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Blitz 60 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 32 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Шпросы 8 мм белые
+                                a.btn.js-popup(href='#calc' data-action='Декоративный переплет Rehau Blitz') Рассчитать свой вариант
+                                +payment('1 250')
+                            div.balcony-list__item__tab(id='cottage-decor-2')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см со шпросами
+                                            span.config-detail__head__price от 13 400 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Grazio 70 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 40 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Шпросы 8 мм белые
+                                a.btn.js-popup(href='#calc' data-action='Декоративный переплет Rehau Grazio') Рассчитать свой вариант
+                                +payment('1 340')
+                    .balcony-list__item__col.balcony-list__item__img
+                        .balcony-list__item__img__img-wrapper
+                            .balcony-list__item__img__img-wrapper__img(style='background-image: url(img/cottage/decor.jpg)')
+                .balcony-list__item
+                    .balcony-list__item__col
+                        .balcony-list__item__head
+                            .balcony-list__item__h Окно с тонировкой
+                        .balcony-list__item__content
+                            p.
+                                Тонировка стеклопакета отражает до 95% вредного ультрафиолета. 
+                                В вашей комнате светло, но не жарко, мебель не выгорает, 
+                                блики не мешают смотреть телевизор, работать на компьютере.
+                            ul
+                                li Создаете индивидуальный стиль и комфорт в помещении
+                                li Летом облегчает работу кондиционера, до 2-3 раз
+                                li Вы защищены от любопытных взглядов
+                    .balcony-list__item__col
+                        .balcony-list__item__tabs-wrapper.js-tabs(data-tabs='.balcony-list__item__tabs > li')
+                            ul.balcony-list__item__tabs
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/blitz.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-tinted-1')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Blitz
+                                        span.balcony-list__item__tabs__item__content__text от 11 600 ₽
+                                li.balcony-list__item__tabs__item
+                                    img.balcony-list__item__tabs__item__img(src='img/grazio.png')
+                                    a.balcony-list__item__tabs__item__content(href='#cottage-tinted-2')
+                                        span.balcony-list__item__tabs__item__content__h 
+                                            span.balcony-list__item__tabs__item__content__h__inner Rehau Grazio
+                                        span.balcony-list__item__tabs__item__content__text от 12 600 ₽
+                            div.balcony-list__item__tab(id='cottage-tinted-1')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см, профиль 2-х камерный белый
+                                            span.config-detail__head__price от 11 600 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Blitz 60 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 32 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Тонировка с защитой от ультрафиолета
+                                a.btn.js-popup(href='#calc' data-action='Окно с тонировкой Rehau Blitz') Рассчитать свой вариант
+                                +payment('1 160')
+                            div.balcony-list__item__tab(id='cottage-tinted-2')
+                                .config-detail
+                                    .config-detail__head
+                                        span.config-detail__head__col
+                                            span.config-detail__head__muted Окно 130х140 см, профиль 2-х камерный белый
+                                            span.config-detail__head__price от 12 600 ₽
+                                            span.config-detail__head__badge._action 
+                                                span Акция -40% за объем
+                                                span.tooltip._inverse
+                                                    i.icon-help
+                                                    span.tooltip__content За комплексный заказ на остекление сделаем 
+                                                        strong скидку до 40%
+                                                        | . Сообщите менеджеру необходимый объем работ.
+                                        span.config-detail__head__col
+                                    .config-detail__content
+                                        .config-detail__content__h Профиль Rehau Grazio 70 мм
+                                        ul.config-detail__content__ul
+                                            li.config-detail__content__ul__li 2-х камерный стеклопакет 40 мм
+                                            li.config-detail__content__ul__li Сертифицированный монтаж по ГОСТу
+                                                +tooltip-gost
+                                            li.config-detail__content__ul__li Поворотно-откидная фурнитура
+                                            li.config-detail__content__ul__li Тонировка с защитой от ультрафиолета
+                                a.btn.js-popup(href='#calc' data-action='Окно с тонировкой Rehau Grazio') Рассчитать свой вариант
+                                +payment('1 260')
+                    .balcony-list__item__col.balcony-list__item__img
+                        .balcony-list__item__img__img-wrapper
+                            .balcony-list__item__img__img-wrapper__img(style='background-image: url(img/cottage/tinted.jpg)')
+            
+        .scrollbar-outer.js-scrollbar-md
+            ul.config-tabs._cottage.js-tabs__list
+                li.config-tabs__item
+                    +config-tab(
+                                sprite = '2-section-window'
+                                title = 'Окна пластиковые белые'
+                                href = '#2-section-window-cottage'
+                        )
+                li.config-tabs__item
+                    +config-tab(
+                                sprite = 'arc-window'
+                                title = 'Окна нестандартной формы'
+                                href = '#arc-window-cottage'
+                        )
+                li.config-tabs__item
+                    +config-tab(
+                                sprite = '2-section-window'
+                                title = 'Окна с цветной ламинацией профиля'
+                                href = '#lamination-cottage'
+                        )
+                li.config-tabs__item
+                    +config-tab(
+                                sprite = 'tinted-window'
+                                title = 'Декоративный переплет или тонировка'
+                                href = '#tinted-window-cottage'
+                        )

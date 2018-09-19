@@ -45,6 +45,9 @@
 .hidden {
     display: none !important;
 }
+.nowrap {
+    white-space: nowrap;
+}
 
 .color-primary, .color-cold {
     color: $color-primary;
