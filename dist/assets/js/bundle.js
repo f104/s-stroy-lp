@@ -19121,7 +19121,8 @@ coverflowEffect:{rotate:0,stretch:stretch,depth:200,modifier:1,slideShadows:fals
 //            $wrapper.slideToggle();
 //        });
 // fix scroll to #tab on direct link
-if(location.hash&&(0,_jquery2.default)(location.hash).length){(0,_jquery2.default)("html, body").animate({scrollTop:0},200);}},initConfig:function initConfig(){// смена картинки при смене таба
+if(location.hash&&(0,_jquery2.default)(location.hash).length){(0,_jquery2.default)("html, body").animate({scrollTop:0},200);}// handle click on footer menu
+(0,_jquery2.default)('.js-nav__footer').click(function(){(0,_jquery2.default)('.js-nav').easytabs('select',(0,_jquery2.default)(this).attr('href'));(0,_jquery2.default)("html, body").animate({scrollTop:0},500);return false;});},initConfig:function initConfig(){// смена картинки при смене таба
 (0,_jquery2.default)('.js-config__toggler').on('click',function(){var data=(0,_jquery2.default)(this).data();if(data.appTogglerHide&&data.appTogglerShow){(0,_jquery2.default)(data.appTogglerHide).addClass('hidden');(0,_jquery2.default)(data.appTogglerShow).removeClass('hidden');}});},/**
      * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
      * param  iNumber Integer Число на основе которого нужно сформировать окончание

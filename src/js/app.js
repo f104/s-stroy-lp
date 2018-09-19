@@ -28,7 +28,7 @@ var app = {
             }
         },
     },
-    tabs: ['windows','balcony','cottage','accessories'],
+    tabs: ['windows', 'balcony', 'cottage', 'accessories'],
     currentTab: 'windows',
 
     init: function () {
@@ -374,6 +374,12 @@ var app = {
         if (location.hash && $(location.hash).length) {
             $("html, body").animate({scrollTop: 0}, 200);
         }
+        // handle click on footer menu
+        $('.js-nav__footer').click(function () {
+            $('.js-nav').easytabs('select', $(this).attr('href'));
+            $("html, body").animate({scrollTop: 0}, 500);
+            return false;
+        });
     },
 
     initConfig: function () {
