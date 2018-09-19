@@ -5,12 +5,27 @@ block title
 
 block content
     
-    include /blocks/main/windows
-    include /blocks/feats/windows
+    .nav.js-nav
+        .nav__toggler.js-nav__toggler
+            .nav__toggler__content.js-nav__toggler__content Пластиковые окна
+        .nav__wrapper.js-nav__wrapper
+            ul.nav__list.js-nav__list
+                li.nav__list__item
+                    a.nav__list__item__link(href='#windows') Пластиковые окна
+                li.nav__list__item
+                    a.nav__list__item__link(href='#balcony') Лоджии и балконы
+        
+        div(id="windows")
+            include /blocks/main/windows
+            include /blocks/feats/windows
+            include /blocks/config/windows
+        div(id="balcony")
+            include /blocks/main/balcony
+            include /blocks/feats/balcony
+            include /blocks/config/balcony
+    
     include /blocks/stock
     
-        
-    include /blocks/config
     include /blocks/bank
     include /blocks/man
     include /blocks/quiz
@@ -20,10 +35,9 @@ block content
     include /blocks/contacts
         
     div(hidden)
-        div(id='order')
-            | order
         div(id='eco')
             include /blocks/popups/eco
+        include /blocks/popups/action
         include /blocks/popups/calc
         include /blocks/popups/call
         include /blocks/popups/bank

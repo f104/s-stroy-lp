@@ -1,5 +1,5 @@
 div(id='bank')
-    .bank._popup(id='bank')
+    .bank._popup
         .container
             .bank__head
                 h3.bank__h Выгодная рассрочка от САКСЭС
@@ -27,8 +27,8 @@ div(id='bank')
                         .bank__payments__item
                             span.bank__payments__item__accent 10
                             | месяцев рассрочки
-                    .bank__rules(hidden)
-                        a.bank__rules__link(href='#') Условия рассрочки для клиентов САКСЭС [PDF, 55 KB]
+                    .bank__rules
+                        a.bank__rules__link(href='docs/Rassrochka_SAKSES.pdf' target='_blank') Условия рассрочки для клиентов САКСЭС [PDF, 55 KB]
                 .bank__content__col
                     ul.bank__list
                         li.bank__list__item Качественные окна сейчас — оплата потом

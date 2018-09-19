@@ -342,7 +342,7 @@ var app = {
                 $content = $('.js-nav__toggler__content');
         $('.js-nav').easytabs({
             tabs: '.js-nav__list > li',
-            updateHash: false,
+            updateHash: true,
             animate: false,
         }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
             $content.text($clicked.text());
@@ -365,6 +365,10 @@ var app = {
 //        app.window.on('click', function() {
 //            $wrapper.slideToggle();
 //        });
+        // fix scroll to #tab on direct link
+        if (location.hash && $(location.hash).length) {
+            $("html, body").animate({scrollTop: 0}, 200);
+        }
     },
 
     initConfig: function () {

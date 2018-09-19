@@ -235,6 +235,7 @@
         background-color: transparent;
         padding: 0;
         margin: 0;
+        overflow: hidden;
         #{$root} {
             &__head {
                 display: block;

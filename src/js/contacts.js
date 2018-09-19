@@ -78,6 +78,20 @@ const contacts = {
         }, {
             suppressMapOpenBlock: true,
         });
+        map.behaviors.disable('scrollZoom');
+        if (contacts.media >= 768) {
+            map.controls.add('zoomControl', {
+//                size: 'small',
+                float: 'none',
+                position: {
+                    top: '50px',
+                    right: '30px'
+                }
+            });
+        }
+//        map.controls.add('zoomControl', {
+//            size: 'small'
+//        });
         let placemarks = [];
         let tplPlacemark = ymaps.templateLayoutFactory.createClass(
                 '<div id="pm_{{ properties.id }}" class="placemark {{ properties.active }}"><svg class="svgsprite _geo"><use xlink:href="assets/img/sprites/svgsprites.svg#geo"></svg></div>'
@@ -109,8 +123,8 @@ const contacts = {
         contacts.map = map;
         contacts.placemarks = placemarks;
     },
-    
-    getCenter: function(geo) {
+
+    getCenter: function (geo) {
 //        if (typeof(this.media !== 'undefined') && this.media >= 1280){
 //            geo[1] += 1;
 //        }
