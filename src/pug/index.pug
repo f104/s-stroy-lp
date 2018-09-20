@@ -16,6 +16,8 @@ block content
                     a.nav__list__item__link(href='#balcony') Лоджии и балконы
                 li.nav__list__item
                     a.nav__list__item__link(href='#cottage') Остекление котеджей
+                li.nav__list__item
+                    a.nav__list__item__link(href='#accessories') Аксессуары и ремонт окон
         
         div(id="windows")
             include /blocks/main/windows
@@ -29,6 +31,10 @@ block content
             include /blocks/main/cottage
             include /blocks/feats/cottage
             include /blocks/config/cottage
+        div(id="accessories")
+            include /blocks/main/accessories
+            include /blocks/feats/accessories
+            include /blocks/config/accessories
     
     include /blocks/stock
     

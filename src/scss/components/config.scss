@@ -126,6 +126,24 @@
             }
         }
     }
+    &._accessories {
+        #{$root} {
+            &__item {
+                @include media-breakpoint-up(md) {
+                    @include col(50%, 25px);
+                }
+            }
+            &__tab {
+                height: 200px;
+                @include media-breakpoint-up(lg) {
+                    height: 169px;
+                }
+                .svgsprite {
+                    font-size: 57px;
+                }
+            }
+        }
+    }
 }
 
 .config-select {

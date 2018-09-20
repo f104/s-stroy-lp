@@ -201,5 +201,74 @@
                 }
             }
         }
+        &__pricelist {
+            margin-bottom: 20px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 23px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 45px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            &._row {
+                .pricelist {
+                    margin-bottom: 20px;
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 0;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+                @include media-breakpoint-up(md) {
+                    @include row(20px);
+                    .pricelist {
+                        @include col(50%, 20px);
+                    }
+                }
+            }
+        }
+    }
+    &._accessories {
+        #{$root} {
+            &__item {
+                &__head {
+                    @include media-breakpoint-up(lg) {
+                        min-height: unset;
+                        margin-bottom: 45px;
+                    }
+                }
+                &__content {
+                    @include media-breakpoint-up(lg) {
+                        width: 550px;
+                        margin-bottom: 45px;
+                    }
+                }
+                &__col {
+                    position: relative;
+                    &:first-child {
+                        margin-bottom: 0;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        &:first-child {
+                            width: 66.66%;
+                        }
+                    }
+                }
+                .btn {
+                    @include media-breakpoint-up(lg) {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        width: 220px;
+                    }
+                    @include media-breakpoint-up(xl) {
+                        width: 240px;
+                    }
+                }
+            }
+        }
     }
 }

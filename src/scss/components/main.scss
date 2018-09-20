@@ -150,6 +150,36 @@
             }
         }
     }
+    &__list {
+        font-size: 14px;
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+        }
+        &__item {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                left: 0px;
+                top: 5px;
+                background-color: $color-primary;
+                @include media-breakpoint-up(md) {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            &._break-before {
+                break-before: column;
+            }
+        }
+    }
     &__installment {
         background-color: $color-secondary;
         border-radius: 4px;
@@ -360,7 +390,7 @@
         }
     }
 
-    &._balcony, &._cottage {
+    &._balcony, &._cottage, &._accessories {
         padding-bottom: 60px;
         /*margin-bottom: 200px;*/
         @include media-breakpoint-up(md) {
@@ -567,6 +597,37 @@
                     right: 0;
                     height: 84px;
                     background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+                }
+            }
+        }
+    }
+
+    &._accessories {
+        #{$root} {
+            &__head {
+                width: auto;
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 40px;
+                }
+            }
+            &__text {
+                line-height: 26px;
+                font-size: 18px;
+                @include media-breakpoint-up(lg) {
+                    line-height: 37px;
+                    font-size: 24px;
+                }
+            }
+            &__list {
+                margin-bottom: 20px;
+                @include media-breakpoint-up(md) {
+                    font-size: 15px;
+                    column-count: 2;
+                    column-gap: 20px;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 950px;
+                    margin-bottom: -10px;
                 }
             }
         }
