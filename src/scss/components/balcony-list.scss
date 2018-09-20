@@ -244,6 +244,9 @@
                     @include media-breakpoint-up(lg) {
                         width: 550px;
                         margin-bottom: 45px;
+                        @include media-breakpoint-up(lg) {
+                            margin-bottom: 71px;
+                        }
                     }
                 }
                 &__col {
