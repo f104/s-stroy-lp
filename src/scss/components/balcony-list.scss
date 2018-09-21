@@ -241,6 +241,7 @@
                     }
                 }
                 &__content {
+                    margin-bottom: 30px;
                     @include media-breakpoint-up(lg) {
                         width: 550px;
                         margin-bottom: 45px;
