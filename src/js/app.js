@@ -108,6 +108,12 @@ var app = {
         // tabs select
         $('.js-tabs__select').each(function () {
             let height = $(this).outerHeight();
+            $(this).find('.js-tabs__select__item').each(function(){
+                let itemHeight = $(this).outerHeight();
+                if (itemHeight > height) {
+                    height = itemHeight;
+                }
+            });
             $(this).css({height: height + 'px'});
         });
         $('.js-tabs__select__item').on('click', function () {
@@ -346,9 +352,9 @@ var app = {
             updateHash: true,
             animate: false,
         }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
-            $content.text($clicked.text());
             let tab = $clicked.attr('href').substr(1);
             if (app.tabs.indexOf(tab) !== -1) {
+                $content.text($clicked.text());
                 app.currentTab = tab;
             }
             if (app.media == app.breakpoints.sm) {
