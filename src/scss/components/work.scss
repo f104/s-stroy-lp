@@ -108,6 +108,21 @@
             }
         }
     }
+    &__next {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        left: 385px;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+        @include media-breakpoint-up(lg) {
+            left: 545px;
+        }
+    }
 }
 
 .work-nav {

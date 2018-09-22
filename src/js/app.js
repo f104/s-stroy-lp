@@ -202,6 +202,7 @@ var app = {
 
     initWorkSlider: function () {
         let $nav = $('.js-work-nav__item');
+        let $next = $('.js-work-nav__next');
         let $btn = $('.js-work-nav__btn');
         let slider = new Swiper('.work .swiper-container', {
             slidesPerView: 1,
@@ -227,6 +228,9 @@ var app = {
         $nav.on('click', function () {
 //            console.log($(this).index());
             slider.slideTo($(this).index());
+        });
+        $next.on('click', function () {
+            slider.slideNext();
         });
         $btn.on('click', function () {
             if (!slider.isEnd) {
