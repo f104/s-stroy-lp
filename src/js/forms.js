@@ -28,7 +28,7 @@ const forms = {
                             forms.showMessage();
                             $form[0].reset();
                             $.fancybox.close();
-                            app.document.trigger(app.submitEventName, {form: $form});
+                            app.document.trigger(app.submitEventName, {$form: $form});
                         } else if (data['msg']) {
                             console.log(data['msg']);
                         }
