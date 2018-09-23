@@ -2,9 +2,17 @@ include chunks/quiz-item
 
 .container.quiz
     
-    .heading
+    .heading._with-flag
         h3.heading__h Выберите свой вариант
         p.heading__lead Ответьте на несколько вопросов и узнайте стоимость ваших окон
+        .heading__flag
+            .heading__flag__inner
+                span.heading__flag__col
+                    +svgsprite('sale')
+                span.heading__flag__col
+                    span.heading__flag__text
+                        span.heading__flag__text__muted Ценим ваше время
+                        | Прошедшим опрос — скидка
     
     .quiz__row
         .quiz__row__col
@@ -16,7 +24,7 @@ include chunks/quiz-item
                         final=true
                         )
                         .quiz-item__question Вы сэкономили наше время, примите в благодарность скидку.
-                        form.quiz-item__row.js-quiz__form
+                        form.quiz-item__row.js-form.js-quiz__form
                             .quiz-item__row__col
                                 .quiz-item__muted Номер вашей анкеты
                                 .quiz-item__code 

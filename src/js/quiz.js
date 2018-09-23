@@ -13,6 +13,8 @@ const quiz = {
 
     init: function () {
         const app = this;
+        this.submitEventName = app.submitEventName;
+
         $.getJSON(this.quiz.srcFile, function (json) {
             app.quiz.initQuiz(json);
             app.quiz.initTooltip();
@@ -20,8 +22,6 @@ const quiz = {
             var err = textStatus + ", " + error;
             console.log("Request Failed: " + err);
         });
-//        app.document.ready(function () {
-//        });
     },
 
     initQuiz: function (data) {
@@ -59,6 +59,7 @@ const quiz = {
                 $back = $('.js-quiz__back'),
                 $toggle = $('.js-quiz__toggle'),
                 $hide = $('.js-quiz__end-hide'),
+                $code = $('.js-quiz__code'),
                 $results = $('.js-quiz__results-input');
         that.setStep(step, total);
         $('.js-quiz__rate').text(rate);
@@ -97,11 +98,24 @@ const quiz = {
             step--;
             slider.slideTo(prevIndex.pop());
         });
-        $('.js-quiz__code').val(that.makeCode());
-//        $('.js-quiz__form').on('submit', function() {
-//            alert($(this).serialize());
-//            return false;
-//        });
+        $code.val(that.makeCode());
+        
+        // handle direct link
+        if (location.hash && location.hash == '#accessories') {
+            $('.js-quiz__answer').filter('[data-next="4"]').click();
+        }
+
+        // handle reset form
+        $(document).on('app_submit', function (e, data) {
+            if (data.$form.hasClass('js-quiz__form')) {
+                step = 1;
+                prevIndex = [];
+                results = [];
+                $code.val(that.makeCode());
+                slider.slideTo(0);
+            }
+        });
+
     },
 
     setStep: function (current, total) {

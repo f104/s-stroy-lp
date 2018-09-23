@@ -12,7 +12,7 @@ const forms = {
             app.forms.initMask();
 
             require("jgrowl");
-            $('form').submit(function (e) {
+            $('.js-form').submit(function (e) {
                 let $form = $(this);
                 let data = $form.serialize() + '&tab=' + app.currentTab;
                 $.ajax({
@@ -28,6 +28,7 @@ const forms = {
                             forms.showMessage();
                             $form[0].reset();
                             $.fancybox.close();
+                            app.document.trigger(app.submitEventName, {form: $form});
                         } else if (data['msg']) {
                             console.log(data['msg']);
                         }
@@ -40,12 +41,13 @@ const forms = {
                     },
                     complete: function () {
                         $form.find('input, select, button').removeClass('_disabled');
+                        // for test
+//                        $form[0].reset();
+//                        app.document.trigger(app.submitEventName, {$form: $form});
                     }
                 });
                 return false;
             });
-
-
 
         });
 

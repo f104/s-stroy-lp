@@ -14,6 +14,7 @@ var app = {
     },
     media: 320,
     resizeEventName: 'app_resize',
+    submitEventName: 'app_submit',
     fancyOptions: {
         autoFocus: false,
         touch: false,
@@ -38,6 +39,10 @@ var app = {
         this.page = page;
         this.page.init.call(this);
 
+        app.checkMedia();
+        app.window.on('resize', app.checkMedia);
+        window.jQuery = $;
+
         // Init forms
         this.forms = forms;
         this.forms.init.call(this);
@@ -45,14 +50,10 @@ var app = {
         // Init quiz
         this.quiz = quiz;
         this.quiz.init.call(this);
-
+        
         // Init contacts
         this.contacts = contacts;
         this.contacts.init.call(this);
-
-        app.checkMedia();
-        app.window.on('resize', app.checkMedia);
-        window.jQuery = $;
 
         app.document.ready(function () {
             app.initTabs();
