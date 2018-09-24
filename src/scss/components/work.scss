@@ -36,13 +36,28 @@
     @include media-breakpoint-up(lg) {
         height: 550px !important;
     }
-    .btn {
+    &__footer {
         margin-top: 20px;
         @include media-breakpoint-up(md) {
-            width: 269px;
+            width: 370px;
         }
         @include media-breakpoint-up(lg) {
-            margin-top: 25px;
+            margin-top: 30px;
+            display: flex;
+        }
+        .btn {
+            margin-bottom: 20px;
+            @include media-breakpoint-only(sm) {
+                white-space: normal;
+                line-height: normal;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-radius: 30px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+                margin-right: 27px;
+            }
         }
     }
     &__h {

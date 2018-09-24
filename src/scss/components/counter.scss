@@ -1,0 +1,25 @@
+.counter {
+    background: $color-bg-gray;
+    border-radius: 8px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    padding: 0 15px;
+    &__number {
+        display: inline-block;
+        line-height: 42px;
+        background: $color-bg;
+        border-radius: 8px;
+        padding: 0 10px;
+        margin: 0 12px;
+        font-family: $font-family-alt;
+        font-weight: 600;
+        font-size: 25px;
+        color: $color-primary;
+    }
+}

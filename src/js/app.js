@@ -4,6 +4,7 @@ import forms from 'forms';
 import quiz from 'quiz';
 import contacts from 'contacts';
 import Swiper from 'swiper';
+import Cookies from 'js-cookie';
 var app = {
 
     breakpoints: {
@@ -67,6 +68,7 @@ var app = {
             app.initLeft();
             app.initConfig();
             app.initATabs();
+            app.initCounter();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -412,6 +414,54 @@ var app = {
                 $(data.appTogglerShow).removeClass('hidden');
             }
         });
+    },
+
+    initCounter: function () {
+        let now = new Date(), left = 15;
+        now = now.getHours();
+        if (now >= 18) {
+            left = 2;
+        } else {
+            switch (now) {
+                case 10:
+                case 11:
+                    left = 13;
+                    break;
+                case 12:
+                case 13:
+                    left = 9;
+                    break;
+                case 14:
+                    left = 7;
+                    break;
+                case 15:
+                    left = 6;
+                    break;
+                case 16:
+                    left = 5;
+                    break;
+                case 17:
+                    left = 4;
+                    break;
+            }
+        }
+        if (Cookies.get('appDimensions') && left > 1) {
+            left--;
+        }
+        writeCounter(left);
+        app.document.on(app.submitEventName, function (e, data) {
+            if (data.$form.hasClass('js-counter__form')) {
+                if (left > 1) {
+                    left--;
+                    writeCounter(left);
+                    Cookies.set('appDimensions', true);
+                }
+            }
+        });
+        function writeCounter(num) {
+            $('.js-counter__number').text(num);
+            $('.js-counter__text').text(app.getNumEnding(num, ['место', 'места', 'мест']));
+        }
     },
 
     /**
