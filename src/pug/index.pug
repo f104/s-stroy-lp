@@ -5,33 +5,33 @@ block title
 
 block content
     
-    .nav.js-nav
-        .nav__toggler.js-nav__toggler
-            .nav__toggler__content.js-nav__toggler__content Пластиковые окна
-        .nav__wrapper.js-nav__wrapper
-            ul.nav__list.js-nav__list
+    .nav._js-nav
+        .nav__toggler.js-tab__toggler
+            .nav__toggler__content.js-tab__toggler__content Пластиковые окна
+        .nav__wrapper.js-tab__wrapper
+            ul.nav__list
                 li.nav__list__item
-                    a.nav__list__item__link(href='#windows') Пластиковые окна
+                    a.nav__list__item__link._active.js-tab__link(href='#windows') Пластиковые окна
                 li.nav__list__item
-                    a.nav__list__item__link(href='#balcony') Лоджии и балконы
+                    a.nav__list__item__link.js-tab__link(href='#balcony') Лоджии и балконы
                 li.nav__list__item
-                    a.nav__list__item__link(href='#cottage') Остекление коттеджей
+                    a.nav__list__item__link.js-tab__link(href='#cottage') Остекление коттеджей
                 li.nav__list__item
-                    a.nav__list__item__link(href='#accessories') Аксессуары и ремонт окон
+                    a.nav__list__item__link.js-tab__link(href='#accessories') Аксессуары и ремонт окон
         
-        div(id="windows")
+        div(id="windows").a-tab._active.js-tab
             include /blocks/main/windows
             include /blocks/feats/windows
             include /blocks/config/windows
-        div(id="balcony")
+        div(id="balcony").a-tab.js-tab
             include /blocks/main/balcony
             include /blocks/feats/balcony
             include /blocks/config/balcony
-        div(id="cottage")
+        div(id="cottage").a-tab.js-tab
             include /blocks/main/cottage
             include /blocks/feats/cottage
             include /blocks/config/cottage
-        div(id="accessories")
+        div(id="accessories").a-tab.js-tab
             include /blocks/main/accessories
             include /blocks/feats/accessories
             include /blocks/config/accessories

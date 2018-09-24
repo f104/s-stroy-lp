@@ -66,7 +66,6 @@ var app = {
             app.initStock();
             app.initLeft();
             app.initConfig();
-            app.initNav();
             app.initATabs();
         });
 
@@ -394,57 +393,11 @@ var app = {
         // fix scroll to #tab on direct link
         if (location.hash && $(location.hash).length) {
             $("html, body").animate({scrollTop: 0}, 200);
-            $('.js-tab__link[href="' + location.hash + '"]').click();
+            $('.js-tab__link[href="' + location.hash + '"]:not(._active)').click();
         }
         // handle click on footer menu
         $('.js-tab__footer').click(function () {
-            $('.js-tab__link[href="' + $(this).attr('href') + '"]').click();
-            $("html, body").animate({scrollTop: 0}, 500);
-            return false;
-        });
-    },
-
-    initNav: function () {
-        require("libs/jquery.easytabs.min.js");
-        let $wrapper = $('.js-nav__wrapper'),
-                $toggler = $('.js-nav__toggler'),
-                $content = $('.js-nav__toggler__content');
-        $('.js-nav').easytabs({
-            tabs: '.js-nav__list > li',
-            updateHash: true,
-            animate: false,
-        }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
-            let tab = $clicked.attr('href').substr(1);
-            if (app.tabs.indexOf(tab) !== -1) {
-                $content.text($clicked.text());
-                app.currentTab = tab;
-            }
-            if (app.media == app.breakpoints.sm) {
-                $wrapper.slideUp();
-                $toggler.removeClass('active');
-            }
-//            console.log(app.currentTab)
-        });
-        let $active = $('.js-nav__list').find('a.active');
-        if ($active.length) {
-            $content.text($active.text());
-            app.currentTab = $active.attr('href').substr(1);
-        }
-        $toggler.on('click', function (e) {
-            e.stopPropagation();
-            $wrapper.slideToggle();
-            $(this).toggleClass('active');
-        });
-//        app.window.on('click', function() {
-//            $wrapper.slideToggle();
-//        });
-        // fix scroll to #tab on direct link
-        if (location.hash && $(location.hash).length) {
-            $("html, body").animate({scrollTop: 0}, 200);
-        }
-        // handle click on footer menu
-        $('.js-nav__footer').click(function () {
-            $('.js-nav').easytabs('select', $(this).attr('href'));
+            $('.js-tab__link[href="' + $(this).attr('href') + '"]:not(._active)').click();
             $("html, body").animate({scrollTop: 0}, 500);
             return false;
         });
