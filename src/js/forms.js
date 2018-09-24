@@ -42,8 +42,8 @@ const forms = {
                     complete: function () {
                         $form.find('input, select, button').removeClass('_disabled');
                         // for test
-                        $form[0].reset();
-                        app.document.trigger(app.submitEventName, {$form: $form});
+//                        $form[0].reset();
+//                        app.document.trigger(app.submitEventName, {$form: $form});
                     }
                 });
                 return false;
