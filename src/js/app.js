@@ -50,7 +50,7 @@ var app = {
         // Init quiz
         this.quiz = quiz;
         this.quiz.init.call(this);
-        
+
         // Init contacts
         this.contacts = contacts;
         this.contacts.init.call(this);
@@ -67,6 +67,7 @@ var app = {
             app.initLeft();
             app.initConfig();
             app.initNav();
+            app.initATabs();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -109,7 +110,7 @@ var app = {
         // tabs select
         $('.js-tabs__select').each(function () {
             let height = $(this).outerHeight();
-            $(this).find('.js-tabs__select__item').each(function(){
+            $(this).find('.js-tabs__select__item').each(function () {
                 let itemHeight = $(this).outerHeight();
                 if (itemHeight > height) {
                     height = itemHeight;
@@ -344,6 +345,62 @@ var app = {
                         days = Math.ceil(est / 1000 / 60 / 60 / 24);
                 $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));
             }
+        });
+    },
+
+    initATabs: function () {
+        let $wrapper = $('.js-tab__wrapper'),
+                $toggler = $('.js-tab__toggler'),
+                $content = $('.js-tab__toggler__content');
+        $toggler.on('click', function (e) {
+            e.stopPropagation();
+            $wrapper.slideToggle();
+            $(this).toggleClass('_active');
+        });
+        $('.js-tab__link').on('click', function () {
+            let tab = $(this).attr('href').substr(1),
+                    $current = $('.js-tab._active'),
+                    $target = $('#' + tab);
+
+            $('.js-tab__link._active').removeClass('_active');
+            $(this).addClass('_active');
+
+            $current.addClass('_out').delay(400).queue(function () {
+                $current.addClass('_only-img').dequeue();
+                $target.addClass('_in _active').delay(200).queue(function () {
+                    $target.removeClass('_in').delay(200).queue(function () {
+                        $current.removeClass('_only-img _out _active').dequeue();
+                    }).dequeue();
+                });
+            }).dequeue();
+
+            $content.text($(this).text());
+            if (app.media == app.breakpoints.sm) {
+                $wrapper.slideUp();
+                $toggler.removeClass('_active');
+            }
+
+            app.currentTab = tab;
+            if (history.pushState) {
+                history.pushState(null, null, '#' + tab);
+            } else {
+                location.hash = '#' + tab;
+            }
+//            console.log(app.currentTab);
+
+            return false;
+        });
+
+        // fix scroll to #tab on direct link
+        if (location.hash && $(location.hash).length) {
+            $("html, body").animate({scrollTop: 0}, 200);
+            $('.js-tab__link[href="' + location.hash + '"]').click();
+        }
+        // handle click on footer menu
+        $('.js-tab__footer').click(function () {
+            $('.js-tab__link[href="' + $(this).attr('href') + '"]').click();
+            $("html, body").animate({scrollTop: 0}, 500);
+            return false;
         });
     },
 

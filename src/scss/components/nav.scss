@@ -32,7 +32,7 @@
                 right: map-get($container-paddings, 'sm');
             }
         }
-        &.active {
+        &.active, &._active {
             #{$root}__toggler__content {
                 &:after {
                     content: '\E808';
@@ -106,7 +106,7 @@
                 @include media-breakpoint-up(md) {
                     padding: 0 25px;
                 }
-                &.active {
+                &.active, &._active {
                     pointer-events: none;
                     &:before {
                         opacity: 1;
