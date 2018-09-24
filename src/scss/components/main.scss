@@ -351,9 +351,11 @@
             &__sticker {
                 right: 0;
                 top: 0px;
+                @include media-breakpoint-up(md) {
+                    right: 0;
+                }
                 @include media-breakpoint-up(lg) {
                     top: -30px;
-                    right: 330px;
                 }
             }
             &__back {
