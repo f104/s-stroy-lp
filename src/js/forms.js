@@ -28,6 +28,7 @@ const forms = {
                             forms.showMessage();
                             $form[0].reset();
                             $.fancybox.close();
+                            forms.goalsGA($form);
                             app.document.trigger(app.submitEventName, {$form: $form});
                         } else if (data['msg']) {
                             console.log(data['msg']);
@@ -41,8 +42,10 @@ const forms = {
                     },
                     complete: function () {
                         $form.find('input, select, button').removeClass('_disabled');
-                        // for test
+//                         for test
+//                        console.log('test');
 //                        $form[0].reset();
+//                        forms.goalsGA($form);
 //                        app.document.trigger(app.submitEventName, {$form: $form});
                     }
                 });
@@ -51,6 +54,14 @@ const forms = {
 
         });
 
+    },
+
+    goalsGA: function ($form) {
+        let $input = $form.find('[name="goals_ga"]');
+        if ($input) {
+            let dataLayer = window.dataLayer = window.dataLayer || [];
+            dataLayer.push(JSON.parse($input.val()));
+        }
     },
 
     showMessage: function () {

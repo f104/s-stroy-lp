@@ -13,6 +13,11 @@
                         input(name='form_id' value='1' hidden)
                         input(name='form_name' value='Вызов специалиста на эко-инжиниринг (popup)' hidden)
                         input.input.js-mask(name='phone' required autocomplete='off')
+                        input(
+                            name='goals_ga' 
+                            hidden 
+                            value='{"event":"form_sent3","eventCategory":"lead","eventAction":"engineering"}'
+                        )
                         button.btn Оставить заявку
                     .form-desc Оставьте ваш номер телефона и мы перезвоним вам, а также согласуем бесплатный выезд специалиста в удобное для вас время.
                 p.eco__text.
