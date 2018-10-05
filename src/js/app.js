@@ -57,13 +57,13 @@ var app = {
         this.contacts.init.call(this);
 
         app.document.ready(function () {
+            app.initScrollbar();
             app.initTabs();
             app.initReviewsSlider();
             app.initStockSlider();
             app.initManSlider();
             app.initWorkSlider();
             app.initPopup();
-            app.initScrollbar();
             app.initStock();
             app.initLeft();
             app.initConfig();
@@ -82,10 +82,9 @@ var app = {
         setTimeout(function () {
             $('input[name="email3"],input[name="email"],input[name="text"]').attr('value', '').val('');
         }, 5000);
-        
+
         /*fast fix anchor tab*/
         $(window).on('load', function () {
-            console.log(location.hash.split((location.hash.indexOf('-') >= 0 ? '-' : '#')));
             if (location.hash.length > 0) {
                 let header = $('header');
                 let block = $('[data-anchor="' + location.hash.split((location.hash.indexOf('-') >= 0 ? '-' : '#')).pop() + '"]');
@@ -100,7 +99,7 @@ var app = {
                 }
             }
         });
-        
+
     },
 
     initTabs: function () {
@@ -153,8 +152,42 @@ var app = {
 
     initScrollbar: function () {
         require("libs/jquery.scrollbar.min.js");
+        require('jquery-mousewheel');
+
         if (app.media >= app.breakpoints.md) {
             $('.js-scrollbar-md_up').scrollbar();
+
+            $('.scroll-content').each(function (index) {
+                let inAction = false,
+                        k = 4; // множитель дельты
+                let $scroll = $(this),
+                        scrollMax = $scroll.get(0).scrollWidth - $scroll.outerWidth();
+                $(this).on('mousewheel', function (event) {
+                    event.preventDefault();
+                    if (inAction) {
+                        return;
+                    }
+                    inAction = true;
+                    let wScroll = $(window).scrollTop();
+                    if ($scroll.scrollLeft() == 0 && event.deltaY == 1) {
+                        $("html, body").animate({scrollTop: wScroll - event.deltaFactor * k}, 200, 'linear', function () {
+                            inAction = false;
+                        });
+                        return;
+                    }
+                    if ($scroll.scrollLeft() >= scrollMax && event.deltaY == -1) {
+                        $("html, body").animate({scrollTop: wScroll + event.deltaFactor * k}, 200, 'linear', function () {
+                            inAction = false;
+                        });
+                        return;
+                    }
+                    let delta = $scroll.scrollLeft() - event.deltaFactor * event.deltaY * k;
+                    $scroll.animate({scrollLeft: delta}, 200, 'linear', function () {
+                        inAction = false;
+                    });
+                });
+
+            });
         } else {
             $('.js-scrollbar-md_up').scrollbar('destroy');
         }

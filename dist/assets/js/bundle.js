@@ -19083,8 +19083,8 @@ var _jquery=__webpack_require__(0);var _jquery2=_interopRequireDefault(_jquery);
 this.page=_page2.default;this.page.init.call(this);app.checkMedia();app.window.on('resize',app.checkMedia);window.jQuery=_jquery2.default;// Init forms
 this.forms=_forms2.default;this.forms.init.call(this);// Init quiz
 this.quiz=_quiz2.default;this.quiz.init.call(this);// Init contacts
-this.contacts=_contacts2.default;this.contacts.init.call(this);app.document.ready(function(){app.initTabs();app.initReviewsSlider();app.initStockSlider();app.initManSlider();app.initWorkSlider();app.initPopup();app.initScrollbar();app.initStock();app.initLeft();app.initConfig();app.initATabs();app.initCounter();});app.document.on(app.resizeEventName,function(){app.initManSlider();app.initReviewsSlider();app.initScrollbar();app.initStock();});// Antispam
-setTimeout(function(){(0,_jquery2.default)('input[name="email3"],input[name="email"],input[name="text"]').attr('value','').val('');},5000);/*fast fix anchor tab*/(0,_jquery2.default)(window).on('load',function(){console.log(location.hash.split(location.hash.indexOf('-')>=0?'-':'#'));if(location.hash.length>0){var header=(0,_jquery2.default)('header');var block=(0,_jquery2.default)('[data-anchor="'+location.hash.split(location.hash.indexOf('-')>=0?'-':'#').pop()+'"]');if(block.length>0&&header.length>0){var top=Math.floor(block.offset().top-header.outerHeight());//                    console.log(block.position().top,header.outerHeight(),top);
+this.contacts=_contacts2.default;this.contacts.init.call(this);app.document.ready(function(){app.initScrollbar();app.initTabs();app.initReviewsSlider();app.initStockSlider();app.initManSlider();app.initWorkSlider();app.initPopup();app.initStock();app.initLeft();app.initConfig();app.initATabs();app.initCounter();});app.document.on(app.resizeEventName,function(){app.initManSlider();app.initReviewsSlider();app.initScrollbar();app.initStock();});// Antispam
+setTimeout(function(){(0,_jquery2.default)('input[name="email3"],input[name="email"],input[name="text"]').attr('value','').val('');},5000);/*fast fix anchor tab*/(0,_jquery2.default)(window).on('load',function(){if(location.hash.length>0){var header=(0,_jquery2.default)('header');var block=(0,_jquery2.default)('[data-anchor="'+location.hash.split(location.hash.indexOf('-')>=0?'-':'#').pop()+'"]');if(block.length>0&&header.length>0){var top=Math.floor(block.offset().top-header.outerHeight());//                    console.log(block.position().top,header.outerHeight(),top);
 //                    console.log(top);
 (0,_jquery2.default)(window).scrollTop(top);//                    console.log(app.window.scrollTop());
 }}});},initTabs:function initTabs(){__webpack_require__(27);(0,_jquery2.default)('.js-tabs').each(function(index,elem){var tabsSelector=typeof(0,_jquery2.default)(elem).data('tabs')==='undefined'?'.js-tabs__list > li':(0,_jquery2.default)(elem).data('tabs');(0,_jquery2.default)(elem).easytabs({tabs:tabsSelector,panelContext:(0,_jquery2.default)(elem).hasClass('js-tabs_disconnected')?(0,_jquery2.default)('.js-tabs__content'):(0,_jquery2.default)(elem),updateHash:false,animate:false//                transitionCollapse: 'fadeOut',
@@ -19094,7 +19094,8 @@ setTimeout(function(){(0,_jquery2.default)('input[name="email3"],input[name="ema
 //                        .removeClass('_active')
 //                        .filter(`[href="${$clicked.attr('href')}"]`).addClass('_active');
 $targetPanel.find('.swiper-container').each(function(){var el=(0,_jquery2.default)(this)[0];if(el.swiper){el.swiper.update();}});});});// tabs select
-(0,_jquery2.default)('.js-tabs__select').each(function(){var height=(0,_jquery2.default)(this).outerHeight();(0,_jquery2.default)(this).find('.js-tabs__select__item').each(function(){var itemHeight=(0,_jquery2.default)(this).outerHeight();if(itemHeight>height){height=itemHeight;}});(0,_jquery2.default)(this).css({height:height+'px'});});(0,_jquery2.default)('.js-tabs__select__item').on('click',function(){if((0,_jquery2.default)(this).hasClass('_active')){(0,_jquery2.default)(this).parents('.js-tabs__select').addClass('_active');(0,_jquery2.default)('.js-tabs__select__item').removeClass('_active');}else{(0,_jquery2.default)(this).parents('.js-tabs__select').removeClass('_active');(0,_jquery2.default)(this).addClass('_active');(0,_jquery2.default)(this).parents('.js-tabs').easytabs('select',(0,_jquery2.default)(this).attr('href'));}return false;});},initScrollbar:function initScrollbar(){__webpack_require__(28);if(app.media>=app.breakpoints.md){(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar('destroy');}if(app.media>=app.breakpoints.md&&app.media<app.breakpoints.lg){(0,_jquery2.default)('.js-scrollbar-md').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md').scrollbar('destroy');}},initPopup:function initPopup(){__webpack_require__(29);(0,_jquery2.default)('.js-popup').fancybox(this.fancyOptions);},initReviewsSlider:function initReviewsSlider(){var selector='.reviews .swiper-container';if(app.media==app.breakpoints.sm){new _swiper2.default(selector,{spaceBetween:10,slidesPerView:1,pagination:{el:'.reviews .swiper-container + .swiper-pagination',type:'bullets',clickable:true}});}else{//            console.log(1)
+(0,_jquery2.default)('.js-tabs__select').each(function(){var height=(0,_jquery2.default)(this).outerHeight();(0,_jquery2.default)(this).find('.js-tabs__select__item').each(function(){var itemHeight=(0,_jquery2.default)(this).outerHeight();if(itemHeight>height){height=itemHeight;}});(0,_jquery2.default)(this).css({height:height+'px'});});(0,_jquery2.default)('.js-tabs__select__item').on('click',function(){if((0,_jquery2.default)(this).hasClass('_active')){(0,_jquery2.default)(this).parents('.js-tabs__select').addClass('_active');(0,_jquery2.default)('.js-tabs__select__item').removeClass('_active');}else{(0,_jquery2.default)(this).parents('.js-tabs__select').removeClass('_active');(0,_jquery2.default)(this).addClass('_active');(0,_jquery2.default)(this).parents('.js-tabs').easytabs('select',(0,_jquery2.default)(this).attr('href'));}return false;});},initScrollbar:function initScrollbar(){__webpack_require__(28);__webpack_require__(29);if(app.media>=app.breakpoints.md){(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar();(0,_jquery2.default)('.scroll-content').each(function(index){var inAction=false,k=4;// множитель дельты
+var $scroll=(0,_jquery2.default)(this),scrollMax=$scroll.get(0).scrollWidth-$scroll.outerWidth();(0,_jquery2.default)(this).on('mousewheel',function(event){event.preventDefault();if(inAction){return;}inAction=true;var wScroll=(0,_jquery2.default)(window).scrollTop();if($scroll.scrollLeft()==0&&event.deltaY==1){(0,_jquery2.default)("html, body").animate({scrollTop:wScroll-event.deltaFactor*k},200,'linear',function(){inAction=false;});return;}if($scroll.scrollLeft()>=scrollMax&&event.deltaY==-1){(0,_jquery2.default)("html, body").animate({scrollTop:wScroll+event.deltaFactor*k},200,'linear',function(){inAction=false;});return;}var delta=$scroll.scrollLeft()-event.deltaFactor*event.deltaY*k;$scroll.animate({scrollLeft:delta},200,'linear',function(){inAction=false;});});});}else{(0,_jquery2.default)('.js-scrollbar-md_up').scrollbar('destroy');}if(app.media>=app.breakpoints.md&&app.media<app.breakpoints.lg){(0,_jquery2.default)('.js-scrollbar-md').scrollbar();}else{(0,_jquery2.default)('.js-scrollbar-md').scrollbar('destroy');}},initPopup:function initPopup(){__webpack_require__(30);(0,_jquery2.default)('.js-popup').fancybox(this.fancyOptions);},initReviewsSlider:function initReviewsSlider(){var selector='.reviews .swiper-container';if(app.media==app.breakpoints.sm){new _swiper2.default(selector,{spaceBetween:10,slidesPerView:1,pagination:{el:'.reviews .swiper-container + .swiper-pagination',type:'bullets',clickable:true}});}else{//            console.log(1)
 var els=document.querySelectorAll(selector);els.forEach(function(el){if(el.swiper){el.swiper.destroy();}});}},initStockSlider:function initStockSlider(){var selector='.stock .swiper-container';new _swiper2.default(selector,{slidesPerView:3,breakpointsInverse:true,watchOverflow:true,breakpoints:{1279:{slidesPerView:2},767:{spaceBetween:10,slidesPerView:1}},pagination:{el:'.stock .swiper-pagination',type:'bullets',clickable:true},navigation:{nextEl:'.stock .swiper-button-next',prevEl:'.stock .swiper-button-prev'}});},initWorkSlider:function initWorkSlider(){var $nav=(0,_jquery2.default)('.js-work-nav__item');var $next=(0,_jquery2.default)('.js-work-nav__next');var $btn=(0,_jquery2.default)('.js-work-nav__btn');var slider=new _swiper2.default('.work .swiper-container',{slidesPerView:1,effect:'fade',simulateTouch:false,autoHeight:true,pagination:{el:'.work .swiper-pagination',type:'bullets',clickable:true}});slider.on('slideChange',function(){//            console.log(this.realIndex);
 $nav.removeClass('_active');$nav.eq(this.realIndex).addClass('_active');if(this.isEnd){$btn.removeClass('_next').text($btn.data('order'));}else if(!$btn.hasClass('_next')){$btn.addClass('_next').text($btn.data('next'));}});$nav.on('click',function(){//            console.log($(this).index());
 slider.slideTo((0,_jquery2.default)(this).index());});$next.on('click',function(){slider.slideNext();});$btn.on('click',function(){if(!slider.isEnd){slider.slideNext();}else{_jquery2.default.fancybox.open((0,_jquery2.default)('#calc'),app.fancyOptions);}});var slideTo=function slideTo(index){slider.slideTo(index);};},initManSlider:function initManSlider(){var stretch=535;if(app.media>=app.breakpoints.lg){stretch=725;}if(app.media>=app.breakpoints.xl){stretch=745;}var selector='.man .swiper-container';var el=document.querySelector(selector);if(el.swiper){el.swiper.destroy();}var slider=new _swiper2.default(selector,{effect:app.media>=app.breakpoints.md?'coverflow':'slide',slidesPerView:'auto',normalizeSlideIndex:false,//            centeredSlides: false,
@@ -24622,6 +24623,236 @@ if(scrollx.isVisible){scrollx.scroll.addClass(scrollClass);scrolly.scroll.addCla
 
 /***/ }),
 /* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * jQuery Mousewheel 3.1.13
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ */
+
+(function (factory) {
+    if ( true ) {
+        // AMD. Register as an anonymous module.
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS style for Browserify
+        module.exports = factory;
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],
+        toBind = ( 'onwheel' in document || document.documentMode >= 9 ) ?
+                    ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],
+        slice  = Array.prototype.slice,
+        nullLowestDeltaTimeout, lowestDelta;
+
+    if ( $.event.fixHooks ) {
+        for ( var i = toFix.length; i; ) {
+            $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
+        }
+    }
+
+    var special = $.event.special.mousewheel = {
+        version: '3.1.12',
+
+        setup: function() {
+            if ( this.addEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.addEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = handler;
+            }
+            // Store the line height and page height for this particular element
+            $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
+            $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
+        },
+
+        teardown: function() {
+            if ( this.removeEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.removeEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = null;
+            }
+            // Clean up the data we added to the element
+            $.removeData(this, 'mousewheel-line-height');
+            $.removeData(this, 'mousewheel-page-height');
+        },
+
+        getLineHeight: function(elem) {
+            var $elem = $(elem),
+                $parent = $elem['offsetParent' in $.fn ? 'offsetParent' : 'parent']();
+            if (!$parent.length) {
+                $parent = $('body');
+            }
+            return parseInt($parent.css('fontSize'), 10) || parseInt($elem.css('fontSize'), 10) || 16;
+        },
+
+        getPageHeight: function(elem) {
+            return $(elem).height();
+        },
+
+        settings: {
+            adjustOldDeltas: true, // see shouldAdjustOldDeltas() below
+            normalizeOffset: true  // calls getBoundingClientRect for each event
+        }
+    };
+
+    $.fn.extend({
+        mousewheel: function(fn) {
+            return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');
+        },
+
+        unmousewheel: function(fn) {
+            return this.unbind('mousewheel', fn);
+        }
+    });
+
+
+    function handler(event) {
+        var orgEvent   = event || window.event,
+            args       = slice.call(arguments, 1),
+            delta      = 0,
+            deltaX     = 0,
+            deltaY     = 0,
+            absDelta   = 0,
+            offsetX    = 0,
+            offsetY    = 0;
+        event = $.event.fix(orgEvent);
+        event.type = 'mousewheel';
+
+        // Old school scrollwheel delta
+        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
+        if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
+        if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
+        if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
+
+        // Firefox < 17 horizontal scrolling related to DOMMouseScroll event
+        if ( 'axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
+            deltaX = deltaY * -1;
+            deltaY = 0;
+        }
+
+        // Set delta to be deltaY or deltaX if deltaY is 0 for backwards compatabilitiy
+        delta = deltaY === 0 ? deltaX : deltaY;
+
+        // New school wheel delta (wheel event)
+        if ( 'deltaY' in orgEvent ) {
+            deltaY = orgEvent.deltaY * -1;
+            delta  = deltaY;
+        }
+        if ( 'deltaX' in orgEvent ) {
+            deltaX = orgEvent.deltaX;
+            if ( deltaY === 0 ) { delta  = deltaX * -1; }
+        }
+
+        // No change actually happened, no reason to go any further
+        if ( deltaY === 0 && deltaX === 0 ) { return; }
+
+        // Need to convert lines and pages to pixels if we aren't already in pixels
+        // There are three delta modes:
+        //   * deltaMode 0 is by pixels, nothing to do
+        //   * deltaMode 1 is by lines
+        //   * deltaMode 2 is by pages
+        if ( orgEvent.deltaMode === 1 ) {
+            var lineHeight = $.data(this, 'mousewheel-line-height');
+            delta  *= lineHeight;
+            deltaY *= lineHeight;
+            deltaX *= lineHeight;
+        } else if ( orgEvent.deltaMode === 2 ) {
+            var pageHeight = $.data(this, 'mousewheel-page-height');
+            delta  *= pageHeight;
+            deltaY *= pageHeight;
+            deltaX *= pageHeight;
+        }
+
+        // Store lowest absolute delta to normalize the delta values
+        absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );
+
+        if ( !lowestDelta || absDelta < lowestDelta ) {
+            lowestDelta = absDelta;
+
+            // Adjust older deltas if necessary
+            if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+                lowestDelta /= 40;
+            }
+        }
+
+        // Adjust older deltas if necessary
+        if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+            // Divide all the things by 40!
+            delta  /= 40;
+            deltaX /= 40;
+            deltaY /= 40;
+        }
+
+        // Get a whole, normalized value for the deltas
+        delta  = Math[ delta  >= 1 ? 'floor' : 'ceil' ](delta  / lowestDelta);
+        deltaX = Math[ deltaX >= 1 ? 'floor' : 'ceil' ](deltaX / lowestDelta);
+        deltaY = Math[ deltaY >= 1 ? 'floor' : 'ceil' ](deltaY / lowestDelta);
+
+        // Normalise offsetX and offsetY properties
+        if ( special.settings.normalizeOffset && this.getBoundingClientRect ) {
+            var boundingRect = this.getBoundingClientRect();
+            offsetX = event.clientX - boundingRect.left;
+            offsetY = event.clientY - boundingRect.top;
+        }
+
+        // Add information to the event object
+        event.deltaX = deltaX;
+        event.deltaY = deltaY;
+        event.deltaFactor = lowestDelta;
+        event.offsetX = offsetX;
+        event.offsetY = offsetY;
+        // Go ahead and set deltaMode to 0 since we converted to pixels
+        // Although this is a little odd since we overwrite the deltaX/Y
+        // properties with normalized deltas.
+        event.deltaMode = 0;
+
+        // Add event and delta to the front of the arguments
+        args.unshift(event, delta, deltaX, deltaY);
+
+        // Clearout lowestDelta after sometime to better
+        // handle multiple device types that give different
+        // a different lowestDelta
+        // Ex: trackpad = 3 and mouse wheel = 120
+        if (nullLowestDeltaTimeout) { clearTimeout(nullLowestDeltaTimeout); }
+        nullLowestDeltaTimeout = setTimeout(nullLowestDelta, 200);
+
+        return ($.event.dispatch || $.event.handle).apply(this, args);
+    }
+
+    function nullLowestDelta() {
+        lowestDelta = null;
+    }
+
+    function shouldAdjustOldDeltas(orgEvent, absDelta) {
+        // If this is an older event and the delta is divisable by 120,
+        // then we are assuming that the browser is treating this as an
+        // older mouse wheel event and that we should divide the deltas
+        // by 40 to try and get a more usable deltaFactor.
+        // Side note, this actually impacts the reported scroll distance
+        // in older browsers and can cause scrolling to be slower than native.
+        // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
+        return special.settings.adjustOldDeltas && orgEvent.type === 'mousewheel' && absDelta % 120 === 0;
+    }
+
+}));
+
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports) {
 
 // ==================================================
