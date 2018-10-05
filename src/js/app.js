@@ -82,6 +82,25 @@ var app = {
         setTimeout(function () {
             $('input[name="email3"],input[name="email"],input[name="text"]').attr('value', '').val('');
         }, 5000);
+        
+        /*fast fix anchor tab*/
+        $(window).on('load', function () {
+            console.log(location.hash.split((location.hash.indexOf('-') >= 0 ? '-' : '#')));
+            if (location.hash.length > 0) {
+                let header = $('header');
+                let block = $('[data-anchor="' + location.hash.split((location.hash.indexOf('-') >= 0 ? '-' : '#')).pop() + '"]');
+
+                if (block.length > 0 && header.length > 0) {
+                    let top = Math.floor(block.offset().top - header.outerHeight());
+//                    console.log(block.position().top,header.outerHeight(),top);
+//                    console.log(top);
+                    $(window).scrollTop(top);
+//                    console.log(app.window.scrollTop());
+
+                }
+            }
+        });
+        
     },
 
     initTabs: function () {

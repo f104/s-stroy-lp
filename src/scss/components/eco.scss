@@ -92,6 +92,7 @@
             font-size: 16px;
             line-height: 23px;
             margin-bottom: 42px;
+            max-width: 670px;
         }
         @include media-breakpoint-up(lg) {
             font-size: 18px;
