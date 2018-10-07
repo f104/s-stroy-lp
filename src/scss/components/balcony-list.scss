@@ -36,28 +36,43 @@
             }
         }
         &__img {
-            @include media-breakpoint-down(md) {
+            margin-top: 30px;
+            margin-bottom: -30px;
+            margin-left: - map-get($container-paddings, sm);
+            margin-right: - map-get($container-paddings, sm);
+            @include media-breakpoint-only(md) {
                 display: none;
             }
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+            @include media-breakpoint-up(lg) {
+                margin: 0;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
             &__img-wrapper {
                 flex-grow: 1;
                 &__img {
-                    display: initial;
-                    position: absolute;
-                    top: -20px;
-                    bottom: -25px;
-                    left: 0;
-                    right: -25px;
+                    display: block;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    height: 400px;
+                    @include media-breakpoint-up(md) {
+                        display: initial;
+                        height: auto;
+                        position: absolute;
+                        top: -20px;
+                        bottom: -25px;
+                        left: 0;
+                        right: -25px;
+                    }
                 }
             }
             &__text {
                 padding-top: 50px;
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
             }
         }
         .btn {
@@ -144,10 +159,11 @@
         &__tabs {
             display: flex;
             justify-content: flex-start;
-            height: 87px;
+            margin-bottom: 20px;
             @include media-breakpoint-up(lg) {
                 height: 87px;
                 margin-top: 5px;
+                margin-bottom: 0;
             }
             &__item {
                 &:first-child {

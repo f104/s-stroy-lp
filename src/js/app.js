@@ -104,6 +104,31 @@ var app = {
 
     initTabs: function () {
         require("libs/jquery.easytabs.min.js");
+        // tabs select
+//        $('.js-tabs__select').each(function () {
+//            let height = $(this).outerHeight();
+//            $(this).find('.js-tabs__select__item').each(function () {
+//                let itemHeight = $(this).outerHeight();
+//                if (itemHeight > height) {
+//                    height = itemHeight;
+//                }
+//            });
+//            $(this).css({height: height + 'px'});
+//        });
+        $('.js-tabs__select__item').on('click', function () {
+            let $parents = $(this).parents('.js-tabs__select');
+            if ($(this).hasClass('_active')) {
+                $parents.css({'height': $parents.outerHeight()});
+                $parents.addClass('_active');
+                $parents.find('.js-tabs__select__item').removeClass('_active');
+            } else {
+                $parents.removeClass('_active');
+                $parents.css({'height': 'auto'});
+                $(this).addClass('_active');
+                $(this).parents('.js-tabs').easytabs('select', $(this).attr('href'));
+            }
+            return false;
+        });
         $('.js-tabs').each(function (index, elem) {
             let tabsSelector = typeof $(elem).data('tabs') === 'undefined' ? '.js-tabs__list > li' : $(elem).data('tabs');
             $(elem).easytabs({
@@ -125,28 +150,6 @@ var app = {
                     }
                 });
             });
-        });
-        // tabs select
-        $('.js-tabs__select').each(function () {
-            let height = $(this).outerHeight();
-            $(this).find('.js-tabs__select__item').each(function () {
-                let itemHeight = $(this).outerHeight();
-                if (itemHeight > height) {
-                    height = itemHeight;
-                }
-            });
-            $(this).css({height: height + 'px'});
-        });
-        $('.js-tabs__select__item').on('click', function () {
-            if ($(this).hasClass('_active')) {
-                $(this).parents('.js-tabs__select').addClass('_active');
-                $('.js-tabs__select__item').removeClass('_active');
-            } else {
-                $(this).parents('.js-tabs__select').removeClass('_active');
-                $(this).addClass('_active');
-                $(this).parents('.js-tabs').easytabs('select', $(this).attr('href'));
-            }
-            return false;
         });
     },
 
