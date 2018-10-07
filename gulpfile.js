@@ -43,7 +43,7 @@ gulp.task('serve', $.sequence('clean', 'icons', ['pug', 'sass', 'js'], 'browsers
 /* Sass task */
 gulp.task('sass', () => {
     const config = getConfig();
-    const dist = global.isDev ? './tmp/assets/css/' : './dist/assets/css/';
+    const dist = global.isDev ? './tmp/assets/css/' : './public_html/assets/css/';
 
     return gulp.src('./src/scss/main.scss')
         .pipe($.if(global.isDev || config.prodmaps, $.sourcemaps.init())).on('error', errorHandler('sass', 'sourcemaps:init'))
@@ -69,7 +69,7 @@ gulp.task('pug', () => {
             "__": locale
         }
     };
-    const dist = global.isDev ? './tmp/' : './dist/';
+    const dist = global.isDev ? './tmp/' : './public_html/';
 
     return gulp.src(['./src/pug/**/*.pug'])
         .pipe($.filter((file) => {
@@ -88,7 +88,7 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('js:copy', () => {
-    const dist = global.isDev ? './tmp/assets/js' : './dist/assets/js';
+    const dist = global.isDev ? './tmp/assets/js' : './public_html/assets/js';
 
     return gulp.src(['./src/js/**/*'])
         .pipe($.if(!global.isDev, $.uglify())).on('error', errorHandler('js', 'uglify'))
@@ -96,7 +96,7 @@ gulp.task('js:copy', () => {
 });
 
 gulp.task('js:webpack', () => {
-    const dist = global.isDev ? './tmp/assets/js' : './dist/assets/js';
+    const dist = global.isDev ? './tmp/assets/js' : './public_html/assets/js';
 
     return gulp.src(['./src/js/**/*'])
         .pipe(webpack(require('./webpack.config.js'))).on('error', errorHandler('js', 'webpack'))
@@ -108,7 +108,7 @@ gulp.task('icons', ['icons:svgsprites', 'icons:sprites']);
 
 gulp.task('icons:svgsprites', () => {
     if (fs.existsSync('./src/icons/')) {
-        const dist = global.isDev ? './tmp/' : './dist/';
+        const dist = global.isDev ? './tmp/' : './public_html/';
         const svgSpriteOptions = {
             mode: {
                 symbol: {
@@ -132,7 +132,7 @@ gulp.task('icons:svgsprites', () => {
 
 gulp.task('icons:sprites', () => {
     if (fs.existsSync('./src/sprites/')) {
-        const dist = global.isDev ? './tmp/assets/img/sprites/' : './dist/assets/img/sprites/';
+        const dist = global.isDev ? './tmp/assets/img/sprites/' : './public_html/assets/img/sprites/';
         const spriteData = gulp.src('./src/sprites/**/*.png').pipe($.spritesmith({
             imgPath: '../img/sprites/sprites.png',
             imgName: 'sprites.png',
@@ -194,14 +194,14 @@ gulp.task('watch', () => {
 
 /* FS tasks */
 gulp.task('clean', () => {
-    return $.del(['./dist/**/*', './tmp/**/*']);
+    return $.del(['./public_html/**/*', './tmp/**/*']);
 });
 
 gulp.task('clean:dist', () => {
-    return $.del(['./dist/**/*']);
+    return $.del(['./public_html/**/*']);
 });
 
 gulp.task('copy:static', () => {
     return gulp.src(['./src/static/**/*'])
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./public_html/'));
 });
