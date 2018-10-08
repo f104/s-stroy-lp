@@ -3,7 +3,7 @@ import page from 'page';
 import forms from 'forms';
 import quiz from 'quiz';
 import contacts from 'contacts';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.min.js';
 import Cookies from 'js-cookie';
 var app = {
 
@@ -398,7 +398,7 @@ var app = {
                 date = Date.parse(date);
                 let now = Date.now(),
                         est = date - now;
-                console.log(est);
+//                console.log(est);
                 if (est > 0) {
                     let days = Math.ceil(est / 1000 / 60 / 60 / 24);
                     $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));

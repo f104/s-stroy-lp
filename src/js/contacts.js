@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.min.js';
 const contacts = {
 
     items: [],
