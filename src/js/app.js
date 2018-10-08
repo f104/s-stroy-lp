@@ -234,7 +234,7 @@ var app = {
         let selector = ('.stock .swiper-container');
         new Swiper(selector, {
             slidesPerView: 3,
-            breakpointsInverse: true,
+//            breakpointsInverse: true,
             watchOverflow: true,
             breakpoints: {
                 1279: {
