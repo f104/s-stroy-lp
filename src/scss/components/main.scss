@@ -263,6 +263,16 @@
             height: 139px;
             padding: 25px 0;
         }
+        &__left {
+            width: 90px;
+            display: block;
+            margin: 0 auto;
+            font-size: 11px;
+            @include media-breakpoint-up(lg) {
+                width: 130px;
+                font-size: 14px;
+            }
+        }
     }
     &__back {
         background-repeat: no-repeat;

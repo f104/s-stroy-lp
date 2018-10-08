@@ -397,9 +397,14 @@ var app = {
             if (date) {
                 date = Date.parse(date);
                 let now = Date.now(),
-                        est = date - now,
-                        days = Math.ceil(est / 1000 / 60 / 60 / 24);
-                $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));
+                        est = date - now;
+                console.log(est);
+                if (est > 0) {
+                    let days = Math.ceil(est / 1000 / 60 / 60 / 24);
+                    $(this).text(days + ' ' + app.getNumEnding(days, ['день', 'дня', 'дней']));
+                } else {
+                    $(this).parent().text('Акция завершена');
+                }
             }
         });
     },
