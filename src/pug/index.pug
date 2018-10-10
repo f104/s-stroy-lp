@@ -47,10 +47,14 @@ block content
             var link = document.querySelector('.nav__list .nav__list__item__link[href="' + hash + '"]');
             var content = document.querySelector('.js-tab__toggler__content');
             if (tab !== null && link != null) {
-                document.querySelectorAll('.nav__list .nav__list__item__link._active').forEach(function (item) {
+                var els = document.querySelectorAll('.nav__list .nav__list__item__link._active');
+                els = Array.prototype.slice.call(els); // ie11
+                els.forEach(function (item) {
                     item.classList.remove("_active");
                 });
-                document.querySelectorAll('.a-tab._active').forEach(function (item) {
+                els = document.querySelectorAll('.a-tab._active');
+                els = Array.prototype.slice.call(els); // ie11
+                els.forEach(function (item) {
                     item.classList.remove("_active");
                 });
                 tab.classList.add("_active");
@@ -58,7 +62,7 @@ block content
                 content.innerText = link.innerText;
             }
         }
-
+    
     include /blocks/stock
     
     include /blocks/bank

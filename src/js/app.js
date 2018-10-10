@@ -219,8 +219,8 @@ var app = {
                 },
             });
         } else {
-//            console.log(1)
-            let els = document.querySelectorAll(selector);
+//            let els = document.querySelectorAll(selector);
+            let els = Array.prototype.slice.call(document.querySelectorAll(selector)); // ie11
             els.forEach(function (el) {
                 if (el.swiper) {
                     el.swiper.destroy();
@@ -380,7 +380,7 @@ var app = {
      */
     checkMedia: function () {
         let current = app.media;
-        for (let key of Object.keys(app.breakpoints)) {
+        for (let key in app.breakpoints) {
             if (app.window.outerWidth() >= app.breakpoints[key]) {
                 app.media = app.breakpoints[key];
             }

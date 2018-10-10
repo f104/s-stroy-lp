@@ -42,6 +42,7 @@
             width: 370px;
         }
         @include media-breakpoint-up(lg) {
+            width: 610px;
             margin-top: 30px;
             display: flex;
         }

@@ -5,6 +5,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     @include media-breakpoint-up(md) {
         padding: 26px 30px 30px;
         border-radius: 10px;
