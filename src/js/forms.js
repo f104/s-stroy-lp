@@ -58,7 +58,7 @@ const forms = {
 
     goalsGA: function ($form) {
         let $input = $form.find('[name="goals_ga"]');
-        if ($input) {
+        if ($input.length > 0) {
             let dataLayer = window.dataLayer = window.dataLayer || [];
             dataLayer.push(JSON.parse($input.val()));
         }

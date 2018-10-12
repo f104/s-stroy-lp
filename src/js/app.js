@@ -456,6 +456,9 @@ var app = {
         if (location.hash && $(location.hash).length) {
             $("html, body").animate({scrollTop: 0}, 200);
             $('.js-tab__link[href="' + location.hash + '"]:not(._active)').click();
+            // fix on direct link
+            app.currentTab = $('.js-tab._active').attr('id');
+//            console.log(app.currentTab);
         }
         // handle click on footer menu
         $('.js-tab__footer').click(function () {
