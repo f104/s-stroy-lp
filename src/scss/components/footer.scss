@@ -170,4 +170,36 @@
             margin-right: 0.5ex;
         }
     }
+    &__madein {
+        display: block;
+        width: 166px;
+        height: 24px;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            @include transition(opacity);
+        }
+        &:before {
+            background: url(/img/riverstart.svg);
+            opacity: .5;
+        }
+        &:after {
+            background: url(/img/riverstart-color.svg);
+            opacity: 0;
+        }
+        &:hover {
+            opacity: 1;
+            &:before {
+                opacity: 0;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
 }
