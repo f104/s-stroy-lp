@@ -85,15 +85,15 @@
             line-height: 23px;
             font-size: 15px;
             margin-bottom: 20px;
-            width: 385px;
+            width: 50%;
         }
         @include media-breakpoint-up(lg) {
             margin-bottom: 25px;
             width: 545px;
         }
-        &:last-of-type {
+/*        &:last-of-type {
             margin-bottom: 0;
-        }
+        }*/
         &._final {
             font-size: 18px;
             @include media-breakpoint-up(lg) {
@@ -114,13 +114,13 @@
         }
         @include media-breakpoint-only(md) {
             &._2 {
-                width: 330px;
+                width: 48%;
             }
             &._3 {
-                width: 410px;
+                width: 58%;
             }
             &._5 {
-                width: 410px;
+                width: 60%;
             }
         }
     }
@@ -131,12 +131,13 @@
         right: 0;
         bottom: 0;
         cursor: pointer;
-        left: 385px;
+        width: 50%;
         @include media-breakpoint-up(md) {
             display: block;
         }
         @include media-breakpoint-up(lg) {
             left: 545px;
+            width: auto;
         }
     }
 }
@@ -193,6 +194,10 @@
                     content: none;
                 }
             }
+            @include media-breakpoint-only(md) {
+                flex: 1;
+                text-align: center;
+            }
             @include media-breakpoint-up(lg) {
                 padding: 0 30px;
             }
@@ -211,6 +216,8 @@
     }
     &__btn {
         width: 270px;
+        display: block;
+        margin: 0 auto;
         @include media-breakpoint-up(lg) {
             width: 215px;
             position: absolute;
