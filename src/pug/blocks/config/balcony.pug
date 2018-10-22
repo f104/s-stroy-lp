@@ -5,25 +5,25 @@ include /blocks/chunks/tooltip-gost
 
     .js-tabs.js-tabs_disconnected
         
-        .config-select.sm-full.js-tabs__select
+        .config-select.js-tabs__select
             .config-select__list
                 a.config-select__item.js-tabs__select__item._active(href='#warm-balcony')
-                    span.config-select__item__img
+                    //-span.config-select__item__img
                         +svgsprite('warm')
                     span.config-select__item__content
                         span.config-select__item__content__h Теплое остекление
                 a.config-select__item.js-tabs__select__item(href='#cold-balcony')
-                    span.config-select__item__img
+                    //-span.config-select__item__img
                         +svgsprite('snow')
                     span.config-select__item__content
                         span.config-select__item__content__h Холодное остекление
                 a.config-select__item.js-tabs__select__item(href='#sliding-balcony')
-                    span.config-select__item__img
+                    //-span.config-select__item__img
                         +svgsprite('sliding')
                     span.config-select__item__content
                         span.config-select__item__content__h Раздвижные окна
                 a.config-select__item.js-tabs__select__item(href='#finishing-balcony')
-                    span.config-select__item__img
+                    //-span.config-select__item__img
                         +svgsprite('finishing')
                     span.config-select__item__content
                         span.config-select__item__content__h Отделка под ключ
@@ -39,6 +39,8 @@ include /blocks/chunks/tooltip-gost
                                 span.color-cold −15°С
                                 | , внутри 
                                 span.color-warm +20°С
+                        //*.balcony-list__item__sm-img
+                            img(src='img/balcony/warm-sm.jpg' alt='Теплое остекление')
                         .balcony-list__item__content
                             p.
                                 Теплое остекление выбирают, когда хотят превратить 
@@ -127,6 +129,8 @@ include /blocks/chunks/tooltip-gost
                                 span.color-cold −15°С
                                 | , внутри 
                                 span.color-warm +5°С
+                        //*.balcony-list__item__sm-img
+                                img(src='img/balcony/cold-sm.jpg' alt='Холодное остекление')
                         .balcony-list__item__content
                             p.
                                 Холодное остекление — идеальный выбор, когда хочется недорого, 

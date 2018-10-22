@@ -61,6 +61,7 @@ var app = {
             app.initPayments();
             app.initTabs();
             app.initReviewsSlider();
+            app.initWindowsSlider();
             app.initStockSlider();
             app.initManSlider();
             app.initWorkSlider();
@@ -75,6 +76,7 @@ var app = {
         app.document.on(app.resizeEventName, function () {
             app.initManSlider();
             app.initReviewsSlider();
+            app.initWindowsSlider();
             app.initScrollbar();
             app.initStock();
         });
@@ -131,6 +133,13 @@ var app = {
                 $parents.css({'height': 'auto'});
                 $(this).addClass('_active');
                 $(this).parents('.js-tabs').easytabs('select', $(this).attr('href'));
+//                let $targetPanel = $($(this).attr('href'));
+//                $targetPanel.find('.swiper-container').each(function () {
+//                    var el = $(this)[0];
+//                    if (el.swiper) {
+//                        el.swiper.update();
+//                    }
+//                });
             }
             return false;
         });
@@ -213,7 +222,7 @@ var app = {
     },
 
     initReviewsSlider: function () {
-        let selector = ('.reviews .swiper-container');
+        let selector = '.reviews .swiper-container';
         if (app.media == app.breakpoints.sm) {
             new Swiper(selector, {
                 spaceBetween: 10,
@@ -233,7 +242,30 @@ var app = {
                 }
             });
         }
+    },
 
+    initWindowsSlider: function () {
+        let selector = '.window-list .swiper-container';
+        if (app.media == app.breakpoints.sm) {
+            let els = Array.prototype.slice.call(document.querySelectorAll(selector));
+            els.forEach(function (el) {
+                let p = el.querySelector('.swiper-pagination');
+                new Swiper(el, {
+                    pagination: {
+                        el: p,
+                        type: 'bullets',
+                        clickable: true
+                    },
+                });
+            });
+        } else {
+            let els = Array.prototype.slice.call(document.querySelectorAll(selector)); // ie11
+            els.forEach(function (el) {
+                if (el.swiper) {
+                    el.swiper.destroy();
+                }
+            });
+        }
     },
 
     initStockSlider: function () {
@@ -435,6 +467,12 @@ var app = {
             $current.addClass('_out').delay(400).queue(function () {
                 $current.addClass('_only-img').dequeue();
                 $target.addClass('_in _active').delay(200).queue(function () {
+                    $target.find('.swiper-container').each(function () {
+                        var el = $(this)[0];
+                        if (el.swiper) {
+                            el.swiper.update();
+                        }
+                    });
                     app.initPayments();
                     $target.removeClass('_in').delay(200).queue(function () {
                         $current.removeClass('_only-img _out _active').dequeue();

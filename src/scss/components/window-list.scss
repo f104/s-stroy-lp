@@ -1,17 +1,31 @@
 .window-list {
     $root: &;
     margin-bottom: 30px;
-    background-color: $color-bg-gray;
     @include media-breakpoint-up(md) {
         margin-bottom: 0;
         border-radius: 10px;
     }
     @include media-breakpoint-up(lg) {
         margin-bottom: 30px;
-        display: flex;
+    }
+    .swiper-wrapper {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            display: block;
+        }
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+    }
+    .swiper-pagination {
+        bottom: 0;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
     }
     &__item {
-        border-bottom: 1px solid $color-border-gray;
+        background-color: $color-bg-gray;
         padding: 20px map-get($container-paddings, 'sm') 30px;
         display: flex;
         flex-direction: column;
@@ -19,6 +33,7 @@
             border-bottom-width: 0;
         }
         @include media-breakpoint-up(md) {
+            border-bottom: 1px solid $color-border-gray;
             padding: 20px 25px 40px;
         }
         @include media-breakpoint-up(lg) {

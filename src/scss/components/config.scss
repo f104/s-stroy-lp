@@ -148,15 +148,27 @@
 
 .config-select {
     $root: &;
-    margin-bottom: 15px;
+    margin-bottom: 27px;
     &__list {
-        background-color: $color-bg-gray;
+        background-color: #5B99E2;
+        color: $color-bg;
+        border-radius: 28px;
+        &:after {
+            font-family: 'fontello';
+            content: '\E80C';
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 7px;
+        }
     }
     &__item {
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 10px 40px 10px 25px;
         display: flex;
         align-items: center;
+        min-height: 58px;
         &__img {
             display: none;
             width: 40px;
@@ -172,13 +184,16 @@
         }
         &__content {
             font-family: $font-family-alt;
-            font-size: 15px;
+            font-size: 13px;
             &__h {
                 display: block;
                 font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
             }
             &__muted {
-                font-weight: 500;
+                /*font-weight: 500;*/
                 opacity: .4;
             }
         }
@@ -192,14 +207,17 @@
     &._active {
         #{$root}__list {
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             top: 0;
             width: 100%;
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+            &:after {
+                display: none;
+            }
         }
         #{$root}__item {
             display: flex;
-            border-bottom: 1px solid $color-border-gray;
+            border-bottom: 1px solid rgba(215, 212, 220, 0.45);
             &:last-child {
                 border-bottom-width: 0;
             }
