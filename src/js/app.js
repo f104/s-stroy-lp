@@ -69,6 +69,7 @@ var app = {
             app.initConfig();
             app.initATabs();
             app.initCounter();
+            app.initPayments();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -76,6 +77,10 @@ var app = {
             app.initReviewsSlider();
             app.initScrollbar();
             app.initStock();
+        });
+        
+        app.window.on('resize', function(){
+            app.initPayments();
         });
 
         // Antispam
@@ -149,6 +154,7 @@ var app = {
                         el.swiper.update();
                     }
                 });
+                app.initPayments();
             });
         });
     },
@@ -524,6 +530,18 @@ var app = {
         function writeCounter(num) {
             $('.js-counter__number').text(num);
             $('.js-counter__text').text(app.getNumEnding(num, ['место', 'места', 'мест']));
+        }
+    },
+    
+    initPayments: function() {
+        if (app.media >= app.breakpoints.md && app.media < app.breakpoints.lg) {
+            $('.js-payment').each(function(){
+                let col = $(this).parents('.balcony-list__item').find('.balcony-list__item__col').first();
+                $(this).css({'top': col.outerHeight() + 74});
+            });
+        } else {
+            $('.js-payment').attr('style', '');
+            
         }
     },
 
