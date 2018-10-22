@@ -58,6 +58,7 @@ var app = {
 
         app.document.ready(function () {
             app.initScrollbar();
+            app.initPayments();
             app.initTabs();
             app.initReviewsSlider();
             app.initStockSlider();
@@ -69,7 +70,6 @@ var app = {
             app.initConfig();
             app.initATabs();
             app.initCounter();
-            app.initPayments();
         });
 
         app.document.on(app.resizeEventName, function () {
@@ -78,8 +78,8 @@ var app = {
             app.initScrollbar();
             app.initStock();
         });
-        
-        app.window.on('resize', function(){
+
+        app.window.on('resize', function () {
             app.initPayments();
         });
 
@@ -435,6 +435,7 @@ var app = {
             $current.addClass('_out').delay(400).queue(function () {
                 $current.addClass('_only-img').dequeue();
                 $target.addClass('_in _active').delay(200).queue(function () {
+                    app.initPayments();
                     $target.removeClass('_in').delay(200).queue(function () {
                         $current.removeClass('_only-img _out _active').dequeue();
                     }).dequeue();
@@ -532,16 +533,16 @@ var app = {
             $('.js-counter__text').text(app.getNumEnding(num, ['место', 'места', 'мест']));
         }
     },
-    
-    initPayments: function() {
+
+    initPayments: function () {
         if (app.media >= app.breakpoints.md && app.media < app.breakpoints.lg) {
-            $('.js-payment').each(function(){
+            $('.js-payment').each(function () {
                 let col = $(this).parents('.balcony-list__item').find('.balcony-list__item__col').first();
                 $(this).css({'top': col.outerHeight() + 74});
             });
         } else {
             $('.js-payment').attr('style', '');
-            
+
         }
     },
 
