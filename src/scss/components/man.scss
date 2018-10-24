@@ -56,6 +56,13 @@
             display: none;
         }
     }
+    .swiper-button {
+        &-prev, &-next {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
     &__sert {
         margin-bottom: 40px;
         @include media-breakpoint-up(md) {

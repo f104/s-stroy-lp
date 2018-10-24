@@ -35,9 +35,6 @@
         line-height: 70px;
         font-size: 24px;
         @include transition(all);
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
         &:hover {
             background-color: $color-bg;
             color: $color-primary;
