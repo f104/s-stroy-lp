@@ -302,9 +302,18 @@ var app = {
         let $btn = $('.js-work-nav__btn');
         let slider = new Swiper('.work .swiper-container', {
             slidesPerView: 1,
-            effect: 'fade',
-            simulateTouch: false,
+            spaceBetween: 30,
+//            effect: 'fade',
+//            simulateTouch: false,
             autoHeight: true,
+//            breakpoints: {
+//                1279: {
+//                    slidesPerView: 2
+//                },
+//                768: {
+//                    spaceBetween: 30
+//                }
+//            },
             pagination: {
                 el: '.work .swiper-pagination',
                 type: 'bullets',
