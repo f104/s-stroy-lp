@@ -4,6 +4,7 @@ import Inputmask from "inputmask";
 const forms = {
 
     url: 'backend/sendmail.php',
+    yaCounter: 50433718,
 
     init: function () {
         const app = this;
@@ -29,6 +30,7 @@ const forms = {
                             $form[0].reset();
                             $.fancybox.close();
                             forms.goalsGA($form);
+                            forms.goalsYA($form);
                             app.document.trigger(app.submitEventName, {$form: $form});
                         } else if (data['msg']) {
                             console.log(data['msg']);
@@ -61,6 +63,13 @@ const forms = {
         if ($input.length > 0) {
             let dataLayer = window.dataLayer = window.dataLayer || [];
             dataLayer.push(JSON.parse($input.val()));
+        }
+    },
+    
+    goalsYA: function ($form) {
+        let $input = $form.find('[name="goals_ya"]');
+        if (typeof window['yaCounter' + forms.yaCounter] !== undefined && $input.length > 0) {
+            window['yaCounter' + forms.yaCounter].reachGoal($input.val());
         }
     },
 
