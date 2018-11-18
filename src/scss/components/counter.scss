@@ -1,5 +1,5 @@
 .counter {
-    background: $color-bg-gray;
+    background: $color-bg;
     border-radius: 8px;
     height: 60px;
     display: flex;
@@ -10,10 +10,13 @@
     font-size: 14px;
     letter-spacing: 0.05em;
     padding: 0 15px;
+    @include media-breakpoint-up(md) {
+        background: $color-bg-gray;
+    }
     &__number {
         display: inline-block;
         line-height: 42px;
-        background: $color-bg;
+        background: $color-bg-gray;
         border-radius: 8px;
         padding: 0 10px;
         margin: 0 12px;
@@ -21,5 +24,8 @@
         font-weight: 600;
         font-size: 25px;
         color: $color-primary;
+        @include media-breakpoint-up(md) {
+            background: $color-bg;
+        }
     }
 }

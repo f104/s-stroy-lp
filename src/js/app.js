@@ -306,14 +306,14 @@ var app = {
 //            effect: 'fade',
 //            simulateTouch: false,
             autoHeight: true,
-//            breakpoints: {
+            breakpoints: {
 //                1279: {
 //                    slidesPerView: 2
 //                },
-//                768: {
-//                    spaceBetween: 30
-//                }
-//            },
+                767: {
+                    spaceBetween: 20
+                }
+            },
             pagination: {
                 el: '.work .swiper-pagination',
                 type: 'bullets',
