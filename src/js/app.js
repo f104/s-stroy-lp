@@ -465,13 +465,22 @@ var app = {
             $wrapper.slideToggle();
             $(this).toggleClass('_active');
         });
+
+        let inProgress = false;
         $('.js-tab__link').on('click', function () {
+//            console.log(inProgress);
+            if (inProgress) {
+                return false;
+            }
+            inProgress = true;
+
             let tab = $(this).attr('href').substr(1),
                     $current = $('.js-tab._active'),
                     $target = $('#' + tab);
 
             $('.js-tab__link._active').removeClass('_active');
             $(this).addClass('_active');
+
 
             $current.addClass('_out').delay(400).queue(function () {
                 $current.addClass('_only-img').dequeue();
@@ -485,6 +494,7 @@ var app = {
                     app.initPayments();
                     $target.removeClass('_in').delay(200).queue(function () {
                         $current.removeClass('_only-img _out _active').dequeue();
+                        inProgress = false;
                     }).dequeue();
                 });
             }).dequeue();
