@@ -454,6 +454,14 @@ var app = {
                 }
             }
         });
+        
+        // days left to end of month
+        let now = new Date();
+        let last = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+        let left = last - now.getDate() + 1;
+        let month = now.getMonth() + 1;
+        $('.js-dayleft').text(left + ' ' + app.getNumEnding(left, ['день', 'дня', 'дней']));
+        $('.js-daymonth').text(last + '.' + month);
     },
 
     initATabs: function () {
