@@ -6,3 +6,4 @@ tmp/
 src/scss/generated
 _docs
 public_html/backend
+mail.php
