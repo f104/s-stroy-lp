@@ -1467,10 +1467,16 @@
               </ul>
               <div class="callback">
                 <div class="title">Оставить заявку</div>
-                <form class="quiz-item__row" id="callClean" action="mail.php" method="post">
-                  <input class="antibot" type="hidden" name="antibot" value="nobot">
+                <form class="quiz-item__row js-form">
+                  <input name="email" value="user@host.com" hidden>
+                  <input name="text" value="info" hidden>
+                  <input name="email3" value="info@example.com" hidden>
+                  <input name="form_id" value="2" hidden>
+                  <input name="form_name" value="Уборка после ремонта" hidden>
+                  <input name="goals_ya" value="lead_cleening" hidden>
+                  <input name="goals_ga" hidden value="{&quot;event&quot;:&quot;form_sent3&quot;,&quot;eventCategory&quot;:&quot;lead&quot;,&quot;eventAction&quot;:&quot;cleening&quot;}">
                   <div class="input-group">
-                    <input class="input _for-white js-mask" name="phone" required="" autocomplete="off" im-insert="true" placeholder="+7 (___)-___-____">
+                    <input class="input _for-white js-mask" name="phone" required autocomplete="off">
                     <button class="btn">Перезвоните мне</button>
                   </div>
                 </form><span>или позвоните по телефону: <br>+7 999 <strong>888 22 33</strong></span>

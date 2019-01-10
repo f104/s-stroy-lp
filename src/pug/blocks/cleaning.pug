@@ -52,9 +52,19 @@
                     li Мойка плинтусов
                 .callback
                     .title Оставить заявку
-                    form(id="callClean" class="quiz-item__row" action="mail.php" method="post")
-                        input(type="hidden" name="antibot" class="antibot" value="nobot")
+                    form.quiz-item__row.js-form
+                        input(name='email' value='user@host.com' hidden)
+                        input(name='text' value='info' hidden)
+                        input(name='email3' value='info@example.com' hidden)
+                        input(name='form_id' value='2' hidden)
+                        input(name='form_name' value='Уборка после ремонта' hidden)
+                        input(name='goals_ya' value='lead_cleening' hidden)
+                        input(
+                            name='goals_ga' 
+                            hidden 
+                            value='{"event":"form_sent3","eventCategory":"lead","eventAction":"cleening"}'
+                        )
                         .input-group
-                            input.input._for-white.js-mask(name="phone" required="" autocomplete="off" im-insert="true" placeholder="+7 (___)-___-____")
+                            input.input._for-white.js-mask(name="phone" required autocomplete="off")
                             button.btn Перезвоните мне
                     span или позвоните по телефону: <br>+7 999 <strong>888 22 33</strong>
