@@ -292,7 +292,33 @@ var app = {
                 nextEl: '.stock .swiper-button-next',
                 prevEl: '.stock .swiper-button-prev',
             },
+            on: {
+                init: function () {
+                    app.fixMainWrapper();
+                },
+                imagesReady: function () {
+                    app.fixMainWrapper();
+                },
+                resize: function () {
+                    app.fixMainWrapper();
+                },
+            }
         });
+    },
+
+    // fix main wrapper
+    fixMainWrapper: function () {
+        let $main = $('.main-wrapper');
+        let $stock = $('.stock');
+        $stock.attr('style', '');
+        $main.attr('style', '');
+        if (app.media >= app.breakpoints.md) {
+            return;
+        }
+        let mainHeight = $main.outerHeight();
+        let stockHeight = $stock.outerHeight();
+        $stock.css('top', mainHeight + 110);
+        $main.css('height', mainHeight + stockHeight + 10);
 
     },
 
@@ -454,7 +480,7 @@ var app = {
                 }
             }
         });
-        
+
         // days left to end of month
         let now = new Date();
         let last = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();

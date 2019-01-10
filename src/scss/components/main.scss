@@ -1,6 +1,6 @@
 .main-wrapper {
     /*margin-bottom: 260px;*/
-    height: 960px;
+    height: 540px;
     margin-bottom: 40px;
     @include media-breakpoint-up(md) {
         height: 680px;
@@ -16,14 +16,11 @@
     $root: &;
     font-family: $font-family-alt;
     padding-top: 18px;
-    /*height: 800px;*/
     @include media-breakpoint-up(md) {
         padding-top: 23px;
-        /*margin-bottom: 30px;*/
     }
     @include media-breakpoint-up(lg) {
         padding-top: 50px;
-        /*margin-bottom: 50px;*/
     }
     &__h {
         font-weight: 700;
@@ -281,7 +278,7 @@
 
     &._windows {
         /*margin-bottom: 40px;*/
-        padding-bottom: 260px;
+        /*padding-bottom: 260px;*/
         @include media-breakpoint-up(md) {
             padding-bottom: 30px;
             /*margin-bottom: 30px;*/
@@ -406,7 +403,7 @@
     }
 
     &._balcony, &._cottage, &._accessories {
-        padding-bottom: 60px;
+        /*padding-bottom: 60px;*/
         /*margin-bottom: 200px;*/
         @include media-breakpoint-up(md) {
             padding-bottom: 220px;

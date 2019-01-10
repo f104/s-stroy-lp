@@ -80,7 +80,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 660px;
+    /*top: 660px;*/
     @include media-breakpoint-up(md) {
         top: 580px;
     }
